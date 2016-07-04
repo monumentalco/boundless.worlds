@@ -16,9 +16,9 @@ If you're interesting in contributing the project please join the [Boundless Wor
 
 The project is currently maintained by:
 
-* [nevir](../../../../nevir)
-* [jamesaustin](../../../../jamesaustin) - Wonderstruck
-* [olliepurkiss](../../../../olliepurkiss) - Wonderstruck
+* [nevir](https://github.com/nevir)
+* [jamesaustin](https://github.com/jamesaustin) - Wonderstruck
+* [olliepurkiss](https://github.com/olliepurkiss) - Wonderstruck
 
 ## License
 
