@@ -1,5 +1,5 @@
 # TODO
 
-* Add initial World Builder configuration folder structure.
-* Add LICENSE file +nevir
+* [ ] Add initial World Builder configuration folder structure.
+* [ ] Add LICENSE file +nevir
 
