@@ -8,10 +8,6 @@ This project is currently (2016-07-04) being setup.
 
 If you're interesting in contributing the project please join the [Boundless World Builder discussion](https://forum.playboundless.com/c/modding).
 
-## Contributors
-
-* Pending
-
 ## Maintainers
 
 The project is currently maintained by:
