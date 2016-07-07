@@ -1,4 +1,4 @@
-# RockyPlain biome
+# Rocky Plain biome
 
 ![Hero Image](./screenshot.jpg)
 

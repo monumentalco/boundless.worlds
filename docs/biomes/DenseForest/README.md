@@ -1,4 +1,4 @@
-# DenseForest biome
+# Dense Forest biome
 
 ![Hero Image](./screenshot.jpg)
 

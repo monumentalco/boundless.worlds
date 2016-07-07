@@ -1,4 +1,4 @@
-# DesertMountain biome
+# Desert Mountain biome
 
 ![Hero Image](./screenshot.jpg)
 

@@ -1,4 +1,4 @@
-# PleasantHills biome
+# Pleasant Hills biome
 
 ![Hero Image](./screenshot.jpg)
 

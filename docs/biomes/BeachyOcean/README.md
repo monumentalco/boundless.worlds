@@ -1,4 +1,4 @@
-# BeachyOcean biome
+# Beachy Ocean biome
 
 ![Hero Image](./screenshot.jpg)
 
