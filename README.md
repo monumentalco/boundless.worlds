@@ -10,11 +10,11 @@ Boundless' myriad worlds are a community undertaking, and we encourage contribut
 
 ### Ideas
 
-Have an idea for a new biome?  Take a look at [the list of biome ideas](Biome Ideas); if it already exists, upvote it and leave a comment w/ your own ideas for it.
+Have an idea for a new biome?  Take a look at [the list of biome ideas](https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea+label%3Abiome); if it already exists, upvote it and leave a comment w/ your own ideas for it.
 
-If you don't see it, [create a new issue](New Issue) describing it.  Bonus points if you include images, to help describe it!
+If you don't see it, [create a new issue](https://github.com/turbulenz/boundless.worlds/issues/new) describing it.  Bonus points if you include images, to help describe it!
 
-The same goes for any other sort of World Builder node: We collect ideas for them all via [this repository's issue tracker](Ideas).
+The same goes for any other sort of World Builder node: We collect ideas for them all via [this repository's issue tracker](https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea).
 
 ### Contributing Configs
 
@@ -22,7 +22,7 @@ Have a config that you'd like to share with the community?  Great!  Give the [co
 
 ### Issues With Configs
 
-Having trouble with some of the configs?  Maybe they're not behaving as expected?  Or maybe it'd be really nice if they exposed another slider for more control?  [File an issue](New Issue) describing what you're running into.
+Having trouble with some of the configs?  Maybe they're not behaving as expected?  Or maybe it'd be really nice if they exposed another slider for more control?  [File an issue](https://github.com/turbulenz/boundless.worlds/issues/new) describing what you're running into.
 
 Or, better yet, if you have a fix for the problematic config, make a change and submit it via a pull request.
 
@@ -40,13 +40,6 @@ The project is currently maintained by:
 * [jamesaustin](https://github.com/jamesaustin) - Wonderstruck
 * [olliepurkiss](https://github.com/olliepurkiss) - Wonderstruck
 
-## License
+## License [![CC BY 4.0](http://mirrors.creativecommons.org/presskit/buttons/80x15/svg/by.svg)](http://creativecommons.org/licenses/by/4.0/)
 
-[![CC BY 4.0](http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg)](CC BY License)
-
-All content in this repository is licensed under the [Creative Commons - Attribution 4.0 International (CC BY 4.0)](CC BY License) license.
-
-[CC BY License]: http://creativecommons.org/licenses/by/4.0/
-[New Issue]: https://github.com/turbulenz/boundless.worlds/issues/new
-[Ideas]: https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea
-[Biome Ideas]: https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea+label%3Abiome
+All content in this repository is licensed under the [Creative Commons - Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/) license.
