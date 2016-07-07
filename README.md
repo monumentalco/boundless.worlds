@@ -10,7 +10,7 @@ You should also join the [Boundless World Builder discussion](https://forum.play
 
 ## Using these configs
 
-All node configs in this repository are regularly released with the Boundless World Builder.
+All [node configs](./configs) in this repository are regularly released with the Boundless World Builder.
 
 But if you can't wait for the next release, you can check out or download the latest copy of them from this repository.  If you're having trouble, don't be afraid to ask for help on the forums!
 
