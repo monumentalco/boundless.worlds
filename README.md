@@ -2,35 +2,17 @@
 
 Official repository for the community development of reusable Boundless World Builder nodes.
 
+## Want to get involved?
+
+Boundless' myriad worlds are a community undertaking, and we encourage contributions of all kinds!  If you'd like to help out, check out [the contributions guide](./CONTRIBUTING.md); we greatly appreciate all the help we can get.
+
+You should also join the [Boundless World Builder discussion](https://forum.playboundless.com/c/modding), and feel free to post any thoughts and ideas for this project.
+
+## Using these configs
+
 All node configs in this repository are regularly released with the Boundless World Builder.
 
-## Want To Get Involved?
-
-Boundless' myriad worlds are a community undertaking, and we encourage contributions of all kinds!  You can help out in several ways:
-
-### Ideas
-
-Have an idea for a new biome?  Take a look at [the list of biome ideas](https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea+label%3Abiome); if it already exists, upvote it and leave a comment w/ your own ideas for it.
-
-If you don't see it, [create a new issue](https://github.com/turbulenz/boundless.worlds/issues/new) describing it.  Bonus points if you include images, to help describe it!
-
-The same goes for any other sort of World Builder node: We collect ideas for them all via [this repository's issue tracker](https://github.com/turbulenz/boundless.worlds/issues?q=is%3Aopen+is%3Aissue+label%3Aidea).
-
-### Contributing Configs
-
-Have a config that you'd like to share with the community?  Great!  Give the [contribution guidelines](./CONTRIBUTING.md) a quick read, and submit your config via a pull request.
-
-### Issues With Configs
-
-Having trouble with some of the configs?  Maybe they're not behaving as expected?  Or maybe it'd be really nice if they exposed another slider for more control?  [File an issue](https://github.com/turbulenz/boundless.worlds/issues/new) describing what you're running into.
-
-Or, better yet, if you have a fix for the problematic config, make a change and submit it via a pull request.
-
-## Status
-
-This project is currently (2016-07-04) being setup.
-
-If you're interesting in contributing the project please join the [Boundless World Builder discussion](https://forum.playboundless.com/c/modding).
+But if you can't wait for the next release, you can check out or download the latest copy of them from this repository.  If you're having trouble, don't be afraid to ask for help on the forums!
 
 ## Maintainers
 
