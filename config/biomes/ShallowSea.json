@@ -1,0 +1,663 @@
+{
+   "@collapsed" : false,
+   "@configType" : "BIOME",
+   "@name" : "ShallowSea",
+   "@position" : [ 7612, 8108 ],
+   "@scroll" : [ 7836.46826171875, 8321.642578125, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 7,
+   "biome" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "ShallowSea",
+         "@position" : [ 7985, 8411 ],
+         "altitude" : 0.31000000238418579,
+         "humidity" : 0.56100004911422729,
+         "part" : {
+            "@collapsed" : false,
+            "@name" : "ShallowSea",
+            "@position" : [ 8354, 8094 ],
+            "@selector-open" : false,
+            "@toggle-caves" : true,
+            "@toggle-ccaves" : true,
+            "@toggle-csurface" : true,
+            "@toggle-cthreed" : true,
+            "@toggle-data" : true,
+            "@toggle-drop" : true,
+            "@toggle-heightmap" : true,
+            "@toggle-selector" : false,
+            "@toggle-stage" : true,
+            "@toggle-threed" : false,
+            "@toggle-visualise" : true,
+            "@x-name" : "x",
+            "@y-name" : "y",
+            "caveSurfaceShrink" : {
+               "enabled" : false,
+               "value" : 0.0099999997764825821
+            },
+            "caveThresholdBias" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "caves" : null,
+            "caves_decorations" : null,
+            "caves_substrate" : null,
+            "distortion" : null,
+            "distortionStrength" : {
+               "enabled" : true,
+               "value" : 0
+            },
+            "drop" : null,
+            "dropMaxDepth" : {
+               "enabled" : true,
+               "value" : 14
+            },
+            "dropMaxGradient" : {
+               "enabled" : true,
+               "value" : 2.3499999046325684
+            },
+            "dropMaxNoGravel" : {
+               "enabled" : true,
+               "value" : 6
+            },
+            "heightmap" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 8723, 7819 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Sea Base",
+                        "@position" : [ 9014, 7843 ],
+                        "frequency" : [ 1, 1 ],
+                        "links" : [],
+                        "offset" : [ -183.00450134277344, 192.75843811035156 ],
+                        "offset-hash" : "WVH6qhneuJ0F3MEl",
+                        "reference" : "noise2d/Sea Base.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9014, 7949 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 357.34799194335938, -82.180076599121094 ],
+                        "offset-hash" : "9dP9tXVBwssKsSSQ",
+                        "type" : "constant",
+                        "value" : -0.15600000321865082
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "heightmapMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "heightmapMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "parts" : [],
+            "shrink" : null,
+            "strata" : {
+               "@collapsed" : false,
+               "@name" : "Standard Strata",
+               "@position" : [ 8723, 8102 ],
+               "strata" : [
+                  {
+                     "averageDepth" : 6,
+                     "averageY" : 42,
+                     "blockType" : "SAND_DEFAULT_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 3,
+                     "replaceTypes" : [ "ROCK_METAMORPHIC_BASE", "ROCK_IGNEOUS_BASE" ],
+                     "yNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9005, 8208 ],
+                        "frequency" : [ 0.23800000548362732, 0.23800000548362732 ],
+                        "offset" : [ -359.5941162109375, -81.49957275390625 ],
+                        "offset-hash" : "eCEELuvaqtZS145o",
+                        "type" : "perlin"
+                     },
+                     "yNoiseScale" : 8
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_decorations" : {
+               "@collapsed" : false,
+               "@name" : "Standard Decorations",
+               "@position" : [ 8723, 8691 ],
+               "@toggle-ceiling" : false,
+               "@toggle-floor" : true,
+               "ceiling" : [],
+               "floor" : [
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [ "ROCK_IGNEOUS_BASE" ],
+                     "density" : -0.98999994993209839,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9018, 8798 ],
+                        "blockType" : "ROCK_SEDIMENTARY_BASE",
+                        "height" : 3.75,
+                        "radius" : 4,
+                        "stemType" : "ROCK_SEDIMENTARY_BASE",
+                        "taper" : 0.59999996423721313,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 1,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9018, 8961 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 374.98739624023438, -229.22604370117188 ],
+                        "offset-hash" : "F2PUkBusSCTgNdMG",
+                        "type" : "constant",
+                        "value" : -0.70900005102157593
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_substrate" : {
+               "@collapsed" : false,
+               "@name" : "Standard Substrate",
+               "@position" : [ 8723, 8419 ],
+               "strates" : [
+                  {
+                     "averageDepth" : 6,
+                     "blockType" : "ROCK_IGNEOUS_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 3,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : null
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "threeD" : null,
+            "threeDMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDSurfaceMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDSurfaceMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDThresholdBias" : {
+               "enabled" : false,
+               "value" : -1
+            },
+            "threed_decorations" : null,
+            "threed_substrate" : null,
+            "x" : null,
+            "y" : null
+         },
+         "temperature" : 0.41900002956390381,
+         "vegetation" : 0.44500002264976501,
+         "weight" : 0.5
+      },
+      "links" : [
+         {
+            "blockConstraint" : 2264040672,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "biome"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "weight"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Biome Weight",
+            "shortPath" : "ShallowSea.weight",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "generator" : {
+      "@version" : 6,
+      "biomeSize" : 24,
+      "lowerSea" : {
+         "level" : 16,
+         "liquidType" : "WATER"
+      },
+      "sea" : {
+         "level" : 64,
+         "liquidType" : "WATER"
+      }
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "blockColors" : {
+         "ASH_DEFAULT_BASE" : 1,
+         "CRYSTAL_GLEAM_BASE" : 13,
+         "FLORA_FLOWER_1" : 1,
+         "FLORA_FLOWER_2" : 1,
+         "FLORA_FLOWER_3" : 1,
+         "FLORA_FLOWER_4" : 1,
+         "FLORA_PLANT_FIBROUS" : 1,
+         "FLORA_PLANT_INKY" : 1,
+         "GRASS_BARBED_BASE" : 8,
+         "GRASS_GNARLED_BASE" : 7,
+         "GRASS_VERDANT_BASE" : 9,
+         "GRAVEL_DEFAULT_BASE" : 16,
+         "GROWTH_DEFAULT_BASE" : 1,
+         "MOULD_DEFAULT_BASE" : 1,
+         "MUD_DEFAULT_BASE" : 1,
+         "ROCK_IGNEOUS_BASE" : 4,
+         "ROCK_METAMORPHIC_BASE" : 5,
+         "ROCK_SEDIMENTARY_BASE" : 6,
+         "SAND_DEFAULT_BASE" : 16,
+         "SOIL_CLAY_BASE" : 1,
+         "SOIL_PEATY_BASE" : 3,
+         "SOIL_SILTY_BASE" : 2,
+         "SPONGE_DEFAULT_BASE" : 1,
+         "TANGLE_DEFAULT_BASE" : 1,
+         "THORNS_DEFAULT_BASE" : 1,
+         "WOOD_ANCIENT_TRUNK" : 10,
+         "WOOD_EXOTIC_LEAVES" : 15,
+         "WOOD_LUSH_LEAVES" : 13,
+         "WOOD_LUSTROUS_TRUNK" : 1,
+         "WOOD_TWISTED_TRUNK" : 11,
+         "WOOD_WAXY_LEAVES" : 14
+      },
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference Biome",
+      "@position" : [ 7985, 9195 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "BIOME",
+         "@name" : "ShallowSea",
+         "@position" : [ 7612, 8108 ],
+         "@toggle-test" : false,
+         "@toggle-world" : true,
+         "@version" : 7,
+         "biome" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "ShallowSea",
+               "@position" : [ 7985, 8411 ],
+               "altitude" : 0.31000000238418579,
+               "humidity" : 0.56100004911422729,
+               "part" : {
+                  "@collapsed" : false,
+                  "@name" : "ShallowSea",
+                  "@position" : [ 8354, 8094 ],
+                  "@selector-open" : false,
+                  "@toggle-caves" : true,
+                  "@toggle-ccaves" : true,
+                  "@toggle-csurface" : true,
+                  "@toggle-cthreed" : true,
+                  "@toggle-data" : true,
+                  "@toggle-drop" : true,
+                  "@toggle-heightmap" : true,
+                  "@toggle-selector" : false,
+                  "@toggle-stage" : true,
+                  "@toggle-threed" : false,
+                  "@toggle-visualise" : true,
+                  "@x-name" : "x",
+                  "@y-name" : "y",
+                  "caveSurfaceShrink" : {
+                     "enabled" : false,
+                     "value" : 0.0099999997764825821
+                  },
+                  "caveThresholdBias" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "caves" : null,
+                  "caves_decorations" : null,
+                  "caves_substrate" : null,
+                  "distortion" : null,
+                  "distortionStrength" : {
+                     "enabled" : true,
+                     "value" : 0
+                  },
+                  "drop" : null,
+                  "dropMaxDepth" : {
+                     "enabled" : true,
+                     "value" : 14
+                  },
+                  "dropMaxGradient" : {
+                     "enabled" : true,
+                     "value" : 2.3499999046325684
+                  },
+                  "dropMaxNoGravel" : {
+                     "enabled" : true,
+                     "value" : 6
+                  },
+                  "heightmap" : {
+                     "@collapsed" : false,
+                     "@name" : "Sum 2D",
+                     "@position" : [ 8723, 7819 ],
+                     "frequency" : [ 1, 1 ],
+                     "terms" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Sea Base",
+                              "@position" : [ 9014, 7843 ],
+                              "frequency" : [ 1, 1 ],
+                              "links" : [],
+                              "offset" : [ -183.00450134277344, 192.75843811035156 ],
+                              "offset-hash" : "WVH6qhneuJ0F3MEl",
+                              "reference" : "noise2d/Sea Base.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9014, 7949 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 357.34799194335938, -82.180076599121094 ],
+                              "offset-hash" : "9dP9tXVBwssKsSSQ",
+                              "type" : "constant",
+                              "value" : -0.15600000321865082
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        }
+                     ],
+                     "type" : "sum"
+                  },
+                  "heightmapMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "heightmapMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "parts" : [],
+                  "shrink" : null,
+                  "strata" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Strata",
+                     "@position" : [ 8723, 8102 ],
+                     "strata" : [
+                        {
+                           "averageDepth" : 6,
+                           "averageY" : 42,
+                           "blockType" : "SAND_DEFAULT_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 3,
+                           "replaceTypes" : [ "ROCK_METAMORPHIC_BASE", "ROCK_IGNEOUS_BASE" ],
+                           "yNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9005, 8208 ],
+                              "frequency" : [ 0.23800000548362732, 0.23800000548362732 ],
+                              "offset" : [ -359.5941162109375, -81.49957275390625 ],
+                              "offset-hash" : "eCEELuvaqtZS145o",
+                              "type" : "perlin"
+                           },
+                           "yNoiseScale" : 8
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_decorations" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Decorations",
+                     "@position" : [ 8723, 8691 ],
+                     "@toggle-ceiling" : false,
+                     "@toggle-floor" : true,
+                     "ceiling" : [],
+                     "floor" : [
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [ "ROCK_IGNEOUS_BASE" ],
+                           "density" : -0.98999994993209839,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9018, 8798 ],
+                              "blockType" : "ROCK_SEDIMENTARY_BASE",
+                              "height" : 3.75,
+                              "radius" : 4,
+                              "stemType" : "ROCK_SEDIMENTARY_BASE",
+                              "taper" : 0.59999996423721313,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 1,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9018, 8961 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 374.98739624023438, -229.22604370117188 ],
+                              "offset-hash" : "F2PUkBusSCTgNdMG",
+                              "type" : "constant",
+                              "value" : -0.70900005102157593
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_substrate" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Substrate",
+                     "@position" : [ 8723, 8419 ],
+                     "strates" : [
+                        {
+                           "averageDepth" : 6,
+                           "blockType" : "ROCK_IGNEOUS_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 3,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : null
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "threeD" : null,
+                  "threeDMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDSurfaceMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDSurfaceMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDThresholdBias" : {
+                     "enabled" : false,
+                     "value" : -1
+                  },
+                  "threed_decorations" : null,
+                  "threed_substrate" : null,
+                  "x" : null,
+                  "y" : null
+               },
+               "temperature" : 0.41900002956390381,
+               "vegetation" : 0.44500002264976501,
+               "weight" : 0.5
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 2264040672,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "biome"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "weight"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Biome Weight",
+                  "shortPath" : "ShallowSea.weight",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "generator" : {
+            "@version" : 6,
+            "biomeSize" : 24,
+            "lowerSea" : {
+               "level" : 16,
+               "liquidType" : "WATER"
+            },
+            "sea" : {
+               "level" : 64,
+               "liquidType" : "WATER"
+            }
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "blockColors" : {
+               "ASH_DEFAULT_BASE" : 1,
+               "CRYSTAL_GLEAM_BASE" : 13,
+               "FLORA_FLOWER_1" : 1,
+               "FLORA_FLOWER_2" : 1,
+               "FLORA_FLOWER_3" : 1,
+               "FLORA_FLOWER_4" : 1,
+               "FLORA_PLANT_FIBROUS" : 1,
+               "FLORA_PLANT_INKY" : 1,
+               "GRASS_BARBED_BASE" : 8,
+               "GRASS_GNARLED_BASE" : 7,
+               "GRASS_VERDANT_BASE" : 9,
+               "GRAVEL_DEFAULT_BASE" : 16,
+               "GROWTH_DEFAULT_BASE" : 1,
+               "MOULD_DEFAULT_BASE" : 1,
+               "MUD_DEFAULT_BASE" : 1,
+               "ROCK_IGNEOUS_BASE" : 4,
+               "ROCK_METAMORPHIC_BASE" : 5,
+               "ROCK_SEDIMENTARY_BASE" : 6,
+               "SAND_DEFAULT_BASE" : 16,
+               "SOIL_CLAY_BASE" : 1,
+               "SOIL_PEATY_BASE" : 3,
+               "SOIL_SILTY_BASE" : 2,
+               "SPONGE_DEFAULT_BASE" : 1,
+               "TANGLE_DEFAULT_BASE" : 1,
+               "THORNS_DEFAULT_BASE" : 1,
+               "WOOD_ANCIENT_TRUNK" : 10,
+               "WOOD_EXOTIC_LEAVES" : 15,
+               "WOOD_LUSH_LEAVES" : 13,
+               "WOOD_LUSTROUS_TRUNK" : 1,
+               "WOOD_TWISTED_TRUNK" : 11,
+               "WOOD_WAXY_LEAVES" : 14
+            },
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference Biome",
+            "@position" : [ 7985, 9195 ],
+            "type" : "reference"
+         }
+      },
+      "links" : [],
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

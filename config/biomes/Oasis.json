@@ -1,0 +1,1345 @@
+{
+   "@collapsed" : false,
+   "@configType" : "BIOME",
+   "@name" : "Oasis",
+   "@position" : [ 7471, 8050 ],
+   "@scroll" : [ 7922.81884765625, 8657.1103515625, 0.5 ],
+   "@toggle-test" : false,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 7,
+   "biome" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Oasis",
+         "@position" : [ 8024, 8353 ],
+         "altitude" : 0.34600001573562622,
+         "humidity" : 0.7850000262260437,
+         "part" : {
+            "@collapsed" : false,
+            "@name" : "Oasis",
+            "@position" : [ 8573, 8123 ],
+            "@selector-open" : false,
+            "@toggle-caves" : false,
+            "@toggle-ccaves" : true,
+            "@toggle-csurface" : true,
+            "@toggle-cthreed" : true,
+            "@toggle-data" : true,
+            "@toggle-drop" : false,
+            "@toggle-heightmap" : true,
+            "@toggle-selector" : false,
+            "@toggle-stage" : true,
+            "@toggle-threed" : false,
+            "@toggle-visualise" : true,
+            "@x-name" : "x",
+            "@y-name" : "y",
+            "caveSurfaceShrink" : {
+               "enabled" : false,
+               "value" : 0.0099999997764825821
+            },
+            "caveThresholdBias" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "caves" : null,
+            "caves_decorations" : null,
+            "caves_substrate" : null,
+            "distortion" : null,
+            "distortionStrength" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "drop" : null,
+            "dropMaxDepth" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxGradient" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxNoGravel" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "heightmap" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 9122, 6358 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Heightmap - Rolling Hills",
+                        "@position" : [ 9416, 6359 ],
+                        "frequency" : [ 1, 1 ],
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "multiplier"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.60100001096725464
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 1,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "multiplier"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.36200001835823059
+                           }
+                        ],
+                        "offset" : [ 263.5843505859375, 44.409786224365234 ],
+                        "offset-hash" : "O2sxOlDNLiwi8jWj",
+                        "reference" : "noise2d/HeightmapRollingHills.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "multiplier" : 0.026000000536441803,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9416, 6511 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -263.2791748046875, 397.56716918945313 ],
+                        "offset-hash" : "GNYMgVCQDbBoEZ6O",
+                        "type" : "constant",
+                        "value" : -0.52799999713897705
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "heightmapMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "heightmapMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "parts" : [],
+            "shrink" : null,
+            "strata" : {
+               "@collapsed" : false,
+               "@name" : "Standard Strata",
+               "@position" : [ 9122, 6641 ],
+               "strata" : [
+                  {
+                     "averageDepth" : 11,
+                     "averageY" : 68,
+                     "blockType" : "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 3,
+                     "replaceTypes" : [ "GRASS_VERDANT_BASE/SOIL_SILTY_BASE" ],
+                     "yNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Distort 2D",
+                        "@position" : [ 9427, 6724 ],
+                        "base" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9716, 6688 ],
+                           "frequency" : [ 0.13900001347064972, 0.13900001347064972 ],
+                           "offset" : [ -115.55962371826172, -123.49730682373047 ],
+                           "offset-hash" : "EQWVMq9yDNF3caAm",
+                           "type" : "perlin"
+                        },
+                        "distortion" : {
+                           "@collapsed" : false,
+                           "@name" : "Simplex 2D",
+                           "@position" : [ 9716, 6794 ],
+                           "frequency" : [ 0.16500000655651093, 0.16500000655651093 ],
+                           "offset" : [ 371.20318603515625, 356.41342163085938 ],
+                           "offset-hash" : "zVk3Q2UQZmCHrhVW",
+                           "type" : "simplex"
+                        },
+                        "distortionScale" : [ 1, 1 ],
+                        "frequency" : [ 1, 1 ],
+                        "type" : "distort"
+                     },
+                     "yNoiseScale" : 8
+                  },
+                  {
+                     "averageDepth" : 12,
+                     "averageY" : 65,
+                     "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 3,
+                     "replaceTypes" : [ "GRASS_VERDANT_BASE/SOIL_SILTY_BASE" ],
+                     "yNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Distort 2D",
+                        "@position" : [ 9427, 6936 ],
+                        "base" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9716, 6900 ],
+                           "frequency" : [ 0.13900001347064972, 0.13900001347064972 ],
+                           "offset" : [ -115.55962371826172, -123.49730682373047 ],
+                           "offset-hash" : "EQWVMq9yDNF3caAm",
+                           "type" : "perlin"
+                        },
+                        "distortion" : {
+                           "@collapsed" : false,
+                           "@name" : "Simplex 2D",
+                           "@position" : [ 9716, 7006 ],
+                           "frequency" : [ 0.16500000655651093, 0.16500000655651093 ],
+                           "offset" : [ 371.20318603515625, 356.41342163085938 ],
+                           "offset-hash" : "zVk3Q2UQZmCHrhVW",
+                           "type" : "simplex"
+                        },
+                        "distortionScale" : [ 1, 1 ],
+                        "frequency" : [ 0.91100007295608521, 0.91100007295608521 ],
+                        "type" : "distort"
+                     },
+                     "yNoiseScale" : 8
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_decorations" : {
+               "@collapsed" : false,
+               "@name" : "Standard Decorations",
+               "@position" : [ 9122, 7612 ],
+               "@toggle-ceiling" : false,
+               "@toggle-floor" : true,
+               "ceiling" : [],
+               "floor" : [
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE"
+                     ],
+                     "density" : -0.93999999761581421,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Basic Tree (deprecated)",
+                        "@position" : [ 9523, 8149 ],
+                        "bias" : 1,
+                        "blockType" : "WOOD_LUSH_LEAVES",
+                        "height" : 16,
+                        "radius" : 13,
+                        "stemType" : "WOOD_ANCIENT_TRUNK",
+                        "taper" : 1,
+                        "trunkHeight" : 15,
+                        "type" : "basicTree"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 2,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.5,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 8358 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE"
+                     ],
+                     "density" : -0.89999997615814209,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Basic Tree (deprecated)",
+                        "@position" : [ 9523, 8487 ],
+                        "bias" : 1,
+                        "blockType" : "WOOD_EXOTIC_LEAVES",
+                        "height" : 10.5,
+                        "radius" : 9.75,
+                        "stemType" : "WOOD_LUSTROUS_TRUNK",
+                        "taper" : 1,
+                        "trunkHeight" : 11.25,
+                        "type" : "basicTree"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 2,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.5,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 8696 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                     ],
+                     "density" : -0.81000000238418579,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Basic Tree (deprecated)",
+                        "@position" : [ 9523, 8825 ],
+                        "bias" : 1,
+                        "blockType" : "WOOD_EXOTIC_LEAVES",
+                        "height" : 14.25,
+                        "radius" : 5.5,
+                        "stemType" : "WOOD_LUSTROUS_TRUNK",
+                        "taper" : 1,
+                        "trunkHeight" : 12.75,
+                        "type" : "basicTree"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 2,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.51999998092651367,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 9034 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                     ],
+                     "density" : -0.87000000476837158,
+                     "depth" : 8,
+                     "instance" : null,
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 1,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 9163 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                     ],
+                     "density" : -0.77999997138977051,
+                     "depth" : 8,
+                     "instance" : null,
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 1,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 9292 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_2",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                     ],
+                     "density" : -0.66999995708465576,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9523, 9421 ],
+                        "blockType" : "WOOD_WAXY_LEAVES",
+                        "height" : 6,
+                        "radius" : 3,
+                        "stemType" : "WOOD_WAXY_LEAVES",
+                        "taper" : 1,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 2,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.5,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 9584 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE"
+                     ],
+                     "density" : -0.64999997615814209,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9523, 9713 ],
+                        "blockType" : "WOOD_WAXY_LEAVES",
+                        "height" : 2.5,
+                        "radius" : 4,
+                        "stemType" : "WOOD_WAXY_LEAVES",
+                        "taper" : 1,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 1,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9523, 9876 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                        "offset-hash" : "Avsg3YSYuqWtNk7m",
+                        "type" : "constant",
+                        "value" : -0.56400001049041748
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_substrate" : {
+               "@collapsed" : false,
+               "@name" : "Standard Substrate",
+               "@position" : [ 9122, 7158 ],
+               "strates" : [
+                  {
+                     "averageDepth" : 6,
+                     "blockType" : "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 3,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : null
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "threeD" : null,
+            "threeDMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDSurfaceMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDSurfaceMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDThresholdBias" : {
+               "enabled" : false,
+               "value" : -1
+            },
+            "threed_decorations" : null,
+            "threed_substrate" : null,
+            "x" : null,
+            "y" : null
+         },
+         "temperature" : 0.7850000262260437,
+         "vegetation" : 0.97500002384185791,
+         "weight" : 0.5
+      },
+      "links" : [
+         {
+            "blockConstraint" : 2264039328,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "biome"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "weight"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Biome Weight",
+            "shortPath" : "Oasis.weight",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "generator" : {
+      "@version" : 6,
+      "biomeSize" : 24,
+      "lowerSea" : {
+         "level" : 16,
+         "liquidType" : "WATER"
+      },
+      "sea" : {
+         "level" : 64,
+         "liquidType" : "WATER"
+      }
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "blockColors" : {
+         "ASH_DEFAULT_BASE" : 1,
+         "CRYSTAL_GLEAM_BASE" : 13,
+         "FLORA_FLOWER_1" : 1,
+         "FLORA_FLOWER_2" : 1,
+         "FLORA_FLOWER_3" : 1,
+         "FLORA_FLOWER_4" : 1,
+         "FLORA_PLANT_FIBROUS" : 1,
+         "FLORA_PLANT_INKY" : 1,
+         "GRASS_BARBED_BASE" : 8,
+         "GRASS_GNARLED_BASE" : 7,
+         "GRASS_VERDANT_BASE" : 9,
+         "GRAVEL_DEFAULT_BASE" : 16,
+         "GROWTH_DEFAULT_BASE" : 1,
+         "MOULD_DEFAULT_BASE" : 1,
+         "MUD_DEFAULT_BASE" : 1,
+         "ROCK_IGNEOUS_BASE" : 4,
+         "ROCK_METAMORPHIC_BASE" : 5,
+         "ROCK_SEDIMENTARY_BASE" : 6,
+         "SAND_DEFAULT_BASE" : 16,
+         "SOIL_CLAY_BASE" : 1,
+         "SOIL_PEATY_BASE" : 3,
+         "SOIL_SILTY_BASE" : 2,
+         "SPONGE_DEFAULT_BASE" : 1,
+         "TANGLE_DEFAULT_BASE" : 1,
+         "THORNS_DEFAULT_BASE" : 1,
+         "WOOD_ANCIENT_TRUNK" : 10,
+         "WOOD_EXOTIC_LEAVES" : 15,
+         "WOOD_LUSH_LEAVES" : 13,
+         "WOOD_LUSTROUS_TRUNK" : 1,
+         "WOOD_TWISTED_TRUNK" : 11,
+         "WOOD_WAXY_LEAVES" : 14
+      },
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference Biome",
+      "@position" : [ 8024, 10540 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "BIOME",
+         "@name" : "Oasis",
+         "@position" : [ 7471, 8050 ],
+         "@toggle-test" : false,
+         "@toggle-world" : true,
+         "@version" : 7,
+         "biome" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Oasis",
+               "@position" : [ 8024, 8353 ],
+               "altitude" : 0.34600001573562622,
+               "humidity" : 0.7850000262260437,
+               "part" : {
+                  "@collapsed" : false,
+                  "@name" : "Oasis",
+                  "@position" : [ 8573, 8123 ],
+                  "@selector-open" : false,
+                  "@toggle-caves" : false,
+                  "@toggle-ccaves" : true,
+                  "@toggle-csurface" : true,
+                  "@toggle-cthreed" : true,
+                  "@toggle-data" : true,
+                  "@toggle-drop" : false,
+                  "@toggle-heightmap" : true,
+                  "@toggle-selector" : false,
+                  "@toggle-stage" : true,
+                  "@toggle-threed" : false,
+                  "@toggle-visualise" : true,
+                  "@x-name" : "x",
+                  "@y-name" : "y",
+                  "caveSurfaceShrink" : {
+                     "enabled" : false,
+                     "value" : 0.0099999997764825821
+                  },
+                  "caveThresholdBias" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "caves" : null,
+                  "caves_decorations" : null,
+                  "caves_substrate" : null,
+                  "distortion" : null,
+                  "distortionStrength" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "drop" : null,
+                  "dropMaxDepth" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxGradient" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxNoGravel" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "heightmap" : {
+                     "@collapsed" : false,
+                     "@name" : "Sum 2D",
+                     "@position" : [ 9122, 6358 ],
+                     "frequency" : [ 1, 1 ],
+                     "terms" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Heightmap - Rolling Hills",
+                              "@position" : [ 9416, 6359 ],
+                              "frequency" : [ 1, 1 ],
+                              "links" : [
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 0,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "multiplier"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.60100001096725464
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 1,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "multiplier"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.36200001835823059
+                                 }
+                              ],
+                              "offset" : [ 263.5843505859375, 44.409786224365234 ],
+                              "offset-hash" : "O2sxOlDNLiwi8jWj",
+                              "reference" : "noise2d/HeightmapRollingHills.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "multiplier" : 0.026000000536441803,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9416, 6511 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -263.2791748046875, 397.56716918945313 ],
+                              "offset-hash" : "GNYMgVCQDbBoEZ6O",
+                              "type" : "constant",
+                              "value" : -0.52799999713897705
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        }
+                     ],
+                     "type" : "sum"
+                  },
+                  "heightmapMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "heightmapMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "parts" : [],
+                  "shrink" : null,
+                  "strata" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Strata",
+                     "@position" : [ 9122, 6641 ],
+                     "strata" : [
+                        {
+                           "averageDepth" : 11,
+                           "averageY" : 68,
+                           "blockType" : "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 3,
+                           "replaceTypes" : [ "GRASS_VERDANT_BASE/SOIL_SILTY_BASE" ],
+                           "yNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Distort 2D",
+                              "@position" : [ 9427, 6724 ],
+                              "base" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9716, 6688 ],
+                                 "frequency" : [ 0.13900001347064972, 0.13900001347064972 ],
+                                 "offset" : [ -115.55962371826172, -123.49730682373047 ],
+                                 "offset-hash" : "EQWVMq9yDNF3caAm",
+                                 "type" : "perlin"
+                              },
+                              "distortion" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Simplex 2D",
+                                 "@position" : [ 9716, 6794 ],
+                                 "frequency" : [ 0.16500000655651093, 0.16500000655651093 ],
+                                 "offset" : [ 371.20318603515625, 356.41342163085938 ],
+                                 "offset-hash" : "zVk3Q2UQZmCHrhVW",
+                                 "type" : "simplex"
+                              },
+                              "distortionScale" : [ 1, 1 ],
+                              "frequency" : [ 1, 1 ],
+                              "type" : "distort"
+                           },
+                           "yNoiseScale" : 8
+                        },
+                        {
+                           "averageDepth" : 12,
+                           "averageY" : 65,
+                           "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 3,
+                           "replaceTypes" : [ "GRASS_VERDANT_BASE/SOIL_SILTY_BASE" ],
+                           "yNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Distort 2D",
+                              "@position" : [ 9427, 6936 ],
+                              "base" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9716, 6900 ],
+                                 "frequency" : [ 0.13900001347064972, 0.13900001347064972 ],
+                                 "offset" : [ -115.55962371826172, -123.49730682373047 ],
+                                 "offset-hash" : "EQWVMq9yDNF3caAm",
+                                 "type" : "perlin"
+                              },
+                              "distortion" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Simplex 2D",
+                                 "@position" : [ 9716, 7006 ],
+                                 "frequency" : [ 0.16500000655651093, 0.16500000655651093 ],
+                                 "offset" : [ 371.20318603515625, 356.41342163085938 ],
+                                 "offset-hash" : "zVk3Q2UQZmCHrhVW",
+                                 "type" : "simplex"
+                              },
+                              "distortionScale" : [ 1, 1 ],
+                              "frequency" : [ 0.91100007295608521, 0.91100007295608521 ],
+                              "type" : "distort"
+                           },
+                           "yNoiseScale" : 8
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_decorations" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Decorations",
+                     "@position" : [ 9122, 7612 ],
+                     "@toggle-ceiling" : false,
+                     "@toggle-floor" : true,
+                     "ceiling" : [],
+                     "floor" : [
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE"
+                           ],
+                           "density" : -0.93999999761581421,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Basic Tree (deprecated)",
+                              "@position" : [ 9523, 8149 ],
+                              "bias" : 1,
+                              "blockType" : "WOOD_LUSH_LEAVES",
+                              "height" : 16,
+                              "radius" : 13,
+                              "stemType" : "WOOD_ANCIENT_TRUNK",
+                              "taper" : 1,
+                              "trunkHeight" : 15,
+                              "type" : "basicTree"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 2,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.5,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 8358 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE"
+                           ],
+                           "density" : -0.89999997615814209,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Basic Tree (deprecated)",
+                              "@position" : [ 9523, 8487 ],
+                              "bias" : 1,
+                              "blockType" : "WOOD_EXOTIC_LEAVES",
+                              "height" : 10.5,
+                              "radius" : 9.75,
+                              "stemType" : "WOOD_LUSTROUS_TRUNK",
+                              "taper" : 1,
+                              "trunkHeight" : 11.25,
+                              "type" : "basicTree"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 2,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.5,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 8696 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                           ],
+                           "density" : -0.81000000238418579,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Basic Tree (deprecated)",
+                              "@position" : [ 9523, 8825 ],
+                              "bias" : 1,
+                              "blockType" : "WOOD_EXOTIC_LEAVES",
+                              "height" : 14.25,
+                              "radius" : 5.5,
+                              "stemType" : "WOOD_LUSTROUS_TRUNK",
+                              "taper" : 1,
+                              "trunkHeight" : 12.75,
+                              "type" : "basicTree"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 2,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.51999998092651367,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 9034 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                           ],
+                           "density" : -0.87000000476837158,
+                           "depth" : 8,
+                           "instance" : null,
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 1,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 9163 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                           ],
+                           "density" : -0.77999997138977051,
+                           "depth" : 8,
+                           "instance" : null,
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 1,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 9292 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_2",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE"
+                           ],
+                           "density" : -0.66999995708465576,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9523, 9421 ],
+                              "blockType" : "WOOD_WAXY_LEAVES",
+                              "height" : 6,
+                              "radius" : 3,
+                              "stemType" : "WOOD_WAXY_LEAVES",
+                              "taper" : 1,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 2,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.5,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 9584 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_GNARLED_BASE/SOIL_PEATY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE"
+                           ],
+                           "density" : -0.64999997615814209,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9523, 9713 ],
+                              "blockType" : "WOOD_WAXY_LEAVES",
+                              "height" : 2.5,
+                              "radius" : 4,
+                              "stemType" : "WOOD_WAXY_LEAVES",
+                              "taper" : 1,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 1,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9523, 9876 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -129.86648559570313, -77.241157531738281 ],
+                              "offset-hash" : "Avsg3YSYuqWtNk7m",
+                              "type" : "constant",
+                              "value" : -0.56400001049041748
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_substrate" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Substrate",
+                     "@position" : [ 9122, 7158 ],
+                     "strates" : [
+                        {
+                           "averageDepth" : 6,
+                           "blockType" : "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 3,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : null
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "threeD" : null,
+                  "threeDMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDSurfaceMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDSurfaceMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDThresholdBias" : {
+                     "enabled" : false,
+                     "value" : -1
+                  },
+                  "threed_decorations" : null,
+                  "threed_substrate" : null,
+                  "x" : null,
+                  "y" : null
+               },
+               "temperature" : 0.7850000262260437,
+               "vegetation" : 0.97500002384185791,
+               "weight" : 0.5
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 2264039328,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "biome"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "weight"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Biome Weight",
+                  "shortPath" : "Oasis.weight",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "generator" : {
+            "@version" : 6,
+            "biomeSize" : 24,
+            "lowerSea" : {
+               "level" : 16,
+               "liquidType" : "WATER"
+            },
+            "sea" : {
+               "level" : 64,
+               "liquidType" : "WATER"
+            }
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "blockColors" : {
+               "ASH_DEFAULT_BASE" : 1,
+               "CRYSTAL_GLEAM_BASE" : 13,
+               "FLORA_FLOWER_1" : 1,
+               "FLORA_FLOWER_2" : 1,
+               "FLORA_FLOWER_3" : 1,
+               "FLORA_FLOWER_4" : 1,
+               "FLORA_PLANT_FIBROUS" : 1,
+               "FLORA_PLANT_INKY" : 1,
+               "GRASS_BARBED_BASE" : 8,
+               "GRASS_GNARLED_BASE" : 7,
+               "GRASS_VERDANT_BASE" : 9,
+               "GRAVEL_DEFAULT_BASE" : 16,
+               "GROWTH_DEFAULT_BASE" : 1,
+               "MOULD_DEFAULT_BASE" : 1,
+               "MUD_DEFAULT_BASE" : 1,
+               "ROCK_IGNEOUS_BASE" : 4,
+               "ROCK_METAMORPHIC_BASE" : 5,
+               "ROCK_SEDIMENTARY_BASE" : 6,
+               "SAND_DEFAULT_BASE" : 16,
+               "SOIL_CLAY_BASE" : 1,
+               "SOIL_PEATY_BASE" : 3,
+               "SOIL_SILTY_BASE" : 2,
+               "SPONGE_DEFAULT_BASE" : 1,
+               "TANGLE_DEFAULT_BASE" : 1,
+               "THORNS_DEFAULT_BASE" : 1,
+               "WOOD_ANCIENT_TRUNK" : 10,
+               "WOOD_EXOTIC_LEAVES" : 15,
+               "WOOD_LUSH_LEAVES" : 13,
+               "WOOD_LUSTROUS_TRUNK" : 1,
+               "WOOD_TWISTED_TRUNK" : 11,
+               "WOOD_WAXY_LEAVES" : 14
+            },
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference Biome",
+            "@position" : [ 8024, 10540 ],
+            "type" : "reference"
+         }
+      },
+      "links" : [],
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
