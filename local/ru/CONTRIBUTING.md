@@ -1,4 +1,6 @@
-﻿# Сотрудничество по Миропостроителю Boundless
+﻿[![EN](./local/uk.png)](./CONTRIBUTING.md) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png)
+
+# Сотрудничество по Миропостроителю Boundless
 
 Спасибо, что выделили время, чтобы помочь нам с Миропостроителем!
 
