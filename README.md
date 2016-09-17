@@ -1,3 +1,5 @@
+[![RU](./local/ru/ru.png)](./local/ru/README.md) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png)
+
 # boundless.worlds
 
 Official repository for the community development of reusable Boundless World Builder nodes.

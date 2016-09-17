@@ -1,3 +1,5 @@
+[![RU](./local/ru/ru.png)](./local/ru/CONTRIBUTING.md) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png) ![n/a](./local/plhd.png)
+
 # Contributing to the Boundless World Builder
 
 Thanks for taking the time to help out with the Boundless World Builder!
