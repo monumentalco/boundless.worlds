@@ -1,0 +1,2449 @@
+{
+   "@collapsed" : false,
+   "@configType" : "BIOME",
+   "@name" : "Hanoi",
+   "@position" : [ 7601, 8175 ],
+   "@scroll" : [ 9189.095703125, 8847.3427734375, 1 ],
+   "@toggle-test" : false,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 11,
+   "biome" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Hanoi",
+         "@position" : [ 8190, 8478 ],
+         "altitude" : {
+            "enabled" : true,
+            "value" : 0.73200005292892456
+         },
+         "humidity" : {
+            "enabled" : true,
+            "value" : 0.54400002956390381
+         },
+         "nameStyle" : "Astragalus",
+         "part" : {
+            "@collapsed" : false,
+            "@name" : "Hanoi",
+            "@position" : [ 8776, 8155 ],
+            "@selector-open" : false,
+            "@toggle-caves" : true,
+            "@toggle-ccaves" : true,
+            "@toggle-csurface" : true,
+            "@toggle-cthreed" : true,
+            "@toggle-data" : true,
+            "@toggle-drop" : false,
+            "@toggle-heightmap" : true,
+            "@toggle-selector" : false,
+            "@toggle-stage" : true,
+            "@toggle-threed" : true,
+            "@toggle-visualise" : true,
+            "@x-name" : "x",
+            "@y-name" : "y",
+            "caveSurfaceShrink" : {
+               "enabled" : true,
+               "value" : 1
+            },
+            "caveThresholdBias" : {
+               "enabled" : true,
+               "value" : 0
+            },
+            "caves" : {
+               "@collapsed" : false,
+               "@name" : "Layered 3D",
+               "@position" : [ 9362, 7727 ],
+               "components" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "SimpleCaves",
+                        "@position" : [ 9656, 7717 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "links" : [],
+                        "offset" : [ 1065.5745849609375, 97.978446960449219, -264.0462646484375 ],
+                        "offset-hash" : "ufvwwCN2MckgzvYK",
+                        "reference" : "noise3d/SimpleCaves.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "y" : 34.413002014160156
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 3D",
+                        "@position" : [ 9656, 7846 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "offset" : [ -87.837066650390625, -10.911374092102051, -305.50784301757813 ],
+                        "offset-hash" : "DzDeBY15C7XUW7px",
+                        "type" : "constant",
+                        "value" : 0
+                     },
+                     "y" : 65.944999694824219
+                  }
+               ],
+               "frequency" : [ 1, 1, 1 ],
+               "type" : "layered"
+            },
+            "caves_decorations" : null,
+            "caves_substrate" : null,
+            "distortion" : null,
+            "distortionStrength" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "drop" : null,
+            "dropMaxDepth" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxGradient" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxNoGravel" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "heightmap" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 9362, 6256 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Heightmap - Angled Hills",
+                        "@position" : [ 9670, 6198 ],
+                        "frequency" : [ 1, 1 ],
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "power"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.5
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "overflowPower"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 2
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "frequency"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "@xz"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.065000005066394806
+                           }
+                        ],
+                        "offset" : [ 316.72235107421875, -263.42617797851563 ],
+                        "offset-hash" : "7L9DBPc4LnYJVkBf",
+                        "reference" : "noise2d/HeightmapAngledHills.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "multiplier" : 0.064000003039836884,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9670, 6373 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ -323.19219970703125, 40.486644744873047 ],
+                        "offset-hash" : "ZUHW95LUy7kouF7j",
+                        "type" : "constant",
+                        "value" : -0.52400004863739014
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Ditches",
+                        "@position" : [ 9670, 6502 ],
+                        "frequency" : [ 1, 1 ],
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "min"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : -0.57200002670288086
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "base"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "cellScale"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 7.5399999618530273
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "distortion"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "frequency"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "@xz"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.70100003480911255
+                           }
+                        ],
+                        "offset" : [ -337.42581176757813, 359.89962768554688 ],
+                        "offset-hash" : "eupD4EXsFwfqtQWo",
+                        "reference" : "noise2d/Ditches.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "heightmapMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "heightmapMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "parts" : [],
+            "shrink" : null,
+            "strata" : {
+               "@collapsed" : false,
+               "@name" : "Join Strata",
+               "@position" : [ 9362, 8064 ],
+               "components" : [
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill1",
+                     "@position" : [ 9658, 7998 ],
+                     "links" : [],
+                     "reference" : "strata/Fill1.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill2",
+                     "@position" : [ 9658, 8058 ],
+                     "links" : [],
+                     "reference" : "strata/Fill2.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill3",
+                     "@position" : [ 9658, 8118 ],
+                     "links" : [],
+                     "reference" : "strata/Fill3.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill4",
+                     "@position" : [ 9658, 8178 ],
+                     "links" : [],
+                     "reference" : "strata/Fill4.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill5",
+                     "@position" : [ 9658, 8238 ],
+                     "links" : [],
+                     "reference" : "strata/Fill5.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  }
+               ],
+               "type" : "join"
+            },
+            "surface_decorations" : {
+               "@collapsed" : false,
+               "@name" : "Standard Decorations",
+               "@position" : [ 9362, 9123 ],
+               "@toggle-ceiling" : false,
+               "@toggle-floor" : true,
+               "ceiling" : [],
+               "floor" : [
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_GNARLED_BASE/SOIL_CLAY_BASE"
+                     ],
+                     "density" : -0.76999998092651367,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "SmallTwistedWaxySelectionMang",
+                        "@position" : [ 9662, 9202 ],
+                        "links" : [],
+                        "reference" : "instances/Trees/SmallTwistedWaxySelectionMang.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 0.5,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.5,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 2D",
+                        "@position" : [ 9662, 9318 ],
+                        "clamp" : true,
+                        "clampPower" : 10,
+                        "frequency" : [ 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 9958, 9318 ],
+                           "clamp" : true,
+                           "clampPower" : 10,
+                           "frequency" : [ 1, 1 ],
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Sum 2D",
+                              "@position" : [ 10254, 9273 ],
+                              "frequency" : [ 1, 1 ],
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Ditches",
+                                       "@position" : [ 10550, 9263 ],
+                                       "frequency" : [ 0.77500003576278687, 0.77500003576278687 ],
+                                       "links" : [
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "min"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : -2
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "base"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "cellScale"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 8
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "distortion"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "frequency"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "@xz"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 0.12600000202655792
+                                          }
+                                       ],
+                                       "offset" : [ -103.05943298339844, 61.666439056396484 ],
+                                       "offset-hash" : "Kd4RC7kMUiKmP39d",
+                                       "reference" : "noise2d/Ditches.json",
+                                       "tick" : 0,
+                                       "type" : "reference"
+                                    },
+                                    "multiplier" : -1,
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 10550, 9438 ],
+                                       "frequency" : [ 1, 1 ],
+                                       "offset" : [ -170.65080261230469, 156.39212036132813 ],
+                                       "offset-hash" : "IygjzaWrzolH6AcY",
+                                       "type" : "constant",
+                                       "value" : -0.049000002443790436
+                                    },
+                                    "multiplier" : 1,
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "sum"
+                           },
+                           "max" : 2,
+                           "min" : -2,
+                           "type" : "remap"
+                        },
+                        "max" : 2,
+                        "min" : -2,
+                        "type" : "remap"
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_substrate" : {
+               "@collapsed" : false,
+               "@name" : "Standard Substrate",
+               "@position" : [ 9362, 8298 ],
+               "strates" : [
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "GRASS_GNARLED_BASE/SOIL_CLAY_BASE",
+                     "depthNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9659, 8552 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 250.57145690917969, 384.15322875976563 ],
+                        "offset-hash" : "w7ksdvePBsfByD0t",
+                        "type" : "perlin"
+                     },
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9659, 8658 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ 325.69467163085938, 299.9730224609375 ],
+                           "offset-hash" : "YlCxvPgWUOQzBiU0",
+                           "type" : "perlin"
+                        }
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  },
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9659, 8764 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ -364.47698974609375, -269.43820190429688 ],
+                           "offset-hash" : "eAsx3ckETiWbpN7U",
+                           "type" : "perlin"
+                        }
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "threeD" : {
+               "@collapsed" : false,
+               "@name" : "Sum 3D",
+               "@position" : [ 9362, 6924 ],
+               "frequency" : [ 1, 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Wave 3D",
+                        "@position" : [ 9709, 6677 ],
+                        "directions" : "xyz",
+                        "frequency" : [ 0.10300000756978989, 1.3420000076293945, 0.10300000756978989 ],
+                        "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                        "offset-hash" : "sgYiJzcLQovT1Zz3",
+                        "type" : "wave",
+                        "waveType" : "sine"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 3D",
+                        "@position" : [ 9709, 6840 ],
+                        "clamp" : false,
+                        "clampPower" : 5,
+                        "frequency" : [ 1, 1.0580000877380371, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Wave 3D",
+                           "@position" : [ 9995, 6855 ],
+                           "directions" : "xz",
+                           "frequency" : [ 0.24500000476837158, 0.23200000822544098, 0.24500000476837158 ],
+                           "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                           "offset-hash" : "sgYiJzcLQovT1Zz3",
+                           "type" : "wave",
+                           "waveType" : "sine"
+                        },
+                        "max" : 0.50300002098083496,
+                        "min" : 0.99400001764297485,
+                        "type" : "remap"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 3D",
+                        "@position" : [ 9709, 7032 ],
+                        "clamp" : false,
+                        "clampPower" : 5,
+                        "frequency" : [ 0.42600002884864807, 0.1940000057220459, 0.42600002884864807 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Wave 3D",
+                           "@position" : [ 9995, 7047 ],
+                           "directions" : "xz",
+                           "frequency" : [ 0.24500000476837158, 0.23200000822544098, 0.24500000476837158 ],
+                           "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                           "offset-hash" : "sgYiJzcLQovT1Zz3",
+                           "type" : "wave",
+                           "waveType" : "sine"
+                        },
+                        "max" : -0.1940000057220459,
+                        "min" : 0.99400001764297485,
+                        "type" : "remap"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Worley 3D",
+                        "@position" : [ 9709, 7224 ],
+                        "cellCount" : 8,
+                        "cellScale" : 1,
+                        "components" : [
+                           {
+                              "k" : 0,
+                              "multiplier" : 1,
+                              "power" : 2
+                           }
+                        ],
+                        "frequency" : [ 0.23200000822544098, 0.37400001287460327, 0.23200000822544098 ],
+                        "offset" : [ 1029.1728515625, -267.11074829101563, -150.28909301757813 ],
+                        "offset-hash" : "eLpcCBrsBDQPCIzn",
+                        "type" : "worley"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 3D",
+                        "@position" : [ 9709, 7525 ],
+                        "clamp" : false,
+                        "clampPower" : 5,
+                        "frequency" : [ 0.96800005435943604, 1, 0.96800005435943604 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Wave 3D",
+                           "@position" : [ 9995, 7540 ],
+                           "directions" : "y",
+                           "frequency" : [ 0.29700002074241638, 0.026000000536441803, 0.29700002074241638 ],
+                           "offset" : [ 260.23971557617188, -72.122421264648438, -85.431404113769531 ],
+                           "offset-hash" : "N9zRUCJ2FYjzia6R",
+                           "type" : "wave",
+                           "waveType" : "sine"
+                        },
+                        "max" : -1.7420001029968262,
+                        "min" : 0.50300002098083496,
+                        "type" : "remap"
+                     },
+                     "multiplier" : 2,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "threeDMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDMinY" : {
+               "enabled" : true,
+               "value" : -64
+            },
+            "threeDSurfaceMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDSurfaceMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDThresholdBias" : {
+               "enabled" : true,
+               "value" : -0.099999994039535522
+            },
+            "threed_decorations" : {
+               "@collapsed" : false,
+               "@name" : "Standard Decorations",
+               "@position" : [ 9362, 10470 ],
+               "@toggle-ceiling" : false,
+               "@toggle-floor" : true,
+               "ceiling" : [],
+               "floor" : [
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [
+                        "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                        "GRASS_GNARLED_BASE/SOIL_CLAY_BASE"
+                     ],
+                     "density" : -0.87999999523162842,
+                     "depth" : 8,
+                     "instance" : null,
+                     "maxGradient" : 5,
+                     "maxSize" : 0.5,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0.5,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 2D",
+                        "@position" : [ 9658, 10624 ],
+                        "clamp" : true,
+                        "clampPower" : 10,
+                        "frequency" : [ 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 9954, 10624 ],
+                           "clamp" : true,
+                           "clampPower" : 10,
+                           "frequency" : [ 1, 1 ],
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Sum 2D",
+                              "@position" : [ 10250, 10579 ],
+                              "frequency" : [ 1, 1 ],
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Ditches",
+                                       "@position" : [ 10546, 10569 ],
+                                       "frequency" : [ 0.77500003576278687, 0.77500003576278687 ],
+                                       "links" : [
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "min"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : -2
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "base"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "cellScale"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 8
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "distortion"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "frequency"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "@xz"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 0.12600000202655792
+                                          }
+                                       ],
+                                       "offset" : [ -103.05943298339844, 61.666439056396484 ],
+                                       "offset-hash" : "Kd4RC7kMUiKmP39d",
+                                       "reference" : "noise2d/Ditches.json",
+                                       "tick" : 0,
+                                       "type" : "reference"
+                                    },
+                                    "multiplier" : -1,
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 10546, 10744 ],
+                                       "frequency" : [ 1, 1 ],
+                                       "offset" : [ -170.65080261230469, 156.39212036132813 ],
+                                       "offset-hash" : "IygjzaWrzolH6AcY",
+                                       "type" : "constant",
+                                       "value" : -0.049000002443790436
+                                    },
+                                    "multiplier" : 1,
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "sum"
+                           },
+                           "max" : 2,
+                           "min" : -2,
+                           "type" : "remap"
+                        },
+                        "max" : 2,
+                        "min" : -2,
+                        "type" : "remap"
+                     },
+                     "placementType" : "FLORA_FLOWER_3",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "threed_substrate" : {
+               "@collapsed" : false,
+               "@name" : "Standard Substrate",
+               "@position" : [ 9362, 9645 ],
+               "strates" : [
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "GRASS_GNARLED_BASE/SOIL_CLAY_BASE",
+                     "depthNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9659, 9899 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 250.57145690917969, 384.15322875976563 ],
+                        "offset-hash" : "w7ksdvePBsfByD0t",
+                        "type" : "perlin"
+                     },
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9659, 10005 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ 325.69467163085938, 299.9730224609375 ],
+                           "offset-hash" : "YlCxvPgWUOQzBiU0",
+                           "type" : "perlin"
+                        }
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  },
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9659, 10111 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ -364.47698974609375, -269.43820190429688 ],
+                           "offset-hash" : "eAsx3ckETiWbpN7U",
+                           "type" : "perlin"
+                        }
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "x" : null,
+            "y" : null
+         },
+         "temperature" : {
+            "enabled" : true,
+            "value" : 0.59400004148483276
+         },
+         "vegetation" : {
+            "enabled" : true,
+            "value" : 0.57900005578994751
+         },
+         "weight" : 0.5
+      },
+      "links" : [
+         {
+            "blockConstraint" : 1121478768,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "biome"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "weight"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Biome Weight",
+            "shortPath" : "Hanoi.weight",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "generator" : {
+      "@version" : 6,
+      "biomeSize" : 24,
+      "lowerSea" : {
+         "level" : 16,
+         "liquidType" : "WATER"
+      },
+      "sea" : {
+         "level" : 64,
+         "liquidType" : "WATER"
+      }
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "blockColors" : {
+         "ASH_DEFAULT_BASE" : 1,
+         "CRYSTAL_GLEAM_BASE" : 13,
+         "FLORA_FLOWER_1" : 1,
+         "FLORA_FLOWER_2" : 1,
+         "FLORA_FLOWER_3" : 1,
+         "FLORA_FLOWER_4" : 1,
+         "FLORA_PLANT_FIBROUS" : 1,
+         "FLORA_PLANT_INKY" : 1,
+         "GRASS_BARBED_BASE" : 8,
+         "GRASS_GNARLED_BASE" : 7,
+         "GRASS_VERDANT_BASE" : 9,
+         "GRAVEL_DEFAULT_BASE" : 16,
+         "GROWTH_DEFAULT_BASE" : 1,
+         "MOULD_DEFAULT_BASE" : 1,
+         "MUD_DEFAULT_BASE" : 1,
+         "ROCK_IGNEOUS_BASE" : 4,
+         "ROCK_METAMORPHIC_BASE" : 5,
+         "ROCK_SEDIMENTARY_BASE" : 6,
+         "SAND_DEFAULT_BASE" : 16,
+         "SOIL_CLAY_BASE" : 1,
+         "SOIL_PEATY_BASE" : 3,
+         "SOIL_SILTY_BASE" : 2,
+         "SPONGE_DEFAULT_BASE" : 1,
+         "TANGLE_DEFAULT_BASE" : 1,
+         "THORNS_DEFAULT_BASE" : 1,
+         "WOOD_ANCIENT_TRUNK" : 10,
+         "WOOD_EXOTIC_LEAVES" : 15,
+         "WOOD_LUSH_LEAVES" : 13,
+         "WOOD_LUSTROUS_TRUNK" : 1,
+         "WOOD_TWISTED_TRUNK" : 11,
+         "WOOD_WAXY_LEAVES" : 14
+      },
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference Biome",
+      "@position" : [ 8190, 10968 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "BIOME",
+         "@name" : "Hanoi",
+         "@position" : [ 7601, 8175 ],
+         "@toggle-test" : false,
+         "@toggle-world" : true,
+         "@version" : 11,
+         "biome" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Hanoi",
+               "@position" : [ 8190, 8478 ],
+               "altitude" : {
+                  "enabled" : true,
+                  "value" : 0.73200005292892456
+               },
+               "humidity" : {
+                  "enabled" : true,
+                  "value" : 0.54400002956390381
+               },
+               "nameStyle" : "Astragalus",
+               "part" : {
+                  "@collapsed" : false,
+                  "@name" : "Hanoi",
+                  "@position" : [ 8776, 8155 ],
+                  "@selector-open" : false,
+                  "@toggle-caves" : true,
+                  "@toggle-ccaves" : true,
+                  "@toggle-csurface" : true,
+                  "@toggle-cthreed" : true,
+                  "@toggle-data" : true,
+                  "@toggle-drop" : false,
+                  "@toggle-heightmap" : true,
+                  "@toggle-selector" : false,
+                  "@toggle-stage" : true,
+                  "@toggle-threed" : true,
+                  "@toggle-visualise" : true,
+                  "@x-name" : "x",
+                  "@y-name" : "y",
+                  "caveSurfaceShrink" : {
+                     "enabled" : true,
+                     "value" : 1
+                  },
+                  "caveThresholdBias" : {
+                     "enabled" : true,
+                     "value" : 0
+                  },
+                  "caves" : {
+                     "@collapsed" : false,
+                     "@name" : "Layered 3D",
+                     "@position" : [ 9362, 7727 ],
+                     "components" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "SimpleCaves",
+                              "@position" : [ 9656, 7717 ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "links" : [],
+                              "offset" : [ 1065.5745849609375, 97.978446960449219, -264.0462646484375 ],
+                              "offset-hash" : "ufvwwCN2MckgzvYK",
+                              "reference" : "noise3d/SimpleCaves.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "y" : 34.413002014160156
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 3D",
+                              "@position" : [ 9656, 7846 ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "offset" : [ -87.837066650390625, -10.911374092102051, -305.50784301757813 ],
+                              "offset-hash" : "DzDeBY15C7XUW7px",
+                              "type" : "constant",
+                              "value" : 0
+                           },
+                           "y" : 65.944999694824219
+                        }
+                     ],
+                     "frequency" : [ 1, 1, 1 ],
+                     "type" : "layered"
+                  },
+                  "caves_decorations" : null,
+                  "caves_substrate" : null,
+                  "distortion" : null,
+                  "distortionStrength" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "drop" : null,
+                  "dropMaxDepth" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxGradient" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxNoGravel" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "heightmap" : {
+                     "@collapsed" : false,
+                     "@name" : "Sum 2D",
+                     "@position" : [ 9362, 6256 ],
+                     "frequency" : [ 1, 1 ],
+                     "terms" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Heightmap - Angled Hills",
+                              "@position" : [ 9670, 6198 ],
+                              "frequency" : [ 1, 1 ],
+                              "links" : [
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "power"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.5
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "overflowPower"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 2
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "frequency"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "@xz"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.065000005066394806
+                                 }
+                              ],
+                              "offset" : [ 316.72235107421875, -263.42617797851563 ],
+                              "offset-hash" : "7L9DBPc4LnYJVkBf",
+                              "reference" : "noise2d/HeightmapAngledHills.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "multiplier" : 0.064000003039836884,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9670, 6373 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ -323.19219970703125, 40.486644744873047 ],
+                              "offset-hash" : "ZUHW95LUy7kouF7j",
+                              "type" : "constant",
+                              "value" : -0.52400004863739014
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Ditches",
+                              "@position" : [ 9670, 6502 ],
+                              "frequency" : [ 1, 1 ],
+                              "links" : [
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 0,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "min"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : -0.57200002670288086
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 0,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "base"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "cellScale"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 7.5399999618530273
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 0,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "distortion"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "frequency"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "@xz"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.70100003480911255
+                                 }
+                              ],
+                              "offset" : [ -337.42581176757813, 359.89962768554688 ],
+                              "offset-hash" : "eupD4EXsFwfqtQWo",
+                              "reference" : "noise2d/Ditches.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        }
+                     ],
+                     "type" : "sum"
+                  },
+                  "heightmapMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "heightmapMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "parts" : [],
+                  "shrink" : null,
+                  "strata" : {
+                     "@collapsed" : false,
+                     "@name" : "Join Strata",
+                     "@position" : [ 9362, 8064 ],
+                     "components" : [
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill1",
+                           "@position" : [ 9658, 7998 ],
+                           "links" : [],
+                           "reference" : "strata/Fill1.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill2",
+                           "@position" : [ 9658, 8058 ],
+                           "links" : [],
+                           "reference" : "strata/Fill2.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill3",
+                           "@position" : [ 9658, 8118 ],
+                           "links" : [],
+                           "reference" : "strata/Fill3.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill4",
+                           "@position" : [ 9658, 8178 ],
+                           "links" : [],
+                           "reference" : "strata/Fill4.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill5",
+                           "@position" : [ 9658, 8238 ],
+                           "links" : [],
+                           "reference" : "strata/Fill5.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        }
+                     ],
+                     "type" : "join"
+                  },
+                  "surface_decorations" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Decorations",
+                     "@position" : [ 9362, 9123 ],
+                     "@toggle-ceiling" : false,
+                     "@toggle-floor" : true,
+                     "ceiling" : [],
+                     "floor" : [
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_GNARLED_BASE/SOIL_CLAY_BASE"
+                           ],
+                           "density" : -0.76999998092651367,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "SmallTwistedWaxySelectionMang",
+                              "@position" : [ 9662, 9202 ],
+                              "links" : [],
+                              "reference" : "instances/Trees/SmallTwistedWaxySelectionMang.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 0.5,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.5,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 2D",
+                              "@position" : [ 9662, 9318 ],
+                              "clamp" : true,
+                              "clampPower" : 10,
+                              "frequency" : [ 1, 1 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Remap 2D",
+                                 "@position" : [ 9958, 9318 ],
+                                 "clamp" : true,
+                                 "clampPower" : 10,
+                                 "frequency" : [ 1, 1 ],
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Sum 2D",
+                                    "@position" : [ 10254, 9273 ],
+                                    "frequency" : [ 1, 1 ],
+                                    "terms" : [
+                                       {
+                                          "fun" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Ditches",
+                                             "@position" : [ 10550, 9263 ],
+                                             "frequency" : [ 0.77500003576278687, 0.77500003576278687 ],
+                                             "links" : [
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "min"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : -2
+                                                },
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "base"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "cellScale"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : 8
+                                                },
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "distortion"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "frequency"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "@xz"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : 0.12600000202655792
+                                                }
+                                             ],
+                                             "offset" : [ -103.05943298339844, 61.666439056396484 ],
+                                             "offset-hash" : "Kd4RC7kMUiKmP39d",
+                                             "reference" : "noise2d/Ditches.json",
+                                             "tick" : 0,
+                                             "type" : "reference"
+                                          },
+                                          "multiplier" : -1,
+                                          "power" : 1
+                                       },
+                                       {
+                                          "fun" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Constant 2D",
+                                             "@position" : [ 10550, 9438 ],
+                                             "frequency" : [ 1, 1 ],
+                                             "offset" : [ -170.65080261230469, 156.39212036132813 ],
+                                             "offset-hash" : "IygjzaWrzolH6AcY",
+                                             "type" : "constant",
+                                             "value" : -0.049000002443790436
+                                          },
+                                          "multiplier" : 1,
+                                          "power" : 1
+                                       }
+                                    ],
+                                    "type" : "sum"
+                                 },
+                                 "max" : 2,
+                                 "min" : -2,
+                                 "type" : "remap"
+                              },
+                              "max" : 2,
+                              "min" : -2,
+                              "type" : "remap"
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_substrate" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Substrate",
+                     "@position" : [ 9362, 8298 ],
+                     "strates" : [
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "GRASS_GNARLED_BASE/SOIL_CLAY_BASE",
+                           "depthNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9659, 8552 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 250.57145690917969, 384.15322875976563 ],
+                              "offset-hash" : "w7ksdvePBsfByD0t",
+                              "type" : "perlin"
+                           },
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9659, 8658 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ 325.69467163085938, 299.9730224609375 ],
+                                 "offset-hash" : "YlCxvPgWUOQzBiU0",
+                                 "type" : "perlin"
+                              }
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        },
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9659, 8764 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ -364.47698974609375, -269.43820190429688 ],
+                                 "offset-hash" : "eAsx3ckETiWbpN7U",
+                                 "type" : "perlin"
+                              }
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "threeD" : {
+                     "@collapsed" : false,
+                     "@name" : "Sum 3D",
+                     "@position" : [ 9362, 6924 ],
+                     "frequency" : [ 1, 1, 1 ],
+                     "terms" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Wave 3D",
+                              "@position" : [ 9709, 6677 ],
+                              "directions" : "xyz",
+                              "frequency" : [ 0.10300000756978989, 1.3420000076293945, 0.10300000756978989 ],
+                              "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                              "offset-hash" : "sgYiJzcLQovT1Zz3",
+                              "type" : "wave",
+                              "waveType" : "sine"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 3D",
+                              "@position" : [ 9709, 6840 ],
+                              "clamp" : false,
+                              "clampPower" : 5,
+                              "frequency" : [ 1, 1.0580000877380371, 1 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Wave 3D",
+                                 "@position" : [ 9995, 6855 ],
+                                 "directions" : "xz",
+                                 "frequency" : [ 0.24500000476837158, 0.23200000822544098, 0.24500000476837158 ],
+                                 "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                                 "offset-hash" : "sgYiJzcLQovT1Zz3",
+                                 "type" : "wave",
+                                 "waveType" : "sine"
+                              },
+                              "max" : 0.50300002098083496,
+                              "min" : 0.99400001764297485,
+                              "type" : "remap"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 3D",
+                              "@position" : [ 9709, 7032 ],
+                              "clamp" : false,
+                              "clampPower" : 5,
+                              "frequency" : [ 0.42600002884864807, 0.1940000057220459, 0.42600002884864807 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Wave 3D",
+                                 "@position" : [ 9995, 7047 ],
+                                 "directions" : "xz",
+                                 "frequency" : [ 0.24500000476837158, 0.23200000822544098, 0.24500000476837158 ],
+                                 "offset" : [ 242.80769348144531, 169.77909851074219, -364.50555419921875 ],
+                                 "offset-hash" : "sgYiJzcLQovT1Zz3",
+                                 "type" : "wave",
+                                 "waveType" : "sine"
+                              },
+                              "max" : -0.1940000057220459,
+                              "min" : 0.99400001764297485,
+                              "type" : "remap"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Worley 3D",
+                              "@position" : [ 9709, 7224 ],
+                              "cellCount" : 8,
+                              "cellScale" : 1,
+                              "components" : [
+                                 {
+                                    "k" : 0,
+                                    "multiplier" : 1,
+                                    "power" : 2
+                                 }
+                              ],
+                              "frequency" : [ 0.23200000822544098, 0.37400001287460327, 0.23200000822544098 ],
+                              "offset" : [ 1029.1728515625, -267.11074829101563, -150.28909301757813 ],
+                              "offset-hash" : "eLpcCBrsBDQPCIzn",
+                              "type" : "worley"
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 3D",
+                              "@position" : [ 9709, 7525 ],
+                              "clamp" : false,
+                              "clampPower" : 5,
+                              "frequency" : [ 0.96800005435943604, 1, 0.96800005435943604 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Wave 3D",
+                                 "@position" : [ 9995, 7540 ],
+                                 "directions" : "y",
+                                 "frequency" : [ 0.29700002074241638, 0.026000000536441803, 0.29700002074241638 ],
+                                 "offset" : [ 260.23971557617188, -72.122421264648438, -85.431404113769531 ],
+                                 "offset-hash" : "N9zRUCJ2FYjzia6R",
+                                 "type" : "wave",
+                                 "waveType" : "sine"
+                              },
+                              "max" : -1.7420001029968262,
+                              "min" : 0.50300002098083496,
+                              "type" : "remap"
+                           },
+                           "multiplier" : 2,
+                           "power" : 1
+                        }
+                     ],
+                     "type" : "sum"
+                  },
+                  "threeDMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDMinY" : {
+                     "enabled" : true,
+                     "value" : -64
+                  },
+                  "threeDSurfaceMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDSurfaceMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDThresholdBias" : {
+                     "enabled" : true,
+                     "value" : -0.099999994039535522
+                  },
+                  "threed_decorations" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Decorations",
+                     "@position" : [ 9362, 10470 ],
+                     "@toggle-ceiling" : false,
+                     "@toggle-floor" : true,
+                     "ceiling" : [],
+                     "floor" : [
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [
+                              "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                              "GRASS_GNARLED_BASE/SOIL_CLAY_BASE"
+                           ],
+                           "density" : -0.87999999523162842,
+                           "depth" : 8,
+                           "instance" : null,
+                           "maxGradient" : 5,
+                           "maxSize" : 0.5,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0.5,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 2D",
+                              "@position" : [ 9658, 10624 ],
+                              "clamp" : true,
+                              "clampPower" : 10,
+                              "frequency" : [ 1, 1 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Remap 2D",
+                                 "@position" : [ 9954, 10624 ],
+                                 "clamp" : true,
+                                 "clampPower" : 10,
+                                 "frequency" : [ 1, 1 ],
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Sum 2D",
+                                    "@position" : [ 10250, 10579 ],
+                                    "frequency" : [ 1, 1 ],
+                                    "terms" : [
+                                       {
+                                          "fun" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Ditches",
+                                             "@position" : [ 10546, 10569 ],
+                                             "frequency" : [ 0.77500003576278687, 0.77500003576278687 ],
+                                             "links" : [
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "min"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : -2
+                                                },
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "base"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "cellScale"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : 8
+                                                },
+                                                {
+                                                   "linkPath" : [
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "noise2d"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "terms"
+                                                      },
+                                                      {
+                                                         "index" : 0,
+                                                         "name" : ""
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "fun"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "distortion"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "frequency"
+                                                      },
+                                                      {
+                                                         "index" : -1,
+                                                         "name" : "@xz"
+                                                      }
+                                                   ],
+                                                   "linkType" : "LT:CUSTOM_SLIDER",
+                                                   "sliderValue" : 0.12600000202655792
+                                                }
+                                             ],
+                                             "offset" : [ -103.05943298339844, 61.666439056396484 ],
+                                             "offset-hash" : "Kd4RC7kMUiKmP39d",
+                                             "reference" : "noise2d/Ditches.json",
+                                             "tick" : 0,
+                                             "type" : "reference"
+                                          },
+                                          "multiplier" : -1,
+                                          "power" : 1
+                                       },
+                                       {
+                                          "fun" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Constant 2D",
+                                             "@position" : [ 10546, 10744 ],
+                                             "frequency" : [ 1, 1 ],
+                                             "offset" : [ -170.65080261230469, 156.39212036132813 ],
+                                             "offset-hash" : "IygjzaWrzolH6AcY",
+                                             "type" : "constant",
+                                             "value" : -0.049000002443790436
+                                          },
+                                          "multiplier" : 1,
+                                          "power" : 1
+                                       }
+                                    ],
+                                    "type" : "sum"
+                                 },
+                                 "max" : 2,
+                                 "min" : -2,
+                                 "type" : "remap"
+                              },
+                              "max" : 2,
+                              "min" : -2,
+                              "type" : "remap"
+                           },
+                           "placementType" : "FLORA_FLOWER_3",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "threed_substrate" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Substrate",
+                     "@position" : [ 9362, 9645 ],
+                     "strates" : [
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "GRASS_GNARLED_BASE/SOIL_CLAY_BASE",
+                           "depthNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9659, 9899 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 250.57145690917969, 384.15322875976563 ],
+                              "offset-hash" : "w7ksdvePBsfByD0t",
+                              "type" : "perlin"
+                           },
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9659, 10005 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ 325.69467163085938, 299.9730224609375 ],
+                                 "offset-hash" : "YlCxvPgWUOQzBiU0",
+                                 "type" : "perlin"
+                              }
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        },
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "GRASS_VERDANT_BASE/SOIL_CLAY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9659, 10111 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ -364.47698974609375, -269.43820190429688 ],
+                                 "offset-hash" : "eAsx3ckETiWbpN7U",
+                                 "type" : "perlin"
+                              }
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "x" : null,
+                  "y" : null
+               },
+               "temperature" : {
+                  "enabled" : true,
+                  "value" : 0.59400004148483276
+               },
+               "vegetation" : {
+                  "enabled" : true,
+                  "value" : 0.57900005578994751
+               },
+               "weight" : 0.5
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 1121478768,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "biome"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "weight"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Biome Weight",
+                  "shortPath" : "Hanoi.weight",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "generator" : {
+            "@version" : 6,
+            "biomeSize" : 24,
+            "lowerSea" : {
+               "level" : 16,
+               "liquidType" : "WATER"
+            },
+            "sea" : {
+               "level" : 64,
+               "liquidType" : "WATER"
+            }
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "blockColors" : {
+               "ASH_DEFAULT_BASE" : 1,
+               "CRYSTAL_GLEAM_BASE" : 13,
+               "FLORA_FLOWER_1" : 1,
+               "FLORA_FLOWER_2" : 1,
+               "FLORA_FLOWER_3" : 1,
+               "FLORA_FLOWER_4" : 1,
+               "FLORA_PLANT_FIBROUS" : 1,
+               "FLORA_PLANT_INKY" : 1,
+               "GRASS_BARBED_BASE" : 8,
+               "GRASS_GNARLED_BASE" : 7,
+               "GRASS_VERDANT_BASE" : 9,
+               "GRAVEL_DEFAULT_BASE" : 16,
+               "GROWTH_DEFAULT_BASE" : 1,
+               "MOULD_DEFAULT_BASE" : 1,
+               "MUD_DEFAULT_BASE" : 1,
+               "ROCK_IGNEOUS_BASE" : 4,
+               "ROCK_METAMORPHIC_BASE" : 5,
+               "ROCK_SEDIMENTARY_BASE" : 6,
+               "SAND_DEFAULT_BASE" : 16,
+               "SOIL_CLAY_BASE" : 1,
+               "SOIL_PEATY_BASE" : 3,
+               "SOIL_SILTY_BASE" : 2,
+               "SPONGE_DEFAULT_BASE" : 1,
+               "TANGLE_DEFAULT_BASE" : 1,
+               "THORNS_DEFAULT_BASE" : 1,
+               "WOOD_ANCIENT_TRUNK" : 10,
+               "WOOD_EXOTIC_LEAVES" : 15,
+               "WOOD_LUSH_LEAVES" : 13,
+               "WOOD_LUSTROUS_TRUNK" : 1,
+               "WOOD_TWISTED_TRUNK" : 11,
+               "WOOD_WAXY_LEAVES" : 14
+            },
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference Biome",
+            "@position" : [ 8190, 10968 ],
+            "type" : "reference"
+         }
+      },
+      "links" : [],
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

@@ -1,0 +1,1645 @@
+{
+   "@collapsed" : false,
+   "@configType" : "BIOME",
+   "@name" : "Wastland",
+   "@position" : [ 7487, 8099 ],
+   "@scroll" : [ 8650.357421875, 8267.0078125, 0.5 ],
+   "@toggle-test" : false,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 11,
+   "biome" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Wastland",
+         "@position" : [ 8008, 8410 ],
+         "altitude" : {
+            "enabled" : true,
+            "value" : 0.42400002479553223
+         },
+         "humidity" : {
+            "enabled" : true,
+            "value" : 0.2330000102519989
+         },
+         "nameStyle" : "{} Chaos",
+         "part" : {
+            "@collapsed" : false,
+            "@name" : "Wastland",
+            "@position" : [ 8526, 8155 ],
+            "@selector-open" : false,
+            "@toggle-caves" : true,
+            "@toggle-ccaves" : true,
+            "@toggle-csurface" : true,
+            "@toggle-cthreed" : true,
+            "@toggle-data" : true,
+            "@toggle-drop" : false,
+            "@toggle-heightmap" : true,
+            "@toggle-selector" : false,
+            "@toggle-stage" : true,
+            "@toggle-threed" : false,
+            "@toggle-visualise" : true,
+            "@x-name" : "x",
+            "@y-name" : "y",
+            "caveSurfaceShrink" : {
+               "enabled" : true,
+               "value" : 1
+            },
+            "caveThresholdBias" : {
+               "enabled" : true,
+               "value" : 0
+            },
+            "caves" : {
+               "@collapsed" : false,
+               "@name" : "Layered 3D",
+               "@position" : [ 9044, 6969 ],
+               "components" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "SimpleCaves",
+                        "@position" : [ 9338, 6959 ],
+                        "frequency" : [ 0.39400002360343933, 0.23900000751018524, 0.39400002360343933 ],
+                        "links" : [],
+                        "offset" : [ 247.10456848144531, 307.4775390625, -394.3359375 ],
+                        "offset-hash" : "kaO4d5QTHjhKol97",
+                        "reference" : "noise3d/SimpleCaves.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "y" : 99.629005432128906
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 3D",
+                        "@position" : [ 9338, 7088 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "offset" : [ 557.97393798828125, -144.98393249511719, -10.678771018981934 ],
+                        "offset-hash" : "WGjZqWBuaI3kvd09",
+                        "type" : "constant",
+                        "value" : 0
+                     },
+                     "y" : 111.49400329589844
+                  }
+               ],
+               "frequency" : [ 2, 2, 2 ],
+               "type" : "layered"
+            },
+            "caves_decorations" : null,
+            "caves_substrate" : null,
+            "distortion" : null,
+            "distortionStrength" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "drop" : null,
+            "dropMaxDepth" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxGradient" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "dropMaxNoGravel" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "heightmap" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 9044, 6675 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Heightmap - Rolling Hills",
+                        "@position" : [ 9338, 6676 ],
+                        "frequency" : [ 2, 2 ],
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "multiplier"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 1
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 1,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "multiplier"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 1
+                           }
+                        ],
+                        "offset" : [ 159.896240234375, 136.98684692382813 ],
+                        "offset-hash" : "kFsApV7F9f66GPus",
+                        "reference" : "noise2d/HeightmapRollingHills.json",
+                        "tick" : 0,
+                        "type" : "reference"
+                     },
+                     "multiplier" : 0.051000002771615982,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9338, 6828 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 356.90850830078125, -251.06202697753906 ],
+                        "offset-hash" : "4koqJNASyUcebrjd",
+                        "type" : "constant",
+                        "value" : -0.22200001776218414
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "heightmapMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "heightmapMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "parts" : [],
+            "shrink" : null,
+            "strata" : {
+               "@collapsed" : false,
+               "@name" : "Join Strata",
+               "@position" : [ 9044, 7305 ],
+               "components" : [
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill1",
+                     "@position" : [ 9340, 7239 ],
+                     "links" : [],
+                     "reference" : "strata/Fill1.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill2",
+                     "@position" : [ 9340, 7299 ],
+                     "links" : [],
+                     "reference" : "strata/Fill2.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill3",
+                     "@position" : [ 9340, 7359 ],
+                     "links" : [],
+                     "reference" : "strata/Fill3.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill4",
+                     "@position" : [ 9340, 7419 ],
+                     "links" : [],
+                     "reference" : "strata/Fill4.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Fill5",
+                     "@position" : [ 9340, 7479 ],
+                     "links" : [],
+                     "reference" : "strata/Fill5.json",
+                     "tick" : 0,
+                     "type" : "reference"
+                  }
+               ],
+               "type" : "join"
+            },
+            "surface_decorations" : {
+               "@collapsed" : false,
+               "@name" : "Standard Decorations",
+               "@position" : [ 9044, 8597 ],
+               "@toggle-ceiling" : false,
+               "@toggle-floor" : true,
+               "ceiling" : [],
+               "floor" : [
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                     "density" : -0.4699999988079071,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9465, 8190 ],
+                        "blockType" : "ROCK_SEDIMENTARY_BASE",
+                        "height" : 2,
+                        "maxScale" : 2,
+                        "minScale" : 0.5,
+                        "radius" : 2,
+                        "stemType" : "ROCK_SEDIMENTARY_BASE",
+                        "taper" : 1,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 109,
+                     "minGradient" : 0,
+                     "minSize" : 0,
+                     "minY" : 64,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Product 2D",
+                        "@position" : [ 9465, 8537 ],
+                        "frequency" : [ 1, 1 ],
+                        "terms" : [
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Remap 2D",
+                                 "@position" : [ 9776, 8495 ],
+                                 "clamp" : true,
+                                 "clampPower" : 10,
+                                 "frequency" : [ 1, 1 ],
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Distort 2D",
+                                    "@position" : [ 10078, 8521 ],
+                                    "base" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Worley 2D",
+                                       "@position" : [ 10380, 8399 ],
+                                       "cellCount" : 1,
+                                       "cellScale" : 3.7200000286102295,
+                                       "components" : [
+                                          {
+                                             "k" : 0,
+                                             "multiplier" : 1,
+                                             "power" : 2
+                                          }
+                                       ],
+                                       "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                       "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                       "offset-hash" : "KmeOMgya7Kphaxej",
+                                       "type" : "worley"
+                                    },
+                                    "distortion" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Simplex 2D",
+                                       "@position" : [ 10380, 8677 ],
+                                       "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                       "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                       "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                       "type" : "simplex"
+                                    },
+                                    "distortionScale" : [ 1, 1 ],
+                                    "frequency" : [ 1, 1 ],
+                                    "type" : "distort"
+                                 },
+                                 "max" : 2,
+                                 "min" : -2,
+                                 "type" : "remap"
+                              },
+                              "power" : 1
+                           },
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Constant 2D",
+                                 "@position" : [ 9776, 8783 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                 "offset-hash" : "3TozrHzABcnMUyON",
+                                 "type" : "constant",
+                                 "value" : -1
+                              },
+                              "power" : 1
+                           }
+                        ],
+                        "type" : "product"
+                     },
+                     "placementType" : "WOOD_LUSH_LEAVES",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                     "density" : 0.25,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9465, 8912 ],
+                        "blockType" : "ROCK_IGNEOUS_BASE",
+                        "height" : 2.25,
+                        "maxScale" : 2,
+                        "minScale" : 0.5,
+                        "radius" : 2.75,
+                        "stemType" : "ROCK_IGNEOUS_BASE",
+                        "taper" : 1,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Product 2D",
+                        "@position" : [ 9465, 9259 ],
+                        "frequency" : [ 1, 1 ],
+                        "terms" : [
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Remap 2D",
+                                 "@position" : [ 9776, 9217 ],
+                                 "clamp" : true,
+                                 "clampPower" : 10,
+                                 "frequency" : [ 1, 1 ],
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Distort 2D",
+                                    "@position" : [ 10078, 9243 ],
+                                    "base" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Worley 2D",
+                                       "@position" : [ 10380, 9121 ],
+                                       "cellCount" : 1,
+                                       "cellScale" : 3.7200000286102295,
+                                       "components" : [
+                                          {
+                                             "k" : 0,
+                                             "multiplier" : 1,
+                                             "power" : 2
+                                          }
+                                       ],
+                                       "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                       "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                       "offset-hash" : "KmeOMgya7Kphaxej",
+                                       "type" : "worley"
+                                    },
+                                    "distortion" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Simplex 2D",
+                                       "@position" : [ 10380, 9399 ],
+                                       "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                       "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                       "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                       "type" : "simplex"
+                                    },
+                                    "distortionScale" : [ 1, 1 ],
+                                    "frequency" : [ 1, 1 ],
+                                    "type" : "distort"
+                                 },
+                                 "max" : 2,
+                                 "min" : -2,
+                                 "type" : "remap"
+                              },
+                              "power" : 1
+                           },
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Constant 2D",
+                                 "@position" : [ 9776, 9505 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                 "offset-hash" : "3TozrHzABcnMUyON",
+                                 "type" : "constant",
+                                 "value" : -1
+                              },
+                              "power" : 1
+                           }
+                        ],
+                        "type" : "product"
+                     },
+                     "placementType" : "FLORA_PLANT_INKY",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  },
+                  {
+                     "clearance" : 8,
+                     "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                     "density" : 1,
+                     "depth" : 8,
+                     "instance" : {
+                        "@collapsed" : false,
+                        "@name" : "Bush (deprecated)",
+                        "@position" : [ 9465, 9634 ],
+                        "blockType" : "ROCK_METAMORPHIC_BASE",
+                        "height" : 2,
+                        "maxScale" : 2,
+                        "minScale" : 0.5,
+                        "radius" : 2.5,
+                        "stemType" : "ROCK_METAMORPHIC_BASE",
+                        "taper" : 1,
+                        "type" : "bush"
+                     },
+                     "maxGradient" : 5,
+                     "maxSize" : 1,
+                     "maxY" : 256,
+                     "minGradient" : 0,
+                     "minSize" : 0,
+                     "minY" : 0,
+                     "noise" : {
+                        "@collapsed" : false,
+                        "@name" : "Product 2D",
+                        "@position" : [ 9465, 9981 ],
+                        "frequency" : [ 1, 1 ],
+                        "terms" : [
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Remap 2D",
+                                 "@position" : [ 9776, 9939 ],
+                                 "clamp" : true,
+                                 "clampPower" : 10,
+                                 "frequency" : [ 1, 1 ],
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Distort 2D",
+                                    "@position" : [ 10078, 9965 ],
+                                    "base" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Worley 2D",
+                                       "@position" : [ 10380, 9843 ],
+                                       "cellCount" : 1,
+                                       "cellScale" : 3.7200000286102295,
+                                       "components" : [
+                                          {
+                                             "k" : 0,
+                                             "multiplier" : 1,
+                                             "power" : 2
+                                          }
+                                       ],
+                                       "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                       "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                       "offset-hash" : "KmeOMgya7Kphaxej",
+                                       "type" : "worley"
+                                    },
+                                    "distortion" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Simplex 2D",
+                                       "@position" : [ 10380, 10121 ],
+                                       "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                       "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                       "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                       "type" : "simplex"
+                                    },
+                                    "distortionScale" : [ 1, 1 ],
+                                    "frequency" : [ 1, 1 ],
+                                    "type" : "distort"
+                                 },
+                                 "max" : 2,
+                                 "min" : -2,
+                                 "type" : "remap"
+                              },
+                              "power" : 1
+                           },
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Constant 2D",
+                                 "@position" : [ 9776, 10227 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                 "offset-hash" : "3TozrHzABcnMUyON",
+                                 "type" : "constant",
+                                 "value" : -1
+                              },
+                              "power" : 1
+                           }
+                        ],
+                        "type" : "product"
+                     },
+                     "placementType" : "FLORA_FLOWER_1",
+                     "sizeNoise" : null,
+                     "smooth" : false,
+                     "threshold" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "surface_substrate" : {
+               "@collapsed" : false,
+               "@name" : "Standard Substrate",
+               "@position" : [ 9044, 7539 ],
+               "strates" : [
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "SAND_DEFAULT_BASE",
+                     "depthNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9333, 7758 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 235.61761474609375, 169.97077941894531 ],
+                        "offset-hash" : "kUoqWPxQGog0wXoe",
+                        "type" : "perlin"
+                     },
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : null
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  },
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "GRAVEL_DEFAULT_BASE",
+                     "depthNoise" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9333, 7864 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 275.85260009765625, 221.27522277832031 ],
+                        "offset-hash" : "AfGWrT0WBMz8dn0p",
+                        "type" : "perlin"
+                     },
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : null
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  },
+                  {
+                     "averageDepth" : 3,
+                     "blockType" : "ROCK_SEDIMENTARY_BASE",
+                     "depthNoise" : null,
+                     "depthNoiseScale" : 6,
+                     "maxGradient" : 5,
+                     "maxY" : 256,
+                     "metadata" : {
+                        "@toggle-metadata" : true,
+                        "maxGradient" : 5,
+                        "maxThreshold" : 1,
+                        "maxY" : 256,
+                        "minGradient" : 0,
+                        "minThreshold" : -1,
+                        "minY" : 0,
+                        "noise" : null
+                     },
+                     "minGradient" : 0,
+                     "minY" : 0
+                  }
+               ],
+               "type" : "standard"
+            },
+            "threeD" : null,
+            "threeDMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDSurfaceMaxY" : {
+               "enabled" : false,
+               "value" : 256
+            },
+            "threeDSurfaceMinY" : {
+               "enabled" : false,
+               "value" : 0
+            },
+            "threeDThresholdBias" : {
+               "enabled" : false,
+               "value" : -1
+            },
+            "threed_decorations" : null,
+            "threed_substrate" : null,
+            "x" : null,
+            "y" : null
+         },
+         "temperature" : {
+            "enabled" : true,
+            "value" : 0.70400005578994751
+         },
+         "vegetation" : {
+            "enabled" : true,
+            "value" : 0.13000001013278961
+         },
+         "weight" : 0.5
+      },
+      "links" : [
+         {
+            "blockConstraint" : 2197641248,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "biome"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "part"
+               },
+               {
+                  "index" : -1,
+                  "name" : "heightmap"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "multiplier"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Terrain Variation",
+            "shortPath" : "Sum 2D.multiplier",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0.30000001192092896,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 2264041696,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "biome"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "weight"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Biome Wight",
+            "shortPath" : "Wastland.weight",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "generator" : {
+      "@version" : 6,
+      "biomeSize" : 24,
+      "lowerSea" : {
+         "level" : 16,
+         "liquidType" : "LAVA"
+      },
+      "sea" : {
+         "level" : 64,
+         "liquidType" : "WATER"
+      }
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "blockColors" : {
+         "ASH_DEFAULT_BASE" : 1,
+         "CRYSTAL_GLEAM_BASE" : 13,
+         "FLORA_FLOWER_1" : 1,
+         "FLORA_FLOWER_2" : 1,
+         "FLORA_FLOWER_3" : 1,
+         "FLORA_FLOWER_4" : 1,
+         "FLORA_PLANT_FIBROUS" : 1,
+         "FLORA_PLANT_INKY" : 1,
+         "GRASS_BARBED_BASE" : 8,
+         "GRASS_GNARLED_BASE" : 7,
+         "GRASS_VERDANT_BASE" : 9,
+         "GRAVEL_DEFAULT_BASE" : 14,
+         "GROWTH_DEFAULT_BASE" : 1,
+         "MOULD_DEFAULT_BASE" : 1,
+         "MUD_DEFAULT_BASE" : 1,
+         "ROCK_IGNEOUS_BASE" : 4,
+         "ROCK_METAMORPHIC_BASE" : 5,
+         "ROCK_SEDIMENTARY_BASE" : 6,
+         "SAND_DEFAULT_BASE" : 16,
+         "SOIL_CLAY_BASE" : 1,
+         "SOIL_PEATY_BASE" : 3,
+         "SOIL_SILTY_BASE" : 2,
+         "SPONGE_DEFAULT_BASE" : 1,
+         "TANGLE_DEFAULT_BASE" : 1,
+         "THORNS_DEFAULT_BASE" : 1,
+         "WOOD_ANCIENT_TRUNK" : 10,
+         "WOOD_EXOTIC_LEAVES" : 15,
+         "WOOD_LUSH_LEAVES" : 13,
+         "WOOD_LUSTROUS_TRUNK" : 1,
+         "WOOD_TWISTED_TRUNK" : 11,
+         "WOOD_WAXY_LEAVES" : 14
+      },
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference Biome",
+      "@position" : [ 8008, 10355 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "BIOME",
+         "@name" : "Wastland",
+         "@position" : [ 7487, 8099 ],
+         "@toggle-test" : false,
+         "@toggle-world" : true,
+         "@version" : 11,
+         "biome" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Wastland",
+               "@position" : [ 8008, 8410 ],
+               "altitude" : {
+                  "enabled" : true,
+                  "value" : 0.42400002479553223
+               },
+               "humidity" : {
+                  "enabled" : true,
+                  "value" : 0.2330000102519989
+               },
+               "nameStyle" : "{} Chaos",
+               "part" : {
+                  "@collapsed" : false,
+                  "@name" : "Wastland",
+                  "@position" : [ 8526, 8155 ],
+                  "@selector-open" : false,
+                  "@toggle-caves" : true,
+                  "@toggle-ccaves" : true,
+                  "@toggle-csurface" : true,
+                  "@toggle-cthreed" : true,
+                  "@toggle-data" : true,
+                  "@toggle-drop" : false,
+                  "@toggle-heightmap" : true,
+                  "@toggle-selector" : false,
+                  "@toggle-stage" : true,
+                  "@toggle-threed" : false,
+                  "@toggle-visualise" : true,
+                  "@x-name" : "x",
+                  "@y-name" : "y",
+                  "caveSurfaceShrink" : {
+                     "enabled" : true,
+                     "value" : 1
+                  },
+                  "caveThresholdBias" : {
+                     "enabled" : true,
+                     "value" : 0
+                  },
+                  "caves" : {
+                     "@collapsed" : false,
+                     "@name" : "Layered 3D",
+                     "@position" : [ 9044, 6969 ],
+                     "components" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "SimpleCaves",
+                              "@position" : [ 9338, 6959 ],
+                              "frequency" : [ 0.39400002360343933, 0.23900000751018524, 0.39400002360343933 ],
+                              "links" : [],
+                              "offset" : [ 247.10456848144531, 307.4775390625, -394.3359375 ],
+                              "offset-hash" : "kaO4d5QTHjhKol97",
+                              "reference" : "noise3d/SimpleCaves.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "y" : 99.629005432128906
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 3D",
+                              "@position" : [ 9338, 7088 ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "offset" : [ 557.97393798828125, -144.98393249511719, -10.678771018981934 ],
+                              "offset-hash" : "WGjZqWBuaI3kvd09",
+                              "type" : "constant",
+                              "value" : 0
+                           },
+                           "y" : 111.49400329589844
+                        }
+                     ],
+                     "frequency" : [ 2, 2, 2 ],
+                     "type" : "layered"
+                  },
+                  "caves_decorations" : null,
+                  "caves_substrate" : null,
+                  "distortion" : null,
+                  "distortionStrength" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "drop" : null,
+                  "dropMaxDepth" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxGradient" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "dropMaxNoGravel" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "heightmap" : {
+                     "@collapsed" : false,
+                     "@name" : "Sum 2D",
+                     "@position" : [ 9044, 6675 ],
+                     "frequency" : [ 1, 1 ],
+                     "terms" : [
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Heightmap - Rolling Hills",
+                              "@position" : [ 9338, 6676 ],
+                              "frequency" : [ 2, 2 ],
+                              "links" : [
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 0,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "multiplier"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 1
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "terms"
+                                       },
+                                       {
+                                          "index" : 1,
+                                          "name" : ""
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "multiplier"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 1
+                                 }
+                              ],
+                              "offset" : [ 159.896240234375, 136.98684692382813 ],
+                              "offset-hash" : "kFsApV7F9f66GPus",
+                              "reference" : "noise2d/HeightmapRollingHills.json",
+                              "tick" : 0,
+                              "type" : "reference"
+                           },
+                           "multiplier" : 0.051000002771615982,
+                           "power" : 1
+                        },
+                        {
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9338, 6828 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 356.90850830078125, -251.06202697753906 ],
+                              "offset-hash" : "4koqJNASyUcebrjd",
+                              "type" : "constant",
+                              "value" : -0.22200001776218414
+                           },
+                           "multiplier" : 1,
+                           "power" : 1
+                        }
+                     ],
+                     "type" : "sum"
+                  },
+                  "heightmapMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "heightmapMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "parts" : [],
+                  "shrink" : null,
+                  "strata" : {
+                     "@collapsed" : false,
+                     "@name" : "Join Strata",
+                     "@position" : [ 9044, 7305 ],
+                     "components" : [
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill1",
+                           "@position" : [ 9340, 7239 ],
+                           "links" : [],
+                           "reference" : "strata/Fill1.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill2",
+                           "@position" : [ 9340, 7299 ],
+                           "links" : [],
+                           "reference" : "strata/Fill2.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill3",
+                           "@position" : [ 9340, 7359 ],
+                           "links" : [],
+                           "reference" : "strata/Fill3.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill4",
+                           "@position" : [ 9340, 7419 ],
+                           "links" : [],
+                           "reference" : "strata/Fill4.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Fill5",
+                           "@position" : [ 9340, 7479 ],
+                           "links" : [],
+                           "reference" : "strata/Fill5.json",
+                           "tick" : 0,
+                           "type" : "reference"
+                        }
+                     ],
+                     "type" : "join"
+                  },
+                  "surface_decorations" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Decorations",
+                     "@position" : [ 9044, 8597 ],
+                     "@toggle-ceiling" : false,
+                     "@toggle-floor" : true,
+                     "ceiling" : [],
+                     "floor" : [
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                           "density" : -0.4699999988079071,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9465, 8190 ],
+                              "blockType" : "ROCK_SEDIMENTARY_BASE",
+                              "height" : 2,
+                              "maxScale" : 2,
+                              "minScale" : 0.5,
+                              "radius" : 2,
+                              "stemType" : "ROCK_SEDIMENTARY_BASE",
+                              "taper" : 1,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 109,
+                           "minGradient" : 0,
+                           "minSize" : 0,
+                           "minY" : 64,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Product 2D",
+                              "@position" : [ 9465, 8537 ],
+                              "frequency" : [ 1, 1 ],
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Remap 2D",
+                                       "@position" : [ 9776, 8495 ],
+                                       "clamp" : true,
+                                       "clampPower" : 10,
+                                       "frequency" : [ 1, 1 ],
+                                       "fun" : {
+                                          "@collapsed" : false,
+                                          "@name" : "Distort 2D",
+                                          "@position" : [ 10078, 8521 ],
+                                          "base" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Worley 2D",
+                                             "@position" : [ 10380, 8399 ],
+                                             "cellCount" : 1,
+                                             "cellScale" : 3.7200000286102295,
+                                             "components" : [
+                                                {
+                                                   "k" : 0,
+                                                   "multiplier" : 1,
+                                                   "power" : 2
+                                                }
+                                             ],
+                                             "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                             "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                             "offset-hash" : "KmeOMgya7Kphaxej",
+                                             "type" : "worley"
+                                          },
+                                          "distortion" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Simplex 2D",
+                                             "@position" : [ 10380, 8677 ],
+                                             "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                             "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                             "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                             "type" : "simplex"
+                                          },
+                                          "distortionScale" : [ 1, 1 ],
+                                          "frequency" : [ 1, 1 ],
+                                          "type" : "distort"
+                                       },
+                                       "max" : 2,
+                                       "min" : -2,
+                                       "type" : "remap"
+                                    },
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 9776, 8783 ],
+                                       "frequency" : [ 1, 1 ],
+                                       "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                       "offset-hash" : "3TozrHzABcnMUyON",
+                                       "type" : "constant",
+                                       "value" : -1
+                                    },
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "product"
+                           },
+                           "placementType" : "WOOD_LUSH_LEAVES",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                           "density" : 0.25,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9465, 8912 ],
+                              "blockType" : "ROCK_IGNEOUS_BASE",
+                              "height" : 2.25,
+                              "maxScale" : 2,
+                              "minScale" : 0.5,
+                              "radius" : 2.75,
+                              "stemType" : "ROCK_IGNEOUS_BASE",
+                              "taper" : 1,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Product 2D",
+                              "@position" : [ 9465, 9259 ],
+                              "frequency" : [ 1, 1 ],
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Remap 2D",
+                                       "@position" : [ 9776, 9217 ],
+                                       "clamp" : true,
+                                       "clampPower" : 10,
+                                       "frequency" : [ 1, 1 ],
+                                       "fun" : {
+                                          "@collapsed" : false,
+                                          "@name" : "Distort 2D",
+                                          "@position" : [ 10078, 9243 ],
+                                          "base" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Worley 2D",
+                                             "@position" : [ 10380, 9121 ],
+                                             "cellCount" : 1,
+                                             "cellScale" : 3.7200000286102295,
+                                             "components" : [
+                                                {
+                                                   "k" : 0,
+                                                   "multiplier" : 1,
+                                                   "power" : 2
+                                                }
+                                             ],
+                                             "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                             "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                             "offset-hash" : "KmeOMgya7Kphaxej",
+                                             "type" : "worley"
+                                          },
+                                          "distortion" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Simplex 2D",
+                                             "@position" : [ 10380, 9399 ],
+                                             "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                             "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                             "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                             "type" : "simplex"
+                                          },
+                                          "distortionScale" : [ 1, 1 ],
+                                          "frequency" : [ 1, 1 ],
+                                          "type" : "distort"
+                                       },
+                                       "max" : 2,
+                                       "min" : -2,
+                                       "type" : "remap"
+                                    },
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 9776, 9505 ],
+                                       "frequency" : [ 1, 1 ],
+                                       "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                       "offset-hash" : "3TozrHzABcnMUyON",
+                                       "type" : "constant",
+                                       "value" : -1
+                                    },
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "product"
+                           },
+                           "placementType" : "FLORA_PLANT_INKY",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        },
+                        {
+                           "clearance" : 8,
+                           "constraintType" : [ "SAND_DEFAULT_BASE", "GRAVEL_DEFAULT_BASE", "ROCK_SEDIMENTARY_BASE" ],
+                           "density" : 1,
+                           "depth" : 8,
+                           "instance" : {
+                              "@collapsed" : false,
+                              "@name" : "Bush (deprecated)",
+                              "@position" : [ 9465, 9634 ],
+                              "blockType" : "ROCK_METAMORPHIC_BASE",
+                              "height" : 2,
+                              "maxScale" : 2,
+                              "minScale" : 0.5,
+                              "radius" : 2.5,
+                              "stemType" : "ROCK_METAMORPHIC_BASE",
+                              "taper" : 1,
+                              "type" : "bush"
+                           },
+                           "maxGradient" : 5,
+                           "maxSize" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minSize" : 0,
+                           "minY" : 0,
+                           "noise" : {
+                              "@collapsed" : false,
+                              "@name" : "Product 2D",
+                              "@position" : [ 9465, 9981 ],
+                              "frequency" : [ 1, 1 ],
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Remap 2D",
+                                       "@position" : [ 9776, 9939 ],
+                                       "clamp" : true,
+                                       "clampPower" : 10,
+                                       "frequency" : [ 1, 1 ],
+                                       "fun" : {
+                                          "@collapsed" : false,
+                                          "@name" : "Distort 2D",
+                                          "@position" : [ 10078, 9965 ],
+                                          "base" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Worley 2D",
+                                             "@position" : [ 10380, 9843 ],
+                                             "cellCount" : 1,
+                                             "cellScale" : 3.7200000286102295,
+                                             "components" : [
+                                                {
+                                                   "k" : 0,
+                                                   "multiplier" : 1,
+                                                   "power" : 2
+                                                }
+                                             ],
+                                             "frequency" : [ 0.67500001192092896, 0.67500001192092896 ],
+                                             "offset" : [ 362.58486938476563, 248.58174133300781 ],
+                                             "offset-hash" : "KmeOMgya7Kphaxej",
+                                             "type" : "worley"
+                                          },
+                                          "distortion" : {
+                                             "@collapsed" : false,
+                                             "@name" : "Simplex 2D",
+                                             "@position" : [ 10380, 10121 ],
+                                             "frequency" : [ 0.080000005662441254, 0.080000005662441254 ],
+                                             "offset" : [ 221.02998352050781, -185.65614318847656 ],
+                                             "offset-hash" : "EpD6PmSwXoIDnOQ3",
+                                             "type" : "simplex"
+                                          },
+                                          "distortionScale" : [ 1, 1 ],
+                                          "frequency" : [ 1, 1 ],
+                                          "type" : "distort"
+                                       },
+                                       "max" : 2,
+                                       "min" : -2,
+                                       "type" : "remap"
+                                    },
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 9776, 10227 ],
+                                       "frequency" : [ 1, 1 ],
+                                       "offset" : [ -6.8299384117126465, 129.84616088867188 ],
+                                       "offset-hash" : "3TozrHzABcnMUyON",
+                                       "type" : "constant",
+                                       "value" : -1
+                                    },
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "product"
+                           },
+                           "placementType" : "FLORA_FLOWER_1",
+                           "sizeNoise" : null,
+                           "smooth" : false,
+                           "threshold" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "surface_substrate" : {
+                     "@collapsed" : false,
+                     "@name" : "Standard Substrate",
+                     "@position" : [ 9044, 7539 ],
+                     "strates" : [
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "SAND_DEFAULT_BASE",
+                           "depthNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9333, 7758 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 235.61761474609375, 169.97077941894531 ],
+                              "offset-hash" : "kUoqWPxQGog0wXoe",
+                              "type" : "perlin"
+                           },
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : null
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        },
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "GRAVEL_DEFAULT_BASE",
+                           "depthNoise" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9333, 7864 ],
+                              "frequency" : [ 1, 1 ],
+                              "offset" : [ 275.85260009765625, 221.27522277832031 ],
+                              "offset-hash" : "AfGWrT0WBMz8dn0p",
+                              "type" : "perlin"
+                           },
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : null
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        },
+                        {
+                           "averageDepth" : 3,
+                           "blockType" : "ROCK_SEDIMENTARY_BASE",
+                           "depthNoise" : null,
+                           "depthNoiseScale" : 6,
+                           "maxGradient" : 5,
+                           "maxY" : 256,
+                           "metadata" : {
+                              "@toggle-metadata" : true,
+                              "maxGradient" : 5,
+                              "maxThreshold" : 1,
+                              "maxY" : 256,
+                              "minGradient" : 0,
+                              "minThreshold" : -1,
+                              "minY" : 0,
+                              "noise" : null
+                           },
+                           "minGradient" : 0,
+                           "minY" : 0
+                        }
+                     ],
+                     "type" : "standard"
+                  },
+                  "threeD" : null,
+                  "threeDMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDSurfaceMaxY" : {
+                     "enabled" : false,
+                     "value" : 256
+                  },
+                  "threeDSurfaceMinY" : {
+                     "enabled" : false,
+                     "value" : 0
+                  },
+                  "threeDThresholdBias" : {
+                     "enabled" : false,
+                     "value" : -1
+                  },
+                  "threed_decorations" : null,
+                  "threed_substrate" : null,
+                  "x" : null,
+                  "y" : null
+               },
+               "temperature" : {
+                  "enabled" : true,
+                  "value" : 0.70400005578994751
+               },
+               "vegetation" : {
+                  "enabled" : true,
+                  "value" : 0.13000001013278961
+               },
+               "weight" : 0.5
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 2197641248,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "biome"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "part"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "heightmap"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "multiplier"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Terrain Variation",
+                  "shortPath" : "Sum 2D.multiplier",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0.30000001192092896,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 2264041696,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "biome"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "weight"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Biome Wight",
+                  "shortPath" : "Wastland.weight",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "generator" : {
+            "@version" : 6,
+            "biomeSize" : 24,
+            "lowerSea" : {
+               "level" : 16,
+               "liquidType" : "LAVA"
+            },
+            "sea" : {
+               "level" : 64,
+               "liquidType" : "WATER"
+            }
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "blockColors" : {
+               "ASH_DEFAULT_BASE" : 1,
+               "CRYSTAL_GLEAM_BASE" : 13,
+               "FLORA_FLOWER_1" : 1,
+               "FLORA_FLOWER_2" : 1,
+               "FLORA_FLOWER_3" : 1,
+               "FLORA_FLOWER_4" : 1,
+               "FLORA_PLANT_FIBROUS" : 1,
+               "FLORA_PLANT_INKY" : 1,
+               "GRASS_BARBED_BASE" : 8,
+               "GRASS_GNARLED_BASE" : 7,
+               "GRASS_VERDANT_BASE" : 9,
+               "GRAVEL_DEFAULT_BASE" : 14,
+               "GROWTH_DEFAULT_BASE" : 1,
+               "MOULD_DEFAULT_BASE" : 1,
+               "MUD_DEFAULT_BASE" : 1,
+               "ROCK_IGNEOUS_BASE" : 4,
+               "ROCK_METAMORPHIC_BASE" : 5,
+               "ROCK_SEDIMENTARY_BASE" : 6,
+               "SAND_DEFAULT_BASE" : 16,
+               "SOIL_CLAY_BASE" : 1,
+               "SOIL_PEATY_BASE" : 3,
+               "SOIL_SILTY_BASE" : 2,
+               "SPONGE_DEFAULT_BASE" : 1,
+               "TANGLE_DEFAULT_BASE" : 1,
+               "THORNS_DEFAULT_BASE" : 1,
+               "WOOD_ANCIENT_TRUNK" : 10,
+               "WOOD_EXOTIC_LEAVES" : 15,
+               "WOOD_LUSH_LEAVES" : 13,
+               "WOOD_LUSTROUS_TRUNK" : 1,
+               "WOOD_TWISTED_TRUNK" : 11,
+               "WOOD_WAXY_LEAVES" : 14
+            },
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference Biome",
+            "@position" : [ 8008, 10355 ],
+            "type" : "reference"
+         }
+      },
+      "links" : [],
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
