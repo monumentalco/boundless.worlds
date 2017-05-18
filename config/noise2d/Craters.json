@@ -1,0 +1,724 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Craters",
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 8656.8310546875, 8631.6904296875, 0.30000025033950806 ],
+   "@toggle-test" : true,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 11,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Lerp 2D",
+         "@position" : [ 8264, 8021 ],
+         "base" : {
+            "@collapsed" : false,
+            "@name" : "Min 2D",
+            "@position" : [ 8558, 8030 ],
+            "frequency" : [ 1, 1 ],
+            "terms" : [
+               {
+                  "@collapsed" : false,
+                  "@name" : "Crater Chooser",
+                  "@position" : [ 8852, 7961 ],
+                  "cellCount" : 1,
+                  "cellScale" : 1,
+                  "components" : [
+                     {
+                        "k" : 0,
+                        "multiplier" : 1,
+                        "power" : 4
+                     }
+                  ],
+                  "frequency" : [ 0.25, 0.25 ],
+                  "offset" : [ -176.400390625, 331.33193969726562 ],
+                  "offset-hash" : "DR9B7CPWpgVVxOaj",
+                  "type" : "worley"
+               }
+            ],
+            "type" : "min"
+         },
+         "basePower" : 0,
+         "f1" : null,
+         "f2" : null,
+         "frequency" : [ 1, 1 ],
+         "type" : "lerp"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 1373,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "f1"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "Base Terrain",
+            "shortPath" : "Lerp 2D.function low",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 90736128,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "f2"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "Crater Terrain",
+            "shortPath" : "Lerp 2D.function high",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 90720768,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "basePower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Edge Smoothing",
+            "shortPath" : "Lerp 2D.basePower",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 2,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 90720768,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Crater Size",
+            "shortPath" : "Crater Chooser.power",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 4,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 90720768,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Crater Frequency",
+            "shortPath" : "Crater Chooser.frequency.@xz",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.25,
+            "sliderMax" : 2,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8264, 8403 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Craters",
+         "@position" : [ 7932, 8160 ],
+         "@toggle-test" : true,
+         "@toggle-world" : true,
+         "@version" : 11,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Lerp 2D",
+               "@position" : [ 8264, 8021 ],
+               "base" : {
+                  "@collapsed" : false,
+                  "@name" : "Min 2D",
+                  "@position" : [ 8558, 8030 ],
+                  "frequency" : [ 1, 1 ],
+                  "terms" : [
+                     {
+                        "@collapsed" : false,
+                        "@name" : "Crater Chooser",
+                        "@position" : [ 8852, 7961 ],
+                        "cellCount" : 1,
+                        "cellScale" : 1,
+                        "components" : [
+                           {
+                              "k" : 0,
+                              "multiplier" : 1,
+                              "power" : 4
+                           }
+                        ],
+                        "frequency" : [ 0.25, 0.25 ],
+                        "offset" : [ -176.400390625, 331.33193969726562 ],
+                        "offset-hash" : "DR9B7CPWpgVVxOaj",
+                        "type" : "worley"
+                     }
+                  ],
+                  "type" : "min"
+               },
+               "basePower" : 0,
+               "f1" : null,
+               "f2" : null,
+               "frequency" : [ 1, 1 ],
+               "type" : "lerp"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 1373,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "f1"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "Base Terrain",
+                  "shortPath" : "Lerp 2D.function low",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 90736128,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "f2"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "Crater Terrain",
+                  "shortPath" : "Lerp 2D.function high",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 90720768,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "basePower"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Edge Smoothing",
+                  "shortPath" : "Lerp 2D.basePower",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 2,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 90720768,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "base"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "power"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Crater Size",
+                  "shortPath" : "Crater Chooser.power",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 4,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 90720768,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "base"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "frequency"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "@xz"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Crater Frequency",
+                  "shortPath" : "Crater Chooser.frequency.@xz",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.25,
+                  "sliderMax" : 2,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8264, 8403 ],
+            "frequency" : [ 1, 1 ],
+            "offset" : [ -178.15823364257812, -127.09002685546875 ],
+            "offset-hash" : "vsl5qH74m2bt8IFq",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "f1"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "nodeValue" : {
+               "@collapsed" : false,
+               "@name" : "Fractal 2D",
+               "@position" : [ 8577, 8239 ],
+               "frequency" : [ 1, 1 ],
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Perlin 2D",
+                  "@position" : [ 8859, 8299 ],
+                  "frequency" : [ 1, 1 ],
+                  "offset" : [ -391.0277099609375, -177.01969909667969 ],
+                  "offset-hash" : "mhHkyhlMczpbyq5d",
+                  "type" : "perlin"
+               },
+               "octaves" : [
+                  {
+                     "multiplier" : 0.05000000074505806,
+                     "offset" : [ 304.91796875, 149.81378173828125 ],
+                     "offset-hash" : "A4VuuhzQGQdRmwJ1",
+                     "scale" : 0.099999994039535522
+                  }
+               ],
+               "type" : "fractal"
+            }
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "f2"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "nodeValue" : {
+               "@collapsed" : false,
+               "@name" : "Offset",
+               "@position" : [ 8577, 8548 ],
+               "frequency" : [ 1, 1 ],
+               "links" : [
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise2d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "terms"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_2D",
+                     "nodeValue" : {
+                        "@collapsed" : false,
+                        "@name" : "Fractal 2D",
+                        "@position" : [ 8874, 8465 ],
+                        "frequency" : [ 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9156, 8568 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ -136.3851318359375, 66.1968994140625 ],
+                           "offset-hash" : "5eVzjxQn0L1wugch",
+                           "type" : "perlin"
+                        },
+                        "octaves" : [
+                           {
+                              "multiplier" : 0.02500000037252903,
+                              "offset" : [ 11.163500785827637, -353.36825561523438 ],
+                              "offset-hash" : "zxOCJZELHBnK4k0v",
+                              "scale" : 2
+                           },
+                           {
+                              "multiplier" : 0.0050000003539025784,
+                              "offset" : [ -117.20759582519531, 35.653484344482422 ],
+                              "offset-hash" : "oCCWWj2COclKOC10",
+                              "scale" : 4
+                           }
+                        ],
+                        "type" : "fractal"
+                     }
+                  },
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise2d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "terms"
+                        },
+                        {
+                           "index" : 1,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "value"
+                        }
+                     ],
+                     "linkType" : "LT:CUSTOM_SLIDER",
+                     "sliderValue" : -0.10000000149011612
+                  }
+               ],
+               "offset" : [ -205.97848510742188, 221.87727355957031 ],
+               "offset-hash" : "YR6AQIfQaBZ66CG8",
+               "reference" : "noise2d/Offset.json",
+               "tick" : 0,
+               "type" : "reference"
+            }
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "basePower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.084000006318092346
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.5
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.25
+         }
+      ],
+      "offset" : [ -178.15823364257812, -127.09002685546875 ],
+      "offset-hash" : "vsl5qH74m2bt8IFq",
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
