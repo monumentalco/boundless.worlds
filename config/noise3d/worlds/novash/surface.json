@@ -1,0 +1,479 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE3D",
+   "@name" : "surface",
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 8202.5546875, 8343.63671875, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 15,
+   "noise3d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Layered 3D",
+         "@position" : [ 8236, 8012 ],
+         "components" : [
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "2D to fixed-y 3D",
+                  "@position" : [ 8533, 8056 ],
+                  "frequency" : [ 1, 1 ],
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "Remap 2D",
+                     "@position" : [ 8821, 8033 ],
+                     "clamp" : false,
+                     "clampPower" : 5,
+                     "frequency" : 1,
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 2D",
+                        "@position" : [ 9109, 8033 ],
+                        "clamp" : false,
+                        "clampPower" : 5,
+                        "frequency" : 1,
+                        "fun" : null,
+                        "max" : 1,
+                        "min" : -1,
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "type" : "remap"
+                     },
+                     "max" : -1,
+                     "min" : 1,
+                     "seed" : 0,
+                     "seed-combine" : true,
+                     "seed-hash" : "",
+                     "type" : "remap"
+                  },
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "type" : "elevate2d"
+               },
+               "noiseMaxY" : 128,
+               "y" : 256,
+               "yfun" : null
+            },
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Constant 3D",
+                  "@position" : [ 8533, 8225 ],
+                  "frequency" : [ 1, 1 ],
+                  "type" : "constant",
+                  "value" : -0.25
+               },
+               "noiseMaxY" : 128,
+               "y" : 190.00001525878906,
+               "yfun" : null
+            }
+         ],
+         "frequency" : [ 1, 1 ],
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "type" : "layered"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 398,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "function",
+            "shortPath" : "Remap 2D.base",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 1132593152,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "min"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "min altitude",
+            "shortPath" : "Remap 2D.min",
+            "sliderCheck" : false,
+            "sliderDefault" : -1,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 1132593152,
+            "blockDefault" : "",
+            "checkDefault" : true,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "max"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "max altitude",
+            "shortPath" : "Remap 2D.max",
+            "sliderCheck" : false,
+            "sliderDefault" : 1,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 3D",
+      "@position" : [ 8236, 8375 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE3D",
+         "@name" : "surface",
+         "@position" : [ 7932, 8160 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 15,
+         "noise3d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Layered 3D",
+               "@position" : [ 8236, 8012 ],
+               "components" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "2D to fixed-y 3D",
+                        "@position" : [ 8533, 8056 ],
+                        "frequency" : [ 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 8821, 8033 ],
+                           "clamp" : false,
+                           "clampPower" : 5,
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Remap 2D",
+                              "@position" : [ 9109, 8033 ],
+                              "clamp" : false,
+                              "clampPower" : 5,
+                              "frequency" : 1,
+                              "fun" : null,
+                              "max" : 1,
+                              "min" : -1,
+                              "seed" : 0,
+                              "seed-combine" : true,
+                              "seed-hash" : "",
+                              "type" : "remap"
+                           },
+                           "max" : -1,
+                           "min" : 1,
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "type" : "remap"
+                        },
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "type" : "elevate2d"
+                     },
+                     "noiseMaxY" : 128,
+                     "y" : 256,
+                     "yfun" : null
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 3D",
+                        "@position" : [ 8533, 8225 ],
+                        "frequency" : [ 1, 1 ],
+                        "type" : "constant",
+                        "value" : -0.25
+                     },
+                     "noiseMaxY" : 128,
+                     "y" : 190.00001525878906,
+                     "yfun" : null
+                  }
+               ],
+               "frequency" : [ 1, 1 ],
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "type" : "layered"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 398,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "function",
+                  "shortPath" : "Remap 2D.base",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 1132593152,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "min"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "min altitude",
+                  "shortPath" : "Remap 2D.min",
+                  "sliderCheck" : false,
+                  "sliderDefault" : -1,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 1132593152,
+                  "blockDefault" : "",
+                  "checkDefault" : true,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "max"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "max altitude",
+                  "shortPath" : "Remap 2D.max",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 1,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 3D",
+            "@position" : [ 8236, 8375 ],
+            "frequency" : [ 1, 1 ],
+            "seed" : 624321028301648498,
+            "seed-combine" : true,
+            "seed-hash" : "jw5S4HeBvjlpOpT6",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [],
+      "reference" : "",
+      "seed" : 624321028301648498,
+      "seed-combine" : true,
+      "seed-hash" : "jw5S4HeBvjlpOpT6",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

@@ -3,13 +3,13 @@
    "@configType" : "WORLD",
    "@name" : "novash",
    "@position" : [ 7706, 8172 ],
-   "@scroll" : [ 8248.5126953125, 8702.6083984375, 0.52499985694885254 ],
+   "@scroll" : [ 9604.6298828125, 7805.9765625, 1.7499997615814209 ],
    "@unlinked" : [],
    "@version" : 15,
    "generator" : {
       "@collapsed" : false,
       "@name" : "Generator",
-      "@position" : [ 8426, 8275 ],
+      "@position" : [ 8428, 8275 ],
       "@toggle-distribution" : true,
       "@toggle-global" : true,
       "@toggle-visualise" : true,
@@ -19,7 +19,7 @@
          {
             "@collapsed" : false,
             "@name" : "capillaries",
-            "@position" : [ 9146, 7215 ],
+            "@position" : [ 9150, 7215 ],
             "altitude" : {
                "enabled" : true,
                "value" : 0.5
@@ -33,7 +33,7 @@
             "part" : {
                "@collapsed" : false,
                "@name" : "capillaries",
-               "@position" : [ 9512, 6680 ],
+               "@position" : [ 9518, 6680 ],
                "@selector-open" : false,
                "@toggle-caves" : true,
                "@toggle-ccaves" : true,
@@ -59,7 +59,7 @@
                "caves" : {
                   "@collapsed" : false,
                   "@name" : "capillaries (novash)",
-                  "@position" : [ 9801, 7237 ],
+                  "@position" : [ 9886, 6965 ],
                   "frequency" : [ 1, 1 ],
                   "links" : [],
                   "reference" : "noise3d/caves/worlds/novash/capillaries.json",
@@ -89,15 +89,24 @@
                   "enabled" : false,
                   "value" : 0
                },
-               "heightmap" : null,
+               "heightmap" : {
+                  "@collapsed" : false,
+                  "@name" : "Perlin 2D",
+                  "@position" : [ 9886, 6667 ],
+                  "frequency" : 1,
+                  "seed" : 16140302918776788666,
+                  "seed-combine" : true,
+                  "seed-hash" : "gzlysfehxYeLHnqE",
+                  "type" : "perlin"
+               },
                "heightmapBlockType" : "ROCK_IGNEOUS_BASE",
                "heightmapMaxY" : {
                   "enabled" : true,
-                  "value" : 190
+                  "value" : 184
                },
                "heightmapMinY" : {
                   "enabled" : true,
-                  "value" : 190
+                  "value" : 180
                },
                "parts" : [],
                "seed" : 0,
@@ -107,7 +116,7 @@
                "strata" : {
                   "@collapsed" : false,
                   "@name" : "base (novash)",
-                  "@position" : [ 9801, 7366 ],
+                  "@position" : [ 9886, 7094 ],
                   "links" : [],
                   "reference" : "strata/worlds/novash/base.json",
                   "seed" : 0,
@@ -118,29 +127,340 @@
                },
                "surface_decorations" : null,
                "surface_substrate" : null,
-               "threeD" : null,
+               "threeD" : {
+                  "@collapsed" : false,
+                  "@name" : "surface",
+                  "@position" : [ 9886, 6773 ],
+                  "frequency" : [ 1, 1 ],
+                  "links" : [
+                     {
+                        "linkPath" : [
+                           {
+                              "index" : -1,
+                              "name" : "noise3d"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "components"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           }
+                        ],
+                        "linkType" : "LT:NOISE_2D",
+                        "nodeValue" : {
+                           "@collapsed" : false,
+                           "@name" : "Dunes",
+                           "@position" : [ 10169, 6805 ],
+                           "frequency" : 1.25,
+                           "links" : [
+                              {
+                                 "linkPath" : [
+                                    {
+                                       "index" : -1,
+                                       "name" : "noise2d"
+                                    },
+                                    {
+                                       "index" : -1,
+                                       "name" : "fun"
+                                    },
+                                    {
+                                       "index" : -1,
+                                       "name" : "terms"
+                                    },
+                                    {
+                                       "index" : 0,
+                                       "name" : ""
+                                    },
+                                    {
+                                       "index" : -1,
+                                       "name" : "fun"
+                                    },
+                                    {
+                                       "index" : -1,
+                                       "name" : "base"
+                                    },
+                                    {
+                                       "index" : -1,
+                                       "name" : "max"
+                                    }
+                                 ],
+                                 "linkType" : "LT:CUSTOM_SLIDER",
+                                 "sliderValue" : 1
+                              }
+                           ],
+                           "reference" : "noise2d/Heightmaps/Dunes.json",
+                           "seed" : 7147884628556713332,
+                           "seed-combine" : true,
+                           "seed-hash" : "hygeWenUq5dBlDg0",
+                           "tick" : 0,
+                           "type" : "reference"
+                        }
+                     },
+                     {
+                        "linkPath" : [
+                           {
+                              "index" : -1,
+                              "name" : "noise3d"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "components"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "min"
+                           }
+                        ],
+                        "linkType" : "LT:CUSTOM_SLIDER",
+                        "sliderValue" : -0.90000003576278687
+                     },
+                     {
+                        "linkPath" : [
+                           {
+                              "index" : -1,
+                              "name" : "noise3d"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "components"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "max"
+                           }
+                        ],
+                        "linkType" : "LT:CUSTOM_SLIDER",
+                        "sliderValue" : -0.30000001192092896
+                     }
+                  ],
+                  "reference" : "noise3d/worlds/novash/surface.json",
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "tick" : 1,
+                  "type" : "reference"
+               },
                "threeDMaxY" : {
                   "enabled" : false,
                   "value" : 256
                },
                "threeDMinY" : {
-                  "enabled" : false,
-                  "value" : 0
+                  "enabled" : true,
+                  "value" : 171
                },
                "threeDSurfaceMaxY" : {
-                  "enabled" : false,
+                  "enabled" : true,
                   "value" : 256
                },
                "threeDSurfaceMinY" : {
-                  "enabled" : false,
-                  "value" : 0
+                  "enabled" : true,
+                  "value" : -64
                },
                "threeDThresholdBias" : {
-                  "enabled" : false,
-                  "value" : -1
+                  "enabled" : true,
+                  "value" : 0
                },
                "threed_decorations" : null,
-               "threed_substrate" : null,
+               "threed_substrate" : {
+                  "@collapsed" : false,
+                  "@name" : "Standard Substrate",
+                  "@position" : [ 9886, 7331 ],
+                  "@toggle-ceils" : false,
+                  "@toggle-strates" : true,
+                  "ceils" : [],
+                  "seed" : 13976008798934212081,
+                  "seed-combine" : true,
+                  "seed-hash" : "JmksPGRlhQbCz9Xl",
+                  "strates" : [
+                     {
+                        "averageDepth" : 4,
+                        "blockType" : "ASH_DEFAULT_BASE",
+                        "depthNoise" : {
+                           "@collapsed" : false,
+                           "@name" : "Fractal 2D",
+                           "@position" : [ 10219, 7177 ],
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 10501, 7335 ],
+                              "frequency" : 1,
+                              "seed" : 4254559194635419269,
+                              "seed-combine" : true,
+                              "seed-hash" : "vxiY56GDSlADyNzs",
+                              "type" : "perlin"
+                           },
+                           "octaves" : [
+                              {
+                                 "multiplier" : 0.30000001192092896,
+                                 "scale" : 0.5,
+                                 "seed" : 6977308190371411264,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "oWbidKej6lsHfwpV"
+                              },
+                              {
+                                 "multiplier" : 0.30000001192092896,
+                                 "scale" : 1,
+                                 "seed" : 6977308190371411264,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "oWbidKej6lsHfwpV"
+                              },
+                              {
+                                 "multiplier" : 0.40000000596046448,
+                                 "scale" : 4,
+                                 "seed" : 6977308190371411264,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "oWbidKej6lsHfwpV"
+                              }
+                           ],
+                           "seed" : 18331619047960589039,
+                           "seed-combine" : true,
+                           "seed-hash" : "59MLnBWreEhhwvwW",
+                           "type" : "fractal"
+                        },
+                        "depthNoiseScale" : 3,
+                        "maxGradient" : 5,
+                        "maxY" : 256,
+                        "metadata" : {
+                           "@toggle-metadata" : true,
+                           "maxGradient" : 5,
+                           "maxThreshold" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minThreshold" : -1,
+                           "minY" : 0,
+                           "noise" : null
+                        },
+                        "minGradient" : 0,
+                        "minY" : 0
+                     },
+                     {
+                        "averageDepth" : 4,
+                        "blockType" : "SAND_DEFAULT_BASE",
+                        "depthNoise" : {
+                           "@collapsed" : false,
+                           "@name" : "Fractal 2D",
+                           "@position" : [ 10219, 7598 ],
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Simplex 2D",
+                              "@position" : [ 10501, 7756 ],
+                              "frequency" : 1,
+                              "seed" : 827267581834528245,
+                              "seed-combine" : true,
+                              "seed-hash" : "w6Tbo1aR84kThWvh",
+                              "type" : "simplex"
+                           },
+                           "octaves" : [
+                              {
+                                 "multiplier" : 0.30000001192092896,
+                                 "scale" : 0.5,
+                                 "seed" : 6927204876860530218,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "6ffjONd2dLFSyd46"
+                              },
+                              {
+                                 "multiplier" : 0.30000001192092896,
+                                 "scale" : 1,
+                                 "seed" : 6927204876860530218,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "6ffjONd2dLFSyd46"
+                              },
+                              {
+                                 "multiplier" : 0.40000000596046448,
+                                 "scale" : 4,
+                                 "seed" : 6927204876860530218,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "6ffjONd2dLFSyd46"
+                              }
+                           ],
+                           "seed" : 17034281087217840890,
+                           "seed-combine" : true,
+                           "seed-hash" : "dg0UMDMGJncfga8j",
+                           "type" : "fractal"
+                        },
+                        "depthNoiseScale" : 2,
+                        "maxGradient" : 5,
+                        "maxY" : 256,
+                        "metadata" : {
+                           "@toggle-metadata" : true,
+                           "maxGradient" : 5,
+                           "maxThreshold" : 1,
+                           "maxY" : 256,
+                           "minGradient" : 0,
+                           "minThreshold" : -1,
+                           "minY" : 0,
+                           "noise" : null
+                        },
+                        "minGradient" : 0,
+                        "minY" : 0
+                     }
+                  ],
+                  "type" : "standard"
+               },
                "type" : "standard",
                "x" : null,
                "y" : null
@@ -162,7 +482,7 @@
          {
             "@collapsed" : false,
             "@name" : "upper cavern",
-            "@position" : [ 9146, 8540 ],
+            "@position" : [ 9150, 8554 ],
             "altitude" : {
                "enabled" : true,
                "value" : 1
@@ -176,7 +496,7 @@
             "part" : {
                "@collapsed" : false,
                "@name" : "upper cavern",
-               "@position" : [ 9512, 8005 ],
+               "@position" : [ 9516, 8019 ],
                "@selector-open" : false,
                "@toggle-caves" : true,
                "@toggle-ccaves" : true,
@@ -202,13 +522,13 @@
                "caves" : {
                   "@collapsed" : false,
                   "@name" : "Layered 3D",
-                  "@position" : [ 9834, 8332 ],
+                  "@position" : [ 9838, 8346 ],
                   "components" : [
                      {
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "upper_cavern (novash)",
-                           "@position" : [ 10136, 8369 ],
+                           "@position" : [ 10140, 8383 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/upper_cavern.json",
@@ -226,7 +546,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Constant 3D",
-                           "@position" : [ 10136, 8498 ],
+                           "@position" : [ 10140, 8512 ],
                            "frequency" : [ 1, 1 ],
                            "type" : "constant",
                            "value" : 0
@@ -239,7 +559,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "capillaries (novash)",
-                           "@position" : [ 10136, 8627 ],
+                           "@position" : [ 10140, 8641 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/capillaries.json",
@@ -298,7 +618,7 @@
                "strata" : {
                   "@collapsed" : false,
                   "@name" : "base (novash)",
-                  "@position" : [ 9834, 8792 ],
+                  "@position" : [ 9838, 8806 ],
                   "links" : [],
                   "reference" : "strata/worlds/novash/base.json",
                   "seed" : 0,
@@ -310,7 +630,7 @@
                "surface_decorations" : {
                   "@collapsed" : false,
                   "@name" : "gleam_swirls",
-                  "@position" : [ 9834, 8875 ],
+                  "@position" : [ 9838, 8889 ],
                   "links" : [
                      {
                         "linkPath" : [
@@ -425,7 +745,7 @@
          {
             "@collapsed" : false,
             "@name" : "lower cavern",
-            "@position" : [ 9146, 9865 ],
+            "@position" : [ 9150, 9879 ],
             "altitude" : {
                "enabled" : true,
                "value" : 0
@@ -439,7 +759,7 @@
             "part" : {
                "@collapsed" : false,
                "@name" : "lower cavern",
-               "@position" : [ 9512, 9330 ],
+               "@position" : [ 9516, 9344 ],
                "@selector-open" : false,
                "@toggle-caves" : true,
                "@toggle-ccaves" : true,
@@ -465,13 +785,13 @@
                "caves" : {
                   "@collapsed" : false,
                   "@name" : "Layered 3D",
-                  "@position" : [ 9834, 9657 ],
+                  "@position" : [ 9838, 9671 ],
                   "components" : [
                      {
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "capillaries (novash)",
-                           "@position" : [ 10136, 9694 ],
+                           "@position" : [ 10140, 9708 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/capillaries.json",
@@ -489,7 +809,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Constant 3D",
-                           "@position" : [ 10136, 9823 ],
+                           "@position" : [ 10140, 9837 ],
                            "frequency" : [ 1, 1 ],
                            "type" : "constant",
                            "value" : 0
@@ -502,7 +822,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "lower cavern (novash)",
-                           "@position" : [ 10136, 9952 ],
+                           "@position" : [ 10140, 9966 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/lower_cavern.json",
@@ -561,7 +881,7 @@
                "strata" : {
                   "@collapsed" : false,
                   "@name" : "base (novash)",
-                  "@position" : [ 9834, 10117 ],
+                  "@position" : [ 9838, 10131 ],
                   "links" : [],
                   "reference" : "strata/worlds/novash/base.json",
                   "seed" : 0,
@@ -573,7 +893,7 @@
                "surface_decorations" : {
                   "@collapsed" : false,
                   "@name" : "gleam_swirls",
-                  "@position" : [ 9834, 10200 ],
+                  "@position" : [ 9838, 10214 ],
                   "links" : [
                      {
                         "linkPath" : [
@@ -688,7 +1008,7 @@
          {
             "@collapsed" : false,
             "@name" : "upper cavern (forest)",
-            "@position" : [ 9146, 11190 ],
+            "@position" : [ 9150, 11204 ],
             "altitude" : {
                "enabled" : true,
                "value" : 1
@@ -702,7 +1022,7 @@
             "part" : {
                "@collapsed" : false,
                "@name" : "upper cavern",
-               "@position" : [ 9512, 10655 ],
+               "@position" : [ 9516, 10669 ],
                "@selector-open" : false,
                "@toggle-caves" : true,
                "@toggle-ccaves" : true,
@@ -728,13 +1048,13 @@
                "caves" : {
                   "@collapsed" : false,
                   "@name" : "Layered 3D",
-                  "@position" : [ 9875, 10678 ],
+                  "@position" : [ 9879, 10692 ],
                   "components" : [
                      {
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "upper_cavern (novash)",
-                           "@position" : [ 10177, 10715 ],
+                           "@position" : [ 10181, 10729 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/upper_cavern.json",
@@ -752,7 +1072,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Constant 3D",
-                           "@position" : [ 10177, 10844 ],
+                           "@position" : [ 10181, 10858 ],
                            "frequency" : [ 1, 1 ],
                            "type" : "constant",
                            "value" : 0
@@ -765,7 +1085,7 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "capillaries (novash)",
-                           "@position" : [ 10177, 10973 ],
+                           "@position" : [ 10181, 10987 ],
                            "frequency" : [ 1, 1 ],
                            "links" : [],
                            "reference" : "noise3d/caves/worlds/novash/capillaries.json",
@@ -789,7 +1109,7 @@
                "caves_decorations" : {
                   "@collapsed" : false,
                   "@name" : "Standard Decorations",
-                  "@position" : [ 9875, 11221 ],
+                  "@position" : [ 9879, 11235 ],
                   "@toggle-ceiling" : false,
                   "@toggle-floor" : true,
                   "ceiling" : [],
@@ -802,7 +1122,7 @@
                         "instance" : {
                            "@collapsed" : false,
                            "@name" : "crystal_gleam",
-                           "@position" : [ 10170, 11338 ],
+                           "@position" : [ 10174, 11352 ],
                            "links" : [],
                            "reference" : "instances/Trees/crystal_gleam.json",
                            "seed" : 1611187352495105229,
@@ -820,7 +1140,7 @@
                         "noise" : {
                            "@collapsed" : false,
                            "@name" : "Perlin 2D",
-                           "@position" : [ 10170, 11527 ],
+                           "@position" : [ 10174, 11541 ],
                            "frequency" : 1.7320001125335693,
                            "seed" : 10587842804507946261,
                            "seed-combine" : true,
@@ -831,7 +1151,7 @@
                         "sizeNoise" : {
                            "@collapsed" : false,
                            "@name" : "Simplex 2D",
-                           "@position" : [ 10170, 11421 ],
+                           "@position" : [ 10174, 11435 ],
                            "frequency" : 0.7160000205039978,
                            "seed" : 11605671853791953740,
                            "seed-combine" : true,
@@ -884,7 +1204,7 @@
                "strata" : {
                   "@collapsed" : false,
                   "@name" : "base (novash)",
-                  "@position" : [ 9875, 11138 ],
+                  "@position" : [ 9879, 11152 ],
                   "links" : [],
                   "reference" : "strata/worlds/novash/base.json",
                   "seed" : 0,
@@ -896,13 +1216,13 @@
                "surface_decorations" : {
                   "@collapsed" : false,
                   "@name" : "Random Decoration",
-                  "@position" : [ 9875, 11749 ],
+                  "@position" : [ 9879, 11763 ],
                   "components" : [
                      {
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "gleam_swirls",
-                           "@position" : [ 10158, 11789 ],
+                           "@position" : [ 10162, 11803 ],
                            "links" : [
                               {
                                  "linkPath" : [
@@ -1032,14 +1352,14 @@
          "altitude" : {
             "@collapsed" : false,
             "@name" : "altitude",
-            "@position" : [ 9146, 5109 ],
+            "@position" : [ 9150, 5095 ],
             "clamp" : false,
             "clampPower" : 5,
             "frequency" : 1,
             "fun" : {
                "@collapsed" : false,
                "@name" : "Offset",
-               "@position" : [ 9446, 5132 ],
+               "@position" : [ 9450, 5118 ],
                "frequency" : 1,
                "links" : [
                   {
@@ -1073,7 +1393,7 @@
                      "nodeValue" : {
                         "@collapsed" : false,
                         "@name" : "Product 2D",
-                        "@position" : [ 9746, 5075 ],
+                        "@position" : [ 9750, 5061 ],
                         "frequency" : 1,
                         "seed" : 0,
                         "seed-combine" : true,
@@ -1083,7 +1403,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Offset",
-                                 "@position" : [ 10046, 5036 ],
+                                 "@position" : [ 10050, 5022 ],
                                  "frequency" : 1,
                                  "links" : [
                                     {
@@ -1117,7 +1437,7 @@
                                        "nodeValue" : {
                                           "@collapsed" : false,
                                           "@name" : "MinMax",
-                                          "@position" : [ 10332, 5025 ],
+                                          "@position" : [ 10336, 5011 ],
                                           "frequency" : 1,
                                           "links" : [
                                              {
@@ -1155,7 +1475,7 @@
                                                 "nodeValue" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Binary Splotches",
-                                                   "@position" : [ 10617, 5034 ],
+                                                   "@position" : [ 10621, 5020 ],
                                                    "frequency" : 1,
                                                    "links" : [
                                                       {
@@ -1376,7 +1696,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Offset",
-                                 "@position" : [ 10046, 5217 ],
+                                 "@position" : [ 10050, 5203 ],
                                  "frequency" : 1,
                                  "links" : [
                                     {
@@ -1410,14 +1730,14 @@
                                        "nodeValue" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [ 10334, 5194 ],
+                                          "@position" : [ 10338, 5180 ],
                                           "clamp" : false,
                                           "clampPower" : 5,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "MinMax",
-                                             "@position" : [ 10620, 5206 ],
+                                             "@position" : [ 10624, 5192 ],
                                              "frequency" : 1,
                                              "links" : [
                                                 {
@@ -1455,7 +1775,7 @@
                                                    "nodeValue" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Binary Splotches",
-                                                      "@position" : [ 10905, 5215 ],
+                                                      "@position" : [ 10909, 5201 ],
                                                       "frequency" : 1,
                                                       "links" : [
                                                          {
@@ -1731,14 +2051,14 @@
          "humidity" : {
             "@collapsed" : false,
             "@name" : "humidity",
-            "@position" : [ 9146, 5577 ],
+            "@position" : [ 9150, 5564 ],
             "clamp" : false,
             "clampPower" : 5,
             "frequency" : 1,
             "fun" : {
                "@collapsed" : false,
                "@name" : "Perlin 2D",
-               "@position" : [ 9428, 5620 ],
+               "@position" : [ 9432, 5607 ],
                "frequency" : 0.41500002145767212,
                "seed" : 17805534289051209333,
                "seed-combine" : true,
@@ -1755,14 +2075,14 @@
          "temperature" : {
             "@collapsed" : false,
             "@name" : "temperature",
-            "@position" : [ 9146, 5385 ],
+            "@position" : [ 9150, 5372 ],
             "clamp" : false,
             "clampPower" : 5,
             "frequency" : 1,
             "fun" : {
                "@collapsed" : false,
                "@name" : "Perlin 2D",
-               "@position" : [ 9428, 5428 ],
+               "@position" : [ 9432, 5415 ],
                "frequency" : 0.28300002217292786,
                "seed" : 12672478293716204129,
                "seed-combine" : true,
@@ -1779,22 +2099,22 @@
          "vegetation" : {
             "@collapsed" : false,
             "@name" : "vegetation",
-            "@position" : [ 9146, 6129 ],
+            "@position" : [ 9150, 6115 ],
             "clamp" : false,
             "clampPower" : 5,
             "frequency" : 1,
             "fun" : {
                "@collapsed" : false,
                "@name" : "Distort 2D",
-               "@position" : [ 9484, 6144 ],
+               "@position" : [ 9488, 6130 ],
                "base" : {
                   "@collapsed" : false,
                   "@name" : "Cell Samples 2D",
-                  "@position" : [ 9822, 5891 ],
+                  "@position" : [ 9826, 5877 ],
                   "cells" : {
                      "@collapsed" : false,
                      "@name" : "Voronoi 2D",
-                     "@position" : [ 10125, 5771 ],
+                     "@position" : [ 10129, 5757 ],
                      "frequency" : 0.25,
                      "seed" : 12414361799736716938,
                      "seed-combine" : true,
@@ -1805,18 +2125,18 @@
                   "fun" : {
                      "@collapsed" : false,
                      "@name" : "Distort 2D",
-                     "@position" : [ 10125, 5944 ],
+                     "@position" : [ 10129, 5930 ],
                      "base" : {
                         "@collapsed" : false,
                         "@name" : "Remap 2D",
-                        "@position" : [ 10421, 5877 ],
+                        "@position" : [ 10425, 5863 ],
                         "clamp" : false,
                         "clampPower" : 5,
                         "frequency" : 0.10000000149011612,
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Simplex 2D",
-                           "@position" : [ 10703, 5920 ],
+                           "@position" : [ 10707, 5906 ],
                            "frequency" : 0.40000000596046448,
                            "seed" : 10281311880996309948,
                            "seed-combine" : true,
@@ -1833,7 +2153,7 @@
                      "distortion" : {
                         "@collapsed" : false,
                         "@name" : "Perlin 2D",
-                        "@position" : [ 10421, 6069 ],
+                        "@position" : [ 10425, 6055 ],
                         "frequency" : 0.51200002431869507,
                         "seed" : 8486600044144834641,
                         "seed-combine" : true,
@@ -1858,12 +2178,12 @@
                "distortion" : {
                   "@collapsed" : false,
                   "@name" : "Fractal 2D",
-                  "@position" : [ 9822, 6174 ],
+                  "@position" : [ 9826, 6160 ],
                   "frequency" : 1,
                   "fun" : {
                      "@collapsed" : false,
                      "@name" : "Perlin 2D",
-                     "@position" : [ 10104, 6375 ],
+                     "@position" : [ 10108, 6361 ],
                      "frequency" : 1,
                      "seed" : 14857601879599428902,
                      "seed-combine" : true,
