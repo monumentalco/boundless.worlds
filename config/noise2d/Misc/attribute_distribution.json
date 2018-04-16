@@ -3,11 +3,11 @@
    "@configType" : "NOISE2D",
    "@name" : "attribute_distribution",
    "@position" : [ 7932, 8160 ],
-   "@scroll" : [ 8448.0986328125, 8210.7255859375, -1 ],
+   "@scroll" : [ 9602.4248046875, 7945.0302734375, -0.5 ],
    "@toggle-test" : false,
    "@toggle-world" : false,
    "@unlinked" : [],
-   "@version" : 16,
+   "@version" : 17,
    "noise2d" : {
       "fun" : {
          "@collapsed" : false,
@@ -17,91 +17,105 @@
             {
                "fun" : {
                   "@collapsed" : false,
-                  "@name" : "Distort 2D",
-                  "@position" : [ 8658, 7743 ],
-                  "base" : {
+                  "@name" : "Interpolate 2D",
+                  "@position" : [ 8672, 7816 ],
+                  "frequency" : 1,
+                  "fun" : {
                      "@collapsed" : false,
-                     "@name" : "Cell Samples 2D",
-                     "@position" : [ 8969, 7690 ],
-                     "cells" : {
+                     "@name" : "Distort 2D",
+                     "@position" : [ 9014, 7787 ],
+                     "base" : {
                         "@collapsed" : false,
-                        "@name" : "Voronoi 2D",
-                        "@position" : [ 9273, 7566 ],
-                        "frequency" : 0.15000000596046448,
-                        "seed" : 17427789108644392674,
-                        "seed-combine" : true,
-                        "seed-hash" : "l7cVU9Dw9MJJRCQx",
-                        "type" : "voronoi"
-                     },
-                     "frequency" : 0.55900001525878906,
-                     "fun" : {
-                        "@collapsed" : false,
-                        "@name" : "Sum 2D",
-                        "@position" : [ 9273, 7672 ],
-                        "frequency" : 1,
+                        "@name" : "Cell Samples 2D",
+                        "@position" : [ 9325, 7734 ],
+                        "cells" : {
+                           "@collapsed" : false,
+                           "@name" : "Voronoi 2D",
+                           "@position" : [ 9629, 7610 ],
+                           "frequency" : 0.15000000596046448,
+                           "seed" : 17427789108644392674,
+                           "seed-combine" : true,
+                           "seed-hash" : "l7cVU9Dw9MJJRCQx",
+                           "type" : "voronoi"
+                        },
+                        "frequency" : 0.55900001525878906,
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Sum 2D",
+                           "@position" : [ 9629, 7716 ],
+                           "frequency" : 1,
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "terms" : [
+                              {
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Perlin 2D",
+                                    "@position" : [ 9918, 7763 ],
+                                    "frequency" : 2,
+                                    "seed" : 1773037932719439197,
+                                    "seed-combine" : true,
+                                    "seed-hash" : "UOs6RL2pW4ad7A7C",
+                                    "type" : "perlin"
+                                 },
+                                 "multiplier" : 1,
+                                 "power" : 1
+                              },
+                              {
+                                 "fun" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Constant 2D",
+                                    "@position" : [ 9918, 7869 ],
+                                    "frequency" : 1,
+                                    "type" : "constant",
+                                    "value" : {
+                                       "max" : 0.5,
+                                       "min" : -0.5
+                                    }
+                                 },
+                                 "multiplier" : 1,
+                                 "power" : 1
+                              }
+                           ],
+                           "type" : "sum"
+                        },
+                        "mix" : false,
+                        "overflowPower" : 1,
+                        "power" : 0.5,
                         "seed" : 0,
                         "seed-combine" : true,
                         "seed-hash" : "",
-                        "terms" : [
-                           {
-                              "fun" : {
-                                 "@collapsed" : false,
-                                 "@name" : "Perlin 2D",
-                                 "@position" : [ 9562, 7719 ],
-                                 "frequency" : 2,
-                                 "seed" : 1773037932719439197,
-                                 "seed-combine" : true,
-                                 "seed-hash" : "UOs6RL2pW4ad7A7C",
-                                 "type" : "perlin"
-                              },
-                              "multiplier" : 1,
-                              "power" : 1
-                           },
-                           {
-                              "fun" : {
-                                 "@collapsed" : false,
-                                 "@name" : "Constant 2D",
-                                 "@position" : [ 9562, 7825 ],
-                                 "frequency" : 1,
-                                 "type" : "constant",
-                                 "value" : {
-                                    "max" : 1,
-                                    "min" : -1
-                                 }
-                              },
-                              "multiplier" : 1,
-                              "power" : 1
-                           }
-                        ],
-                        "type" : "sum"
+                        "type" : "cell_samples"
                      },
-                     "mix" : false,
-                     "overflowPower" : 1,
-                     "power" : 0.5,
-                     "seed" : 0,
+                     "distortion" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9325, 8022 ],
+                        "frequency" : 0.2460000067949295,
+                        "seed" : 1773037932719439197,
+                        "seed-combine" : true,
+                        "seed-hash" : "UOs6RL2pW4ad7A7C",
+                        "type" : "perlin"
+                     },
+                     "distortionScale" : 1,
+                     "frequency" : {
+                        "max" : 0.70000004768371582,
+                        "min" : 0.20000000298023224
+                     },
+                     "seed" : 6776613465777908889,
                      "seed-combine" : true,
-                     "seed-hash" : "",
-                     "type" : "cell_samples"
+                     "seed-hash" : "32bFdXQqylOc3LaR",
+                     "type" : "distort"
                   },
-                  "distortion" : {
-                     "@collapsed" : false,
-                     "@name" : "Perlin 2D",
-                     "@position" : [ 8969, 7978 ],
-                     "frequency" : 0.2460000067949295,
-                     "seed" : 1773037932719439197,
-                     "seed-combine" : true,
-                     "seed-hash" : "UOs6RL2pW4ad7A7C",
-                     "type" : "perlin"
+                  "scale" : {
+                     "max" : 10,
+                     "min" : 0.0099999997764825821
                   },
-                  "distortionScale" : 1,
-                  "frequency" : {
-                     "max" : 0.70000004768371582,
-                     "min" : 0
-                  },
-                  "seed" : 6776613465777908889,
+                  "seed" : 10137194490269840633,
                   "seed-combine" : true,
-                  "seed-hash" : "32bFdXQqylOc3LaR",
-                  "type" : "distort"
+                  "seed-hash" : "0LKd93F2lHNrYDit",
+                  "type" : "interpolated"
                },
                "w" : 1
             },
@@ -142,7 +156,7 @@
                   "seed-hash" : "NFYOP6XNm40HBRYj",
                   "type" : "distort"
                },
-               "w" : 0.19999998807907104
+               "w" : 0.039999999105930328
             },
             {
                "fun" : {
@@ -181,7 +195,7 @@
                   "seed-hash" : "qSzHXLvw2DqOgAzr",
                   "type" : "distort"
                },
-               "w" : 0.19999998807907104
+               "w" : 0.039999999105930328
             },
             {
                "fun" : {
@@ -220,7 +234,7 @@
                   "seed-hash" : "qSzHXLvw2DqOgAzr",
                   "type" : "distort"
                },
-               "w" : 0.19999998807907104
+               "w" : 0.039999999105930328
             }
          ],
          "frequency" : 1,
@@ -246,7 +260,7 @@
          "@position" : [ 7932, 8160 ],
          "@toggle-test" : false,
          "@toggle-world" : false,
-         "@version" : 15,
+         "@version" : 17,
          "noise2d" : {
             "fun" : {
                "@collapsed" : false,
@@ -256,91 +270,105 @@
                   {
                      "fun" : {
                         "@collapsed" : false,
-                        "@name" : "Distort 2D",
-                        "@position" : [ 8658, 7743 ],
-                        "base" : {
+                        "@name" : "Interpolate 2D",
+                        "@position" : [ 8672, 7816 ],
+                        "frequency" : 1,
+                        "fun" : {
                            "@collapsed" : false,
-                           "@name" : "Cell Samples 2D",
-                           "@position" : [ 8969, 7690 ],
-                           "cells" : {
+                           "@name" : "Distort 2D",
+                           "@position" : [ 9014, 7787 ],
+                           "base" : {
                               "@collapsed" : false,
-                              "@name" : "Voronoi 2D",
-                              "@position" : [ 9273, 7566 ],
-                              "frequency" : 0.15000000596046448,
-                              "seed" : 17427789108644392674,
-                              "seed-combine" : true,
-                              "seed-hash" : "l7cVU9Dw9MJJRCQx",
-                              "type" : "voronoi"
-                           },
-                           "frequency" : 0.55900001525878906,
-                           "fun" : {
-                              "@collapsed" : false,
-                              "@name" : "Sum 2D",
-                              "@position" : [ 9273, 7672 ],
-                              "frequency" : 1,
+                              "@name" : "Cell Samples 2D",
+                              "@position" : [ 9325, 7734 ],
+                              "cells" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Voronoi 2D",
+                                 "@position" : [ 9629, 7610 ],
+                                 "frequency" : 0.15000000596046448,
+                                 "seed" : 17427789108644392674,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "l7cVU9Dw9MJJRCQx",
+                                 "type" : "voronoi"
+                              },
+                              "frequency" : 0.55900001525878906,
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Sum 2D",
+                                 "@position" : [ 9629, 7716 ],
+                                 "frequency" : 1,
+                                 "seed" : 0,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "",
+                                 "terms" : [
+                                    {
+                                       "fun" : {
+                                          "@collapsed" : false,
+                                          "@name" : "Perlin 2D",
+                                          "@position" : [ 9918, 7763 ],
+                                          "frequency" : 2,
+                                          "seed" : 1773037932719439197,
+                                          "seed-combine" : true,
+                                          "seed-hash" : "UOs6RL2pW4ad7A7C",
+                                          "type" : "perlin"
+                                       },
+                                       "multiplier" : 1,
+                                       "power" : 1
+                                    },
+                                    {
+                                       "fun" : {
+                                          "@collapsed" : false,
+                                          "@name" : "Constant 2D",
+                                          "@position" : [ 9918, 7869 ],
+                                          "frequency" : 1,
+                                          "type" : "constant",
+                                          "value" : {
+                                             "max" : 0.5,
+                                             "min" : -0.5
+                                          }
+                                       },
+                                       "multiplier" : 1,
+                                       "power" : 1
+                                    }
+                                 ],
+                                 "type" : "sum"
+                              },
+                              "mix" : false,
+                              "overflowPower" : 1,
+                              "power" : 0.5,
                               "seed" : 0,
                               "seed-combine" : true,
                               "seed-hash" : "",
-                              "terms" : [
-                                 {
-                                    "fun" : {
-                                       "@collapsed" : false,
-                                       "@name" : "Perlin 2D",
-                                       "@position" : [ 9562, 7719 ],
-                                       "frequency" : 2,
-                                       "seed" : 1773037932719439197,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "UOs6RL2pW4ad7A7C",
-                                       "type" : "perlin"
-                                    },
-                                    "multiplier" : 1,
-                                    "power" : 1
-                                 },
-                                 {
-                                    "fun" : {
-                                       "@collapsed" : false,
-                                       "@name" : "Constant 2D",
-                                       "@position" : [ 9562, 7825 ],
-                                       "frequency" : 1,
-                                       "type" : "constant",
-                                       "value" : {
-                                          "max" : 1,
-                                          "min" : -1
-                                       }
-                                    },
-                                    "multiplier" : 1,
-                                    "power" : 1
-                                 }
-                              ],
-                              "type" : "sum"
+                              "type" : "cell_samples"
                            },
-                           "mix" : false,
-                           "overflowPower" : 1,
-                           "power" : 0.5,
-                           "seed" : 0,
+                           "distortion" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9325, 8022 ],
+                              "frequency" : 0.2460000067949295,
+                              "seed" : 1773037932719439197,
+                              "seed-combine" : true,
+                              "seed-hash" : "UOs6RL2pW4ad7A7C",
+                              "type" : "perlin"
+                           },
+                           "distortionScale" : 1,
+                           "frequency" : {
+                              "max" : 0.70000004768371582,
+                              "min" : 0.20000000298023224
+                           },
+                           "seed" : 6776613465777908889,
                            "seed-combine" : true,
-                           "seed-hash" : "",
-                           "type" : "cell_samples"
+                           "seed-hash" : "32bFdXQqylOc3LaR",
+                           "type" : "distort"
                         },
-                        "distortion" : {
-                           "@collapsed" : false,
-                           "@name" : "Perlin 2D",
-                           "@position" : [ 8969, 7978 ],
-                           "frequency" : 0.2460000067949295,
-                           "seed" : 1773037932719439197,
-                           "seed-combine" : true,
-                           "seed-hash" : "UOs6RL2pW4ad7A7C",
-                           "type" : "perlin"
+                        "scale" : {
+                           "max" : 10,
+                           "min" : 0.0099999997764825821
                         },
-                        "distortionScale" : 1,
-                        "frequency" : {
-                           "max" : 0.70000004768371582,
-                           "min" : 0
-                        },
-                        "seed" : 6776613465777908889,
+                        "seed" : 10137194490269840633,
                         "seed-combine" : true,
-                        "seed-hash" : "32bFdXQqylOc3LaR",
-                        "type" : "distort"
+                        "seed-hash" : "0LKd93F2lHNrYDit",
+                        "type" : "interpolated"
                      },
                      "w" : 1
                   },
@@ -381,7 +409,7 @@
                         "seed-hash" : "NFYOP6XNm40HBRYj",
                         "type" : "distort"
                      },
-                     "w" : 0.19999998807907104
+                     "w" : 0.039999999105930328
                   },
                   {
                      "fun" : {
@@ -420,7 +448,7 @@
                         "seed-hash" : "qSzHXLvw2DqOgAzr",
                         "type" : "distort"
                      },
-                     "w" : 0.19999998807907104
+                     "w" : 0.039999999105930328
                   },
                   {
                      "fun" : {
@@ -459,7 +487,7 @@
                         "seed-hash" : "qSzHXLvw2DqOgAzr",
                         "type" : "distort"
                      },
-                     "w" : 0.19999998807907104
+                     "w" : 0.039999999105930328
                   }
                ],
                "frequency" : 1,
