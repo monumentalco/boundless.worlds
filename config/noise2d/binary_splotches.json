@@ -3,7 +3,7 @@
    "@configType" : "NOISE2D",
    "@name" : "Binary Splotches",
    "@position" : [ 7932, 8160 ],
-   "@scroll" : [ 8268.2958984375, 8346.3984375, 0.10000012814998627 ],
+   "@scroll" : [ 8085.650390625, 8148.31689453125, 0.10000012814998627 ],
    "@toggle-test" : false,
    "@toggle-world" : false,
    "@unlinked" : [],
@@ -57,23 +57,23 @@
                   "fun" : {
                      "@collapsed" : false,
                      "@name" : "Distort 2D",
-                     "@position" : [ 8919, 8129 ],
+                     "@position" : [ 9212, 7917 ],
                      "base" : {
                         "@collapsed" : false,
                         "@name" : "Fractal 2D",
-                        "@position" : [ 9247, 7833 ],
+                        "@position" : [ 9540, 7621 ],
                         "frequency" : 1,
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Remap 2D",
-                           "@position" : [ 9541, 7893 ],
+                           "@position" : [ 9834, 7681 ],
                            "clamp" : true,
                            "clampPower" : 10,
                            "frequency" : 1,
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "MinMax",
-                              "@position" : [ 9835, 7916 ],
+                              "@position" : [ 10128, 7704 ],
                               "frequency" : 1,
                               "links" : [
                                  {
@@ -111,7 +111,7 @@
                                     "nodeValue" : {
                                        "@collapsed" : false,
                                        "@name" : "Worley 2D",
-                                       "@position" : [ 10129, 7862 ],
+                                       "@position" : [ 10422, 7650 ],
                                        "cellCount" : 1,
                                        "cellScale" : 7.5,
                                        "components" : [
@@ -227,12 +227,12 @@
                      "distortion" : {
                         "@collapsed" : false,
                         "@name" : "Fractal 2D",
-                        "@position" : [ 9247, 8168 ],
+                        "@position" : [ 9540, 7956 ],
                         "frequency" : 1,
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Perlin 2D",
-                           "@position" : [ 9529, 8326 ],
+                           "@position" : [ 9822, 8114 ],
                            "frequency" : 1,
                            "seed" : 962940588487372592,
                            "seed-combine" : true,
@@ -255,11 +255,18 @@
                               "seed-hash" : "uhTc3GR4iNvCBWpi"
                            },
                            {
-                              "multiplier" : 0.35700002312660217,
-                              "scale" : 0.75,
+                              "multiplier" : 0.2630000114440918,
+                              "scale" : 1,
                               "seed" : 10153238810501558514,
                               "seed-combine" : true,
                               "seed-hash" : "uhTc3GR4iNvCBWpi"
+                           },
+                           {
+                              "multiplier" : 0.10000000149011612,
+                              "scale" : 2,
+                              "seed" : 16127636353099811418,
+                              "seed-combine" : true,
+                              "seed-hash" : "Q6oMlCOhDrdo1vAN"
                            }
                         ],
                         "seed" : 3938739450301887442,
@@ -390,12 +397,67 @@
                }
             ],
             "linkType" : "LT:CUSTOM_SLIDER",
-            "name" : "distortion",
+            "name" : "coarse distortion",
             "shortPath" : "Distort 2D.scale.@xz",
             "sliderCheck" : false,
             "sliderDefault" : 1,
             "sliderMax" : 4,
             "sliderMin" : 0.0010000000474974513,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 4015774160,
+            "blockDefault" : "",
+            "checkDefault" : true,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "links"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "nodeValue"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "distortion"
+               },
+               {
+                  "index" : -1,
+                  "name" : "octaves"
+               },
+               {
+                  "index" : 3,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "multiplier"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "fine distortion",
+            "shortPath" : "Fractal 2D.multiplier",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.10000000149011612,
+            "sliderMax" : 2,
+            "sliderMin" : -2,
             "sliderStep" : 0.0010000000474974513
          },
          {
@@ -532,23 +594,23 @@
                         "fun" : {
                            "@collapsed" : false,
                            "@name" : "Distort 2D",
-                           "@position" : [ 8919, 8129 ],
+                           "@position" : [ 9212, 7917 ],
                            "base" : {
                               "@collapsed" : false,
                               "@name" : "Fractal 2D",
-                              "@position" : [ 9247, 7833 ],
+                              "@position" : [ 9540, 7621 ],
                               "frequency" : 1,
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [ 9541, 7893 ],
+                                 "@position" : [ 9834, 7681 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "MinMax",
-                                    "@position" : [ 9835, 7916 ],
+                                    "@position" : [ 10128, 7704 ],
                                     "frequency" : 1,
                                     "links" : [
                                        {
@@ -586,7 +648,7 @@
                                           "nodeValue" : {
                                              "@collapsed" : false,
                                              "@name" : "Worley 2D",
-                                             "@position" : [ 10129, 7862 ],
+                                             "@position" : [ 10422, 7650 ],
                                              "cellCount" : 1,
                                              "cellScale" : 7.5,
                                              "components" : [
@@ -702,12 +764,12 @@
                            "distortion" : {
                               "@collapsed" : false,
                               "@name" : "Fractal 2D",
-                              "@position" : [ 9247, 8168 ],
+                              "@position" : [ 9540, 7956 ],
                               "frequency" : 1,
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Perlin 2D",
-                                 "@position" : [ 9529, 8326 ],
+                                 "@position" : [ 9822, 8114 ],
                                  "frequency" : 1,
                                  "seed" : 962940588487372592,
                                  "seed-combine" : true,
@@ -730,11 +792,18 @@
                                     "seed-hash" : "uhTc3GR4iNvCBWpi"
                                  },
                                  {
-                                    "multiplier" : 0.35700002312660217,
-                                    "scale" : 0.75,
+                                    "multiplier" : 0.2630000114440918,
+                                    "scale" : 1,
                                     "seed" : 10153238810501558514,
                                     "seed-combine" : true,
                                     "seed-hash" : "uhTc3GR4iNvCBWpi"
+                                 },
+                                 {
+                                    "multiplier" : 0.10000000149011612,
+                                    "scale" : 2,
+                                    "seed" : 16127636353099811418,
+                                    "seed-combine" : true,
+                                    "seed-hash" : "Q6oMlCOhDrdo1vAN"
                                  }
                               ],
                               "seed" : 3938739450301887442,
@@ -865,12 +934,67 @@
                      }
                   ],
                   "linkType" : "LT:CUSTOM_SLIDER",
-                  "name" : "distortion",
+                  "name" : "coarse distortion",
                   "shortPath" : "Distort 2D.scale.@xz",
                   "sliderCheck" : false,
                   "sliderDefault" : 1,
                   "sliderMax" : 4,
                   "sliderMin" : 0.0010000000474974513,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 4015774160,
+                  "blockDefault" : "",
+                  "checkDefault" : true,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "links"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "nodeValue"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "distortion"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "octaves"
+                     },
+                     {
+                        "index" : 3,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "multiplier"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "fine distortion",
+                  "shortPath" : "Fractal 2D.multiplier",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.10000000149011612,
+                  "sliderMax" : 2,
+                  "sliderMin" : -2,
                   "sliderStep" : 0.0010000000474974513
                },
                {
