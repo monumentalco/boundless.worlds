@@ -1,0 +1,517 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Ditches",
+   "@position" : [ 8203, 8050 ],
+   "@scroll" : [ 8901.244140625, 8138.6533203125, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 17,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Product 2D",
+         "@position" : [ 8555, 8001 ],
+         "frequency" : 1,
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "terms" : [
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Remap 2D",
+                  "@position" : [ 8891, 7986 ],
+                  "clamp" : true,
+                  "clampPower" : 0.5,
+                  "frequency" : 1,
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "Remap 2D",
+                     "@position" : [ 9219, 7981 ],
+                     "clamp" : true,
+                     "clampPower" : 0.5,
+                     "frequency" : 1,
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Distort 2D",
+                        "@position" : [ 9595, 7960 ],
+                        "base" : {
+                           "@collapsed" : false,
+                           "@name" : "Worley 2D",
+                           "@position" : [ 9933, 7890 ],
+                           "cellCount" : 1,
+                           "cellScale" : 20,
+                           "components" : [
+                              {
+                                 "k" : 0,
+                                 "multiplier" : 1,
+                                 "power" : 2
+                              }
+                           ],
+                           "frequency" : 0.24000000953674316,
+                           "seed" : 14342776291472181264,
+                           "seed-combine" : true,
+                           "seed-hash" : "pyIhv5YRNN7DSfOX",
+                           "type" : "worley"
+                        },
+                        "distortion" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 9908, 8190 ],
+                           "frequency" : 0.10000000149011612,
+                           "seed" : 11255793118020908025,
+                           "seed-combine" : true,
+                           "seed-hash" : "OyESxlHvzfYCkC9V",
+                           "type" : "perlin"
+                        },
+                        "distortionScale" : 1,
+                        "frequency" : 1,
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "type" : "distort"
+                     },
+                     "max" : 2,
+                     "min" : -2,
+                     "seed" : 0,
+                     "seed-combine" : true,
+                     "seed-hash" : "",
+                     "type" : "remap"
+                  },
+                  "max" : 0.40000000596046448,
+                  "min" : -0.40000000596046448,
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "type" : "remap"
+               },
+               "power" : 1
+            }
+         ],
+         "type" : "product"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 3978715312,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "min"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Depth",
+            "shortPath" : "Remap 2D.min",
+            "sliderCheck" : false,
+            "sliderDefault" : -0.20000000298023224,
+            "sliderMax" : 2,
+            "sliderMin" : -2,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 3978715312,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "cellScale"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Size",
+            "shortPath" : "Worley 2D.cellScale",
+            "sliderCheck" : false,
+            "sliderDefault" : 2.9600000381469727,
+            "sliderMax" : 20,
+            "sliderMin" : 0.0099999997764825821,
+            "sliderStep" : 0.0099999997764825821
+         },
+         {
+            "blockConstraint" : 3978715312,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "distortion"
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Roundness",
+            "shortPath" : "Perlin 2D.frequency.@xz",
+            "sliderCheck" : false,
+            "sliderDefault" : 1,
+            "sliderMax" : 2,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "seed-hash" : "",
+   "sharedConfig" : {
+      "seed-hash" : "",
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8481, 8083 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Ditches",
+         "@position" : [ 8203, 8050 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 15,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Product 2D",
+               "@position" : [ 8555, 8001 ],
+               "frequency" : 1,
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 2D",
+                        "@position" : [ 8891, 7986 ],
+                        "clamp" : true,
+                        "clampPower" : 0.5,
+                        "frequency" : 1,
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 9219, 7981 ],
+                           "clamp" : true,
+                           "clampPower" : 0.5,
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Distort 2D",
+                              "@position" : [ 9595, 7960 ],
+                              "base" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Worley 2D",
+                                 "@position" : [ 9933, 7890 ],
+                                 "cellCount" : 1,
+                                 "cellScale" : 20,
+                                 "components" : [
+                                    {
+                                       "k" : 0,
+                                       "multiplier" : 1,
+                                       "power" : 2
+                                    }
+                                 ],
+                                 "frequency" : 0.24000000953674316,
+                                 "seed" : 14342776291472181264,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "pyIhv5YRNN7DSfOX",
+                                 "type" : "worley"
+                              },
+                              "distortion" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Perlin 2D",
+                                 "@position" : [ 9908, 8190 ],
+                                 "frequency" : 0.10000000149011612,
+                                 "seed" : 11255793118020908025,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "OyESxlHvzfYCkC9V",
+                                 "type" : "perlin"
+                              },
+                              "distortionScale" : 1,
+                              "frequency" : 1,
+                              "seed" : 0,
+                              "seed-combine" : true,
+                              "seed-hash" : "",
+                              "type" : "distort"
+                           },
+                           "max" : 2,
+                           "min" : -2,
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "type" : "remap"
+                        },
+                        "max" : 0.40000000596046448,
+                        "min" : -0.40000000596046448,
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "type" : "remap"
+                     },
+                     "power" : 1
+                  }
+               ],
+               "type" : "product"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 3978715312,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "min"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Depth",
+                  "shortPath" : "Remap 2D.min",
+                  "sliderCheck" : false,
+                  "sliderDefault" : -0.20000000298023224,
+                  "sliderMax" : 2,
+                  "sliderMin" : -2,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 3978715312,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "base"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "cellScale"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Size",
+                  "shortPath" : "Worley 2D.cellScale",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 2.9600000381469727,
+                  "sliderMax" : 20,
+                  "sliderMin" : 0.0099999997764825821,
+                  "sliderStep" : 0.0099999997764825821
+               },
+               {
+                  "blockConstraint" : 3978715312,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "distortion"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "frequency"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "@xz"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Roundness",
+                  "shortPath" : "Perlin 2D.frequency.@xz",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 1,
+                  "sliderMax" : 2,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8481, 8083 ],
+            "frequency" : 1,
+            "seed" : 15315005695039086861,
+            "seed-combine" : true,
+            "seed-hash" : "9If70QpiP7ycm1GZ",
+            "type" : "reference"
+         }
+      },
+      "frequency" : 1,
+      "links" : [],
+      "reference" : "",
+      "seed" : 15315005695039086861,
+      "seed-combine" : true,
+      "seed-hash" : "9If70QpiP7ycm1GZ",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
