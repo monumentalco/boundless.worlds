@@ -1,0 +1,408 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Hilly",
+   "@position" : [ 7916, 8153 ],
+   "@scroll" : [ 8234.58203125, 8286.251953125, -0.5 ],
+   "@toggle-test" : true,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 11,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "cell_samples noise (2D)",
+         "@position" : [ 8230, 8093 ],
+         "cells" : {
+            "@collapsed" : false,
+            "@name" : "voronoi cell noise (2D)",
+            "@position" : [ 8540, 7934 ],
+            "frequency" : [ 0.20000000298023224, 0.20000000298023224 ],
+            "offset" : [ 0, 0 ],
+            "offset-hash" : "pKSpnBwiVPs99DV4",
+            "type" : "voronoi"
+         },
+         "frequency" : [ 1, 1 ],
+         "fun" : {
+            "@collapsed" : false,
+            "@name" : "fractal noise (2D)",
+            "@position" : [ 8540, 8040 ],
+            "frequency" : [ 0.065000005066394806, 0.065000005066394806 ],
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "perlin noise (2D)",
+               "@position" : [ 8822, 8186 ],
+               "frequency" : [ 1, 1 ],
+               "offset" : [ 124, -421 ],
+               "offset-hash" : "PMxkCvUeWn9xT1pu",
+               "type" : "perlin"
+            },
+            "octaves" : [
+               {
+                  "multiplier" : 0.5,
+                  "offset" : [ 124, 321 ],
+                  "offset-hash" : "dtXhM7rpr0cJdDFz",
+                  "scale" : 1
+               },
+               {
+                  "multiplier" : 0.30000001192092896,
+                  "offset" : [ 464, 436 ],
+                  "offset-hash" : "SblSRSlBQy8Fvitk",
+                  "scale" : 4
+               },
+               {
+                  "multiplier" : 0.10000000149011612,
+                  "offset" : [ -651, -954 ],
+                  "offset-hash" : "552nfbLcFuxW8q5M",
+                  "scale" : 10
+               }
+            ],
+            "type" : "fractal"
+         },
+         "mix" : true,
+         "overflowPower" : 0.41300001740455627,
+         "power" : 0.50300002098083496,
+         "type" : "cell_samples"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Softness",
+            "shortPath" : "cell_samples noise (2D).power",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "overflowPower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Edge Sharpness",
+            "shortPath" : "cell_samples noise (2D).overflowPower",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.41300001740455627,
+            "sliderMax" : 2,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Bumpiness",
+            "shortPath" : "fractal noise (2D).frequency.@xz",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.065000005066394806,
+            "sliderMax" : 0.29900002479553223,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 192
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8237, 8402 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Hilly",
+         "@position" : [ 7916, 8153 ],
+         "@toggle-test" : true,
+         "@toggle-world" : true,
+         "@version" : 11,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "cell_samples noise (2D)",
+               "@position" : [ 8230, 8093 ],
+               "cells" : {
+                  "@collapsed" : false,
+                  "@name" : "voronoi cell noise (2D)",
+                  "@position" : [ 8540, 7934 ],
+                  "frequency" : [ 0.20000000298023224, 0.20000000298023224 ],
+                  "offset" : [ 0, 0 ],
+                  "offset-hash" : "pKSpnBwiVPs99DV4",
+                  "type" : "voronoi"
+               },
+               "frequency" : [ 1, 1 ],
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "fractal noise (2D)",
+                  "@position" : [ 8540, 8040 ],
+                  "frequency" : [ 0.065000005066394806, 0.065000005066394806 ],
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "perlin noise (2D)",
+                     "@position" : [ 8822, 8186 ],
+                     "frequency" : [ 1, 1 ],
+                     "offset" : [ 124, -421 ],
+                     "offset-hash" : "PMxkCvUeWn9xT1pu",
+                     "type" : "perlin"
+                  },
+                  "octaves" : [
+                     {
+                        "multiplier" : 0.5,
+                        "offset" : [ 124, 321 ],
+                        "offset-hash" : "dtXhM7rpr0cJdDFz",
+                        "scale" : 1
+                     },
+                     {
+                        "multiplier" : 0.30000001192092896,
+                        "offset" : [ 464, 436 ],
+                        "offset-hash" : "SblSRSlBQy8Fvitk",
+                        "scale" : 4
+                     },
+                     {
+                        "multiplier" : 0.10000000149011612,
+                        "offset" : [ -651, -954 ],
+                        "offset-hash" : "552nfbLcFuxW8q5M",
+                        "scale" : 10
+                     }
+                  ],
+                  "type" : "fractal"
+               },
+               "mix" : true,
+               "overflowPower" : 0.41300001740455627,
+               "power" : 0.50300002098083496,
+               "type" : "cell_samples"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "power"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Softness",
+                  "shortPath" : "cell_samples noise (2D).power",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "overflowPower"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Edge Sharpness",
+                  "shortPath" : "cell_samples noise (2D).overflowPower",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.41300001740455627,
+                  "sliderMax" : 2,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "frequency"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "@xz"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Bumpiness",
+                  "shortPath" : "fractal noise (2D).frequency.@xz",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.065000005066394806,
+                  "sliderMax" : 0.29900002479553223,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 192
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8237, 8402 ],
+            "frequency" : [ 1, 1 ],
+            "offset" : [ 193.31959533691406, -96.458290100097656 ],
+            "offset-hash" : "BKTj3CI6rYUbkM3i",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.28800001740455627
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "overflowPower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.029000001028180122
+         }
+      ],
+      "offset" : [ 193.31959533691406, -96.458290100097656 ],
+      "offset-hash" : "BKTj3CI6rYUbkM3i",
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

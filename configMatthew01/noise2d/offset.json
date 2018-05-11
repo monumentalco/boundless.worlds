@@ -1,0 +1,360 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Offset",
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 8634.84765625, 8314.234375, 0 ],
+   "@toggle-test" : true,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 11,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Sum 2D",
+         "@position" : [ 8238, 8063 ],
+         "frequency" : [ 1, 1 ],
+         "terms" : [
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Remap 2D",
+                  "@position" : [ 8534, 8056 ],
+                  "clamp" : false,
+                  "clampPower" : 5,
+                  "frequency" : [ 1, 1 ],
+                  "fun" : null,
+                  "max" : 1,
+                  "min" : -1,
+                  "type" : "remap"
+               },
+               "multiplier" : 1,
+               "power" : 1
+            },
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Constant 2D",
+                  "@position" : [ 8534, 8225 ],
+                  "frequency" : [ 1, 1 ],
+                  "offset" : [ 159.45677185058594, 110.11886596679688 ],
+                  "offset-hash" : "x2I4Suy87ZQ8PYEz",
+                  "type" : "constant",
+                  "value" : 0
+               },
+               "multiplier" : 1,
+               "power" : 1
+            }
+         ],
+         "type" : "sum"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 173316608,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "function",
+            "shortPath" : "Remap 2D.base",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 173316608,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 1,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "value"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "offset",
+            "shortPath" : "Constant 2D.value",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8238, 8353 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Offset",
+         "@position" : [ 7932, 8160 ],
+         "@toggle-test" : true,
+         "@toggle-world" : false,
+         "@version" : 11,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 8238, 8063 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Remap 2D",
+                        "@position" : [ 8534, 8056 ],
+                        "clamp" : false,
+                        "clampPower" : 5,
+                        "frequency" : [ 1, 1 ],
+                        "fun" : null,
+                        "max" : 1,
+                        "min" : -1,
+                        "type" : "remap"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 8534, 8225 ],
+                        "frequency" : [ 1, 1 ],
+                        "offset" : [ 159.45677185058594, 110.11886596679688 ],
+                        "offset-hash" : "x2I4Suy87ZQ8PYEz",
+                        "type" : "constant",
+                        "value" : 0
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 173316608,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "function",
+                  "shortPath" : "Remap 2D.base",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 173316608,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 1,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "value"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "offset",
+                  "shortPath" : "Constant 2D.value",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8238, 8353 ],
+            "frequency" : [ 1, 1 ],
+            "offset" : [ 96.699470520019531, 341.17831420898438 ],
+            "offset-hash" : "zGQuor9d4wQhgQ1i",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "nodeValue" : {
+               "@collapsed" : false,
+               "@name" : "Perlin 2D",
+               "@position" : [ 8520, 8373 ],
+               "frequency" : [ 1, 1 ],
+               "offset" : [ 328.5755615234375, 31.274721145629883 ],
+               "offset-hash" : "PjyzNFOpQ3Bz6lL7",
+               "type" : "perlin"
+            }
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 1,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "value"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : -1
+         }
+      ],
+      "offset" : [ 96.699470520019531, 341.17831420898438 ],
+      "offset-hash" : "zGQuor9d4wQhgQ1i",
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
