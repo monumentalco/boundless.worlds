@@ -1,0 +1,341 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Pitted",
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 8587, 8211, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 17,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Fractal 2D",
+         "@position" : [ 8241, 8161 ],
+         "frequency" : 1,
+         "fun" : {
+            "@collapsed" : false,
+            "@name" : "remap noise (2D)",
+            "@position" : [ 8535, 8264 ],
+            "clamp" : true,
+            "clampPower" : 4.8499999046325684,
+            "frequency" : 1,
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "gabor noise (2D)",
+               "@position" : [ 8829, 8224 ],
+               "cellCount" : 4,
+               "components" : [
+                  {
+                     "F" : 0.026000000536441803,
+                     "K" : 0.29000002145767212,
+                     "a" : 0.20600001513957977,
+                     "w" : {
+                        "@collapsed" : false,
+                        "@name" : "Heightmap - Angled Hills",
+                        "@position" : [ 9116, 8273 ],
+                        "frequency" : 1,
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "power"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "overflowPower"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.41300001740455627
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "frequency"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "@xz"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : 0.065000005066394806
+                           }
+                        ],
+                        "reference" : "noise2d/heightmaps/angledhills.json",
+                        "seed" : 16237413267835243029,
+                        "seed-combine" : true,
+                        "seed-hash" : "Pp1gastlLybCRhFX",
+                        "tick" : 0,
+                        "type" : "reference"
+                     }
+                  }
+               ],
+               "frequency" : 1.0840001106262207,
+               "seed" : 6979841502789182004,
+               "seed-combine" : true,
+               "seed-hash" : "nmZZUSTBemsqbs3k",
+               "type" : "gabor"
+            },
+            "max" : 0.94200003147125244,
+            "min" : -1.2000000476837158,
+            "seed" : 0,
+            "seed-combine" : true,
+            "seed-hash" : "",
+            "type" : "remap"
+         },
+         "octaves" : [
+            {
+               "multiplier" : 0.86500006914138794,
+               "scale" : 1,
+               "seed" : 8312082894187413818,
+               "seed-combine" : true,
+               "seed-hash" : "ANrjRwMiiJr0tm1V"
+            },
+            {
+               "multiplier" : -0.11600000411272049,
+               "scale" : 1.6100000143051147,
+               "seed" : 4638496920902988502,
+               "seed-combine" : true,
+               "seed-hash" : "tSCQbkeN2u0lIFu5"
+            },
+            {
+               "multiplier" : 0.27100002765655518,
+               "scale" : 3.2899999618530273,
+               "seed" : 13752514258664808981,
+               "seed-combine" : true,
+               "seed-hash" : "kjhILfbGqnqLhUWk"
+            }
+         ],
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "type" : "fractal"
+      },
+      "links" : []
+   },
+   "seed" : "I has a seed!",
+   "seed-hash" : "",
+   "sharedConfig" : {
+      "seed-hash" : "",
+      "worldSize" : 192
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8239, 8392 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Pitted",
+         "@position" : [ 7932, 8160 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 15,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Fractal 2D",
+               "@position" : [ 8241, 8161 ],
+               "frequency" : 1,
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "remap noise (2D)",
+                  "@position" : [ 8535, 8264 ],
+                  "clamp" : true,
+                  "clampPower" : 4.8499999046325684,
+                  "frequency" : 1,
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "gabor noise (2D)",
+                     "@position" : [ 8829, 8224 ],
+                     "cellCount" : 4,
+                     "components" : [
+                        {
+                           "F" : 0.026000000536441803,
+                           "K" : 0.29000002145767212,
+                           "a" : 0.20600001513957977,
+                           "w" : {
+                              "@collapsed" : false,
+                              "@name" : "Heightmap - Angled Hills",
+                              "@position" : [ 9116, 8273 ],
+                              "frequency" : 1,
+                              "links" : [
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "power"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "overflowPower"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.41300001740455627
+                                 },
+                                 {
+                                    "linkPath" : [
+                                       {
+                                          "index" : -1,
+                                          "name" : "noise2d"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "fun"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "frequency"
+                                       },
+                                       {
+                                          "index" : -1,
+                                          "name" : "@xz"
+                                       }
+                                    ],
+                                    "linkType" : "LT:CUSTOM_SLIDER",
+                                    "sliderValue" : 0.065000005066394806
+                                 }
+                              ],
+                              "reference" : "noise2d/heightmaps/angledhills.json",
+                              "seed" : 16237413267835243029,
+                              "seed-combine" : true,
+                              "seed-hash" : "Pp1gastlLybCRhFX",
+                              "tick" : 0,
+                              "type" : "reference"
+                           }
+                        }
+                     ],
+                     "frequency" : 1.0840001106262207,
+                     "seed" : 6979841502789182004,
+                     "seed-combine" : true,
+                     "seed-hash" : "nmZZUSTBemsqbs3k",
+                     "type" : "gabor"
+                  },
+                  "max" : 0.94200003147125244,
+                  "min" : -1.2000000476837158,
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "type" : "remap"
+               },
+               "octaves" : [
+                  {
+                     "multiplier" : 0.86500006914138794,
+                     "scale" : 1,
+                     "seed" : 8312082894187413818,
+                     "seed-combine" : true,
+                     "seed-hash" : "ANrjRwMiiJr0tm1V"
+                  },
+                  {
+                     "multiplier" : -0.11600000411272049,
+                     "scale" : 1.6100000143051147,
+                     "seed" : 4638496920902988502,
+                     "seed-combine" : true,
+                     "seed-hash" : "tSCQbkeN2u0lIFu5"
+                  },
+                  {
+                     "multiplier" : 0.27100002765655518,
+                     "scale" : 3.2899999618530273,
+                     "seed" : 13752514258664808981,
+                     "seed-combine" : true,
+                     "seed-hash" : "kjhILfbGqnqLhUWk"
+                  }
+               ],
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "type" : "fractal"
+            },
+            "links" : []
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 192
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8239, 8392 ],
+            "frequency" : 1,
+            "seed" : 13423746469470400496,
+            "seed-combine" : true,
+            "seed-hash" : "c52E9JTSHRb3nNxe",
+            "type" : "reference"
+         }
+      },
+      "frequency" : 1,
+      "links" : [],
+      "reference" : "",
+      "seed" : 13423746469470400496,
+      "seed-combine" : true,
+      "seed-hash" : "c52E9JTSHRb3nNxe",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

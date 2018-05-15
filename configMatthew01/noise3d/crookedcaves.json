@@ -1,0 +1,261 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE3D",
+   "@name" : "CrookedCaves",
+   "@position" : [ 7730, 8039 ],
+   "@scroll" : [ 7987.5830078125, 8123.1865234375, -0.5 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 11,
+   "noise3d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Sum 3D",
+         "@position" : [ 8058, 7919 ],
+         "frequency" : [ 1, 1, 1 ],
+         "terms" : [
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Fractal 3D",
+                  "@position" : [ 8382, 7872 ],
+                  "frequency" : [ 1, 1, 1 ],
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "Distort 3D",
+                     "@position" : [ 8696, 7904 ],
+                     "base" : {
+                        "@collapsed" : false,
+                        "@name" : "Interpolate 3D",
+                        "@position" : [ 9010, 7860 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Lerp 3D",
+                           "@position" : [ 9315, 7843 ],
+                           "base" : {
+                              "@collapsed" : false,
+                              "@name" : "Worley 3D",
+                              "@position" : [ 9620, 7718 ],
+                              "cellCount" : 8,
+                              "cellScale" : 1,
+                              "components" : [
+                                 {
+                                    "k" : 0,
+                                    "multiplier" : 1,
+                                    "power" : 2
+                                 }
+                              ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "offset" : [ 557.97393798828125, -144.98393249511719, -10.678771018981934 ],
+                              "offset-hash" : "WGjZqWBuaI3kvd09",
+                              "type" : "worley"
+                           },
+                           "basePower" : 1,
+                           "f1" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 3D",
+                              "@position" : [ 9620, 8019 ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "offset" : [ 1073.2161865234375, 342.20770263671875, -339.31369018554688 ],
+                              "offset-hash" : "xiQxl07hy0L4UNcn",
+                              "type" : "perlin"
+                           },
+                           "f2" : null,
+                           "frequency" : [ 1, 1, 1 ],
+                           "type" : "lerp"
+                        },
+                        "scale" : 1,
+                        "type" : "interpolated"
+                     },
+                     "distortion" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 3D",
+                        "@position" : [ 9010, 8148 ],
+                        "frequency" : [ 2, 2, 2 ],
+                        "offset" : [ 1149.0474853515625, 369.36569213867188, -166.69648742675781 ],
+                        "offset-hash" : "C23yH8hJklvUWVRz",
+                        "type" : "perlin"
+                     },
+                     "distortionScale" : [ 1, 1, 1 ],
+                     "frequency" : [ 1, 1, 1 ],
+                     "type" : "distort"
+                  },
+                  "octaves" : [
+                     {
+                        "multiplier" : 1,
+                        "offset" : [ 806.14678955078125, -203.26528930664062, -321.98788452148438 ],
+                        "offset-hash" : "ZS145ojVPzuoVw6R",
+                        "scale" : 1
+                     }
+                  ],
+                  "type" : "fractal"
+               },
+               "multiplier" : 1,
+               "power" : 1
+            },
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Constant 3D",
+                  "@position" : [ 8382, 8276 ],
+                  "frequency" : [ 1, 1, 1 ],
+                  "offset" : [ 570.15655517578125, 244.63798522949219, -110.23056793212891 ],
+                  "offset-hash" : "rMSUxDfBDIXz8lRM",
+                  "type" : "constant",
+                  "value" : 0.79000002145767212
+               },
+               "multiplier" : 1,
+               "power" : 1
+            }
+         ],
+         "type" : "sum"
+      },
+      "links" : []
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 3D",
+      "@position" : [ 8058, 8428 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE3D",
+         "@name" : "CrookedCaves",
+         "@position" : [ 7730, 8039 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 11,
+         "noise3d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Sum 3D",
+               "@position" : [ 8058, 7919 ],
+               "frequency" : [ 1, 1, 1 ],
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Fractal 3D",
+                        "@position" : [ 8382, 7872 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Distort 3D",
+                           "@position" : [ 8696, 7904 ],
+                           "base" : {
+                              "@collapsed" : false,
+                              "@name" : "Interpolate 3D",
+                              "@position" : [ 9010, 7860 ],
+                              "frequency" : [ 1, 1, 1 ],
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Lerp 3D",
+                                 "@position" : [ 9315, 7843 ],
+                                 "base" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Worley 3D",
+                                    "@position" : [ 9620, 7718 ],
+                                    "cellCount" : 8,
+                                    "cellScale" : 1,
+                                    "components" : [
+                                       {
+                                          "k" : 0,
+                                          "multiplier" : 1,
+                                          "power" : 2
+                                       }
+                                    ],
+                                    "frequency" : [ 1, 1, 1 ],
+                                    "offset" : [ 557.97393798828125, -144.98393249511719, -10.678771018981934 ],
+                                    "offset-hash" : "WGjZqWBuaI3kvd09",
+                                    "type" : "worley"
+                                 },
+                                 "basePower" : 1,
+                                 "f1" : {
+                                    "@collapsed" : false,
+                                    "@name" : "Perlin 3D",
+                                    "@position" : [ 9620, 8019 ],
+                                    "frequency" : [ 1, 1, 1 ],
+                                    "offset" : [ 1073.2161865234375, 342.20770263671875, -339.31369018554688 ],
+                                    "offset-hash" : "xiQxl07hy0L4UNcn",
+                                    "type" : "perlin"
+                                 },
+                                 "f2" : null,
+                                 "frequency" : [ 1, 1, 1 ],
+                                 "type" : "lerp"
+                              },
+                              "scale" : 1,
+                              "type" : "interpolated"
+                           },
+                           "distortion" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 3D",
+                              "@position" : [ 9010, 8148 ],
+                              "frequency" : [ 2, 2, 2 ],
+                              "offset" : [ 1149.0474853515625, 369.36569213867188, -166.69648742675781 ],
+                              "offset-hash" : "C23yH8hJklvUWVRz",
+                              "type" : "perlin"
+                           },
+                           "distortionScale" : [ 1, 1, 1 ],
+                           "frequency" : [ 1, 1, 1 ],
+                           "type" : "distort"
+                        },
+                        "octaves" : [
+                           {
+                              "multiplier" : 1,
+                              "offset" : [ 806.14678955078125, -203.26528930664062, -321.98788452148438 ],
+                              "offset-hash" : "ZS145ojVPzuoVw6R",
+                              "scale" : 1
+                           }
+                        ],
+                        "type" : "fractal"
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 3D",
+                        "@position" : [ 8382, 8276 ],
+                        "frequency" : [ 1, 1, 1 ],
+                        "offset" : [ 570.15655517578125, 244.63798522949219, -110.23056793212891 ],
+                        "offset-hash" : "rMSUxDfBDIXz8lRM",
+                        "type" : "constant",
+                        "value" : 0.79000002145767212
+                     },
+                     "multiplier" : 1,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "links" : []
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 3D",
+            "@position" : [ 8058, 8428 ],
+            "frequency" : [ 1, 1, 1 ],
+            "offset" : [ 64.167243957519531, 53.283527374267578, -360.45550537109375 ],
+            "offset-hash" : "4k14m0ezKlr7PojV",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1, 1 ],
+      "links" : [],
+      "offset" : [ 64.167243957519531, 53.283527374267578, -360.45550537109375 ],
+      "offset-hash" : "4k14m0ezKlr7PojV",
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
