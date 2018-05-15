@@ -1,0 +1,434 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Angled Hills",
+   "@position" : [ 7916, 8153 ],
+   "@scroll" : [ 8742.6943359375, 8269.791015625, -0.5 ],
+   "@toggle-test" : true,
+   "@toggle-world" : true,
+   "@unlinked" : [],
+   "@version" : 17,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "cell_samples noise (2D)",
+         "@position" : [ 8230, 8093 ],
+         "cells" : {
+            "@collapsed" : false,
+            "@name" : "voronoi cell noise (2D)",
+            "@position" : [ 8540, 7934 ],
+            "frequency" : 0.20000000298023224,
+            "seed" : 4243862981399071967,
+            "seed-combine" : true,
+            "seed-hash" : "pKSpnBwiVPs99DV4",
+            "type" : "voronoi"
+         },
+         "frequency" : 1,
+         "fun" : {
+            "@collapsed" : false,
+            "@name" : "fractal noise (2D)",
+            "@position" : [ 8540, 8040 ],
+            "frequency" : 0.065000005066394806,
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "perlin noise (2D)",
+               "@position" : [ 8822, 8186 ],
+               "frequency" : 1,
+               "seed" : 7465111767733711360,
+               "seed-combine" : true,
+               "seed-hash" : "PMxkCvUeWn9xT1pu",
+               "type" : "perlin"
+            },
+            "octaves" : [
+               {
+                  "multiplier" : 0.5,
+                  "scale" : 1,
+                  "seed" : 9309645432025579831,
+                  "seed-combine" : true,
+                  "seed-hash" : "dtXhM7rpr0cJdDFz"
+               },
+               {
+                  "multiplier" : 0.30000001192092896,
+                  "scale" : 4,
+                  "seed" : 1716460601079336759,
+                  "seed-combine" : true,
+                  "seed-hash" : "SblSRSlBQy8Fvitk"
+               },
+               {
+                  "multiplier" : 0.10000000149011612,
+                  "scale" : 10,
+                  "seed" : 1171516729828456858,
+                  "seed-combine" : true,
+                  "seed-hash" : "552nfbLcFuxW8q5M"
+               }
+            ],
+            "seed" : 0,
+            "seed-combine" : true,
+            "seed-hash" : "",
+            "type" : "fractal"
+         },
+         "mix" : true,
+         "overflowPower" : 0.41300001740455627,
+         "power" : 0.50300002098083496,
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "type" : "cell_samples"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Softness",
+            "shortPath" : "cell_samples noise (2D).power",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.5,
+            "sliderMax" : 1,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "overflowPower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Edge Sharpness",
+            "shortPath" : "cell_samples noise (2D).overflowPower",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.41300001740455627,
+            "sliderMax" : 2,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 0,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Bumpiness",
+            "shortPath" : "fractal noise (2D).frequency.@xz",
+            "sliderCheck" : false,
+            "sliderDefault" : 0.065000005066394806,
+            "sliderMax" : 0.29900002479553223,
+            "sliderMin" : 0,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "seed-hash" : "",
+   "sharedConfig" : {
+      "seed-hash" : "",
+      "worldSize" : 192
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8237, 8402 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Angled Hills",
+         "@position" : [ 7916, 8153 ],
+         "@toggle-test" : true,
+         "@toggle-world" : true,
+         "@version" : 15,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "cell_samples noise (2D)",
+               "@position" : [ 8230, 8093 ],
+               "cells" : {
+                  "@collapsed" : false,
+                  "@name" : "voronoi cell noise (2D)",
+                  "@position" : [ 8540, 7934 ],
+                  "frequency" : 0.20000000298023224,
+                  "seed" : 4243862981399071967,
+                  "seed-combine" : true,
+                  "seed-hash" : "pKSpnBwiVPs99DV4",
+                  "type" : "voronoi"
+               },
+               "frequency" : 1,
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "fractal noise (2D)",
+                  "@position" : [ 8540, 8040 ],
+                  "frequency" : 0.065000005066394806,
+                  "fun" : {
+                     "@collapsed" : false,
+                     "@name" : "perlin noise (2D)",
+                     "@position" : [ 8822, 8186 ],
+                     "frequency" : 1,
+                     "seed" : 7465111767733711360,
+                     "seed-combine" : true,
+                     "seed-hash" : "PMxkCvUeWn9xT1pu",
+                     "type" : "perlin"
+                  },
+                  "octaves" : [
+                     {
+                        "multiplier" : 0.5,
+                        "scale" : 1,
+                        "seed" : 9309645432025579831,
+                        "seed-combine" : true,
+                        "seed-hash" : "dtXhM7rpr0cJdDFz"
+                     },
+                     {
+                        "multiplier" : 0.30000001192092896,
+                        "scale" : 4,
+                        "seed" : 1716460601079336759,
+                        "seed-combine" : true,
+                        "seed-hash" : "SblSRSlBQy8Fvitk"
+                     },
+                     {
+                        "multiplier" : 0.10000000149011612,
+                        "scale" : 10,
+                        "seed" : 1171516729828456858,
+                        "seed-combine" : true,
+                        "seed-hash" : "552nfbLcFuxW8q5M"
+                     }
+                  ],
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "type" : "fractal"
+               },
+               "mix" : true,
+               "overflowPower" : 0.41300001740455627,
+               "power" : 0.50300002098083496,
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "type" : "cell_samples"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "power"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Softness",
+                  "shortPath" : "cell_samples noise (2D).power",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.5,
+                  "sliderMax" : 1,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "overflowPower"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Edge Sharpness",
+                  "shortPath" : "cell_samples noise (2D).overflowPower",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.41300001740455627,
+                  "sliderMax" : 2,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 0,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "frequency"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "@xz"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Bumpiness",
+                  "shortPath" : "fractal noise (2D).frequency.@xz",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0.065000005066394806,
+                  "sliderMax" : 0.29900002479553223,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 192
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8237, 8402 ],
+            "frequency" : 1,
+            "seed" : 13681018522264806174,
+            "seed-combine" : true,
+            "seed-hash" : "BKTj3CI6rYUbkM3i",
+            "type" : "reference"
+         }
+      },
+      "frequency" : 1,
+      "links" : [
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "power"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.28800001740455627
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "overflowPower"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0
+         },
+         {
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "frequency"
+               },
+               {
+                  "index" : -1,
+                  "name" : "@xz"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "sliderValue" : 0.029000001028180122
+         }
+      ],
+      "reference" : "",
+      "seed" : 13681018522264806174,
+      "seed-combine" : true,
+      "seed-hash" : "BKTj3CI6rYUbkM3i",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

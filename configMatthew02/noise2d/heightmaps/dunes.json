@@ -1,0 +1,333 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "Dunes",
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 8620.3134765625, 8125.40087890625, -0.32500016689300537 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 17,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Sum 2D",
+         "@position" : [ 8250, 8036 ],
+         "frequency" : 1,
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "terms" : [
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Lerp 2D",
+                  "@position" : [ 8561, 8046 ],
+                  "base" : {
+                     "@collapsed" : false,
+                     "@name" : "Remap 2D",
+                     "@position" : [ 8864, 7923 ],
+                     "clamp" : false,
+                     "clampPower" : 5,
+                     "frequency" : 1,
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Simplex 2D",
+                        "@position" : [ 9146, 7955 ],
+                        "frequency" : 0.125,
+                        "seed" : 17777386361919251796,
+                        "seed-combine" : true,
+                        "seed-hash" : "VcM7qWHcmMMjAdAS",
+                        "type" : "simplex"
+                     },
+                     "max" : 1,
+                     "min" : -1,
+                     "seed" : 0,
+                     "seed-combine" : true,
+                     "seed-hash" : "",
+                     "type" : "remap"
+                  },
+                  "basePower" : 1,
+                  "f1" : {
+                     "@collapsed" : false,
+                     "@name" : "Constant 2D",
+                     "@position" : [ 8864, 8092 ],
+                     "frequency" : 1,
+                     "type" : "constant",
+                     "value" : -1
+                  },
+                  "f2" : {
+                     "@collapsed" : false,
+                     "@name" : "Basic dunes (Absolute 2D)",
+                     "@position" : [ 8864, 8224 ],
+                     "frequency" : 1,
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9146, 8221 ],
+                        "frequency" : 0.5,
+                        "seed" : 4182781977530785082,
+                        "seed-combine" : true,
+                        "seed-hash" : "CPWpgVVxOajE0CMi",
+                        "type" : "perlin"
+                     },
+                     "seed" : 0,
+                     "seed-combine" : true,
+                     "seed-hash" : "",
+                     "type" : "absolute"
+                  },
+                  "frequency" : 1,
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "type" : "lerp"
+               },
+               "multiplier" : 0.65000003576278687,
+               "power" : 1
+            },
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Coarse Variations (Simplex 2D)",
+                  "@position" : [ 8561, 8327 ],
+                  "frequency" : 0.25,
+                  "seed" : 11350933113529603352,
+                  "seed-combine" : true,
+                  "seed-hash" : "LvYCiv6zT8f55fOG",
+                  "type" : "simplex"
+               },
+               "multiplier" : 0.35000002384185791,
+               "power" : 1
+            }
+         ],
+         "type" : "sum"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 209752576,
+            "blockDefault" : "",
+            "checkDefault" : true,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "max"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Dune Spacing",
+            "shortPath" : "Remap 2D.max",
+            "sliderCheck" : false,
+            "sliderDefault" : 1,
+            "sliderMax" : 2,
+            "sliderMin" : -2,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "seed-hash" : "",
+   "sharedConfig" : {
+      "seed-hash" : "",
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 8250, 8432 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "Dunes",
+         "@position" : [ 7932, 8160 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 15,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Sum 2D",
+               "@position" : [ 8250, 8036 ],
+               "frequency" : 1,
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "terms" : [
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Lerp 2D",
+                        "@position" : [ 8561, 8046 ],
+                        "base" : {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 8864, 7923 ],
+                           "clamp" : false,
+                           "clampPower" : 5,
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Simplex 2D",
+                              "@position" : [ 9146, 7955 ],
+                              "frequency" : 0.125,
+                              "seed" : 17777386361919251796,
+                              "seed-combine" : true,
+                              "seed-hash" : "VcM7qWHcmMMjAdAS",
+                              "type" : "simplex"
+                           },
+                           "max" : 1,
+                           "min" : -1,
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "type" : "remap"
+                        },
+                        "basePower" : 1,
+                        "f1" : {
+                           "@collapsed" : false,
+                           "@name" : "Constant 2D",
+                           "@position" : [ 8864, 8092 ],
+                           "frequency" : 1,
+                           "type" : "constant",
+                           "value" : -1
+                        },
+                        "f2" : {
+                           "@collapsed" : false,
+                           "@name" : "Basic dunes (Absolute 2D)",
+                           "@position" : [ 8864, 8224 ],
+                           "frequency" : 1,
+                           "fun" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9146, 8221 ],
+                              "frequency" : 0.5,
+                              "seed" : 4182781977530785082,
+                              "seed-combine" : true,
+                              "seed-hash" : "CPWpgVVxOajE0CMi",
+                              "type" : "perlin"
+                           },
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "type" : "absolute"
+                        },
+                        "frequency" : 1,
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "type" : "lerp"
+                     },
+                     "multiplier" : 0.65000003576278687,
+                     "power" : 1
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Coarse Variations (Simplex 2D)",
+                        "@position" : [ 8561, 8327 ],
+                        "frequency" : 0.25,
+                        "seed" : 11350933113529603352,
+                        "seed-combine" : true,
+                        "seed-hash" : "LvYCiv6zT8f55fOG",
+                        "type" : "simplex"
+                     },
+                     "multiplier" : 0.35000002384185791,
+                     "power" : 1
+                  }
+               ],
+               "type" : "sum"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 209752576,
+                  "blockDefault" : "",
+                  "checkDefault" : true,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "base"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "max"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Dune Spacing",
+                  "shortPath" : "Remap 2D.max",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 1,
+                  "sliderMax" : 2,
+                  "sliderMin" : -2,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 8250, 8432 ],
+            "frequency" : 1,
+            "seed" : 17060740137029026550,
+            "seed-combine" : true,
+            "seed-hash" : "vsl5qH74m2bt8IFq",
+            "type" : "reference"
+         }
+      },
+      "frequency" : 1,
+      "links" : [],
+      "reference" : "",
+      "seed" : 17060740137029026550,
+      "seed-combine" : true,
+      "seed-hash" : "vsl5qH74m2bt8IFq",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
