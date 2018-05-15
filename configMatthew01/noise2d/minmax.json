@@ -1,0 +1,399 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE2D",
+   "@name" : "MinMax",
+   "@position" : [ 7631, 8160 ],
+   "@scroll" : [ 8041.97265625, 8267.21484375, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 11,
+   "noise2d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Min 2D",
+         "@position" : [ 7940, 8140 ],
+         "frequency" : [ 1, 1 ],
+         "terms" : [
+            {
+               "@collapsed" : false,
+               "@name" : "Max 2D",
+               "@position" : [ 8245, 8076 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Remap 2D",
+                     "@position" : [ 8541, 8006 ],
+                     "clamp" : false,
+                     "clampPower" : 5,
+                     "frequency" : [ 1, 1 ],
+                     "fun" : null,
+                     "max" : 1,
+                     "min" : -1,
+                     "type" : "remap"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Constant 2D",
+                     "@position" : [ 8541, 8175 ],
+                     "frequency" : [ 1, 1 ],
+                     "offset" : [ -221.50607299804688, -330.9368896484375 ],
+                     "offset-hash" : "wcrdzqwJZNBgB4LB",
+                     "type" : "constant",
+                     "value" : -1
+                  }
+               ],
+               "type" : "max"
+            },
+            {
+               "@collapsed" : false,
+               "@name" : "Constant 2D",
+               "@position" : [ 8245, 8303 ],
+               "frequency" : [ 1, 1 ],
+               "offset" : [ -303.34326171875, -123.00410461425781 ],
+               "offset-hash" : "K3p32Rk4ejgwL0DA",
+               "type" : "constant",
+               "value" : 1
+            }
+         ],
+         "type" : "min"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 1486334880,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "function",
+            "shortPath" : "Remap 2D.base",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 1486334880,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 1,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "value"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "min",
+            "shortPath" : "Constant 2D.value",
+            "sliderCheck" : false,
+            "sliderDefault" : -1,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 3395272832,
+            "blockDefault" : "",
+            "checkDefault" : true,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise2d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "terms"
+               },
+               {
+                  "index" : 1,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "value"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "max",
+            "shortPath" : "Constant 2D.value",
+            "sliderCheck" : false,
+            "sliderDefault" : 1,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 2D",
+      "@position" : [ 7940, 8432 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE2D",
+         "@name" : "MinMax",
+         "@position" : [ 7631, 8160 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 11,
+         "noise2d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Min 2D",
+               "@position" : [ 7940, 8140 ],
+               "frequency" : [ 1, 1 ],
+               "terms" : [
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Max 2D",
+                     "@position" : [ 8245, 8076 ],
+                     "frequency" : [ 1, 1 ],
+                     "terms" : [
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Remap 2D",
+                           "@position" : [ 8541, 8006 ],
+                           "clamp" : false,
+                           "clampPower" : 5,
+                           "frequency" : [ 1, 1 ],
+                           "fun" : null,
+                           "max" : 1,
+                           "min" : -1,
+                           "type" : "remap"
+                        },
+                        {
+                           "@collapsed" : false,
+                           "@name" : "Constant 2D",
+                           "@position" : [ 8541, 8175 ],
+                           "frequency" : [ 1, 1 ],
+                           "offset" : [ -221.50607299804688, -330.9368896484375 ],
+                           "offset-hash" : "wcrdzqwJZNBgB4LB",
+                           "type" : "constant",
+                           "value" : -1
+                        }
+                     ],
+                     "type" : "max"
+                  },
+                  {
+                     "@collapsed" : false,
+                     "@name" : "Constant 2D",
+                     "@position" : [ 8245, 8303 ],
+                     "frequency" : [ 1, 1 ],
+                     "offset" : [ -303.34326171875, -123.00410461425781 ],
+                     "offset-hash" : "K3p32Rk4ejgwL0DA",
+                     "type" : "constant",
+                     "value" : 1
+                  }
+               ],
+               "type" : "min"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 1486334880,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "function",
+                  "shortPath" : "Remap 2D.base",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 1486334880,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 1,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "value"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "min",
+                  "shortPath" : "Constant 2D.value",
+                  "sliderCheck" : false,
+                  "sliderDefault" : -1,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 3395272832,
+                  "blockDefault" : "",
+                  "checkDefault" : true,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise2d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "terms"
+                     },
+                     {
+                        "index" : 1,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "value"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "max",
+                  "shortPath" : "Constant 2D.value",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 1,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 2D",
+            "@position" : [ 7940, 8432 ],
+            "frequency" : [ 1, 1 ],
+            "offset" : [ 193.06324768066406, 120.82357025146484 ],
+            "offset-hash" : "bMSR8WAY72w9NNkU",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [],
+      "offset" : [ 193.06324768066406, 120.82357025146484 ],
+      "offset-hash" : "bMSR8WAY72w9NNkU",
+      "reference" : "",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}
