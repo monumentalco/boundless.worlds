@@ -3,7 +3,7 @@
    "@configType" : "BIOME",
    "@name" : "strata_slice",
    "@position" : [ 7759, 8141 ],
-   "@scroll" : [ 8407.6962890625, 8599.7275390625, -1 ],
+   "@scroll" : [ 9011.5576171875, 8665.62109375, -0.75 ],
    "@toggle-test" : false,
    "@toggle-world" : true,
    "@unlinked" : [],
@@ -55,7 +55,7 @@
             "@x-name" : "x",
             "@y-name" : "y",
             "caveSurfaceShrink" : {
-               "enabled" : true,
+               "enabled" : false,
                "value" : 1
             },
             "caveThresholdBias" : {
@@ -64,112 +64,144 @@
             },
             "caves" : {
                "@collapsed" : false,
-               "@name" : "Layered 3D",
-               "@position" : [ 9183, 8034 ],
-               "components" : [
+               "@name" : "cave_height_3d",
+               "@position" : [ 9135, 8322 ],
+               "frequency" : [ 1, 1 ],
+               "links" : [
                   {
-                     "fun" : {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "sliderValue"
+                        }
+                     ],
+                     "linkType" : "LT:CUSTOM_SLIDER",
+                     "sliderValue" : -0.070000000298023224
+                  },
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 1,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "nodeValue"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_2D",
+                     "nodeValue" : {
                         "@collapsed" : false,
-                        "@name" : "tier_4_caves",
-                        "@position" : [ 9513, 7913 ],
-                        "frequency" : [ 1, 1 ],
-                        "links" : [],
-                        "reference" : "noise3d/caves/release/tier_4_caves.json",
-                        "seed" : 10241904780022452932,
-                        "seed-combine" : true,
-                        "seed-hash" : "zlvopHnuLg1ZMAdR",
-                        "tick" : 0,
-                        "type" : "reference"
-                     },
-                     "noiseMaxY" : 256,
-                     "y" : 0,
-                     "yfun" : {
-                        "@collapsed" : false,
-                        "@name" : "Sum 2D",
-                        "@position" : [ 9519, 8063 ],
+                        "@name" : "Constant 2D",
+                        "@position" : [ 9447, 8338 ],
                         "frequency" : 1,
-                        "seed" : 0,
-                        "seed-combine" : true,
-                        "seed-hash" : "",
-                        "terms" : [
-                           {
-                              "fun" : {
-                                 "@collapsed" : false,
-                                 "@name" : "Min 2D",
-                                 "@position" : [ 9845, 8072 ],
-                                 "frequency" : 1,
-                                 "seed" : 0,
-                                 "seed-combine" : true,
-                                 "seed-hash" : "",
-                                 "terms" : [
-                                    {
-                                       "@collapsed" : false,
-                                       "@name" : "Constant 2D",
-                                       "@position" : [ 10134, 8056 ],
-                                       "frequency" : 1,
-                                       "type" : "constant",
-                                       "value" : -0.49300003051757813
-                                    },
-                                    {
-                                       "@collapsed" : false,
-                                       "@name" : "water_system_1",
-                                       "@position" : [ 10134, 8162 ],
-                                       "frequency" : 1,
-                                       "links" : [],
-                                       "reference" : "noise2d/watersystems/water_system_1.json",
-                                       "seed" : 7577140515190446856,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "vfKUd1LeyNQkxZRE",
-                                       "tick" : 0,
-                                       "type" : "reference"
-                                    }
-                                 ],
-                                 "type" : "min"
-                              },
-                              "multiplier" : 1,
-                              "power" : 1
-                           },
-                           {
-                              "fun" : {
-                                 "@collapsed" : false,
-                                 "@name" : "Constant 2D",
-                                 "@position" : [ 9848, 8263 ],
-                                 "frequency" : 1,
-                                 "type" : "constant",
-                                 "value" : -0.20000000298023224
-                              },
-                              "multiplier" : 1,
-                              "power" : 1
-                           }
-                        ],
-                        "type" : "sum"
+                        "type" : "constant",
+                        "value" : -0.49300003051757813
                      }
                   },
                   {
-                     "fun" : {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_3D",
+                     "nodeValue" : {
                         "@collapsed" : false,
-                        "@name" : "Constant 3D",
-                        "@position" : [ 9515, 8386 ],
+                        "@name" : "tier_1_caves",
+                        "@position" : [ 9460, 8497 ],
                         "frequency" : [ 1, 1 ],
-                        "type" : "constant",
-                        "value" : -1
-                     },
-                     "noiseMaxY" : 0,
-                     "y" : 256,
-                     "yfun" : null
+                        "links" : [],
+                        "reference" : "noise3d/caves/release/tier_1_caves.json",
+                        "seed" : 2840125855102216963,
+                        "seed-combine" : false,
+                        "seed-hash" : "6qIPujHIsn6speZx",
+                        "tick" : 2,
+                        "type" : "reference"
+                     }
                   }
                ],
-               "frequency" : [ 1, 1 ],
+               "reference" : "noise3d/misc/cave_height_3d.json",
                "seed" : 0,
                "seed-combine" : true,
                "seed-hash" : "",
-               "type" : "layered"
+               "tick" : 2,
+               "type" : "reference"
             },
             "caves_decorations" : null,
             "caves_substrate" : {
                "@collapsed" : false,
                "@name" : "tier_2_caves",
-               "@position" : [ 9185, 8953 ],
+               "@position" : [ 9158, 8683 ],
                "links" : [],
                "reference" : "substrate/caves/tier_2_caves.json",
                "seed" : 15408175334311480782,
@@ -199,7 +231,7 @@
             "heightmap" : {
                "@collapsed" : false,
                "@name" : "Min 2D",
-               "@position" : [ 9206, 7716 ],
+               "@position" : [ 9108, 8064 ],
                "frequency" : 1,
                "seed" : 0,
                "seed-combine" : true,
@@ -208,7 +240,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "Constant 2D",
-                     "@position" : [ 9495, 7700 ],
+                     "@position" : [ 9397, 8048 ],
                      "frequency" : 1,
                      "type" : "constant",
                      "value" : -0.49300003051757813
@@ -216,7 +248,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "water_system_1",
-                     "@position" : [ 9495, 7806 ],
+                     "@position" : [ 9397, 8154 ],
                      "frequency" : 1,
                      "links" : [],
                      "reference" : "noise2d/watersystems/water_system_1.json",
@@ -246,19 +278,19 @@
             "strata" : {
                "@collapsed" : true,
                "@name" : "Random Strata",
-               "@position" : [ 9171, 8631 ],
+               "@position" : [ 9155, 8551 ],
                "components" : [
                   {
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Random Strata",
-                        "@position" : [ 9532, 8176 ],
+                        "@position" : [ 9516, 8096 ],
                         "components" : [
                            {
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8133 ],
+                                 "@position" : [ 9820, 8053 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 8202587459308008318,
@@ -273,7 +305,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8216 ],
+                                 "@position" : [ 9820, 8136 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 949992542310347921,
@@ -288,7 +320,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8299 ],
+                                 "@position" : [ 9820, 8219 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 2973265546997317127,
@@ -303,7 +335,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8382 ],
+                                 "@position" : [ 9820, 8302 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 13583345214139124009,
@@ -318,7 +350,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8465 ],
+                                 "@position" : [ 9820, 8385 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 17641150396189723558,
@@ -342,13 +374,13 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Random Strata",
-                        "@position" : [ 9532, 8591 ],
+                        "@position" : [ 9516, 8511 ],
                         "components" : [
                            {
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8548 ],
+                                 "@position" : [ 9820, 8468 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 8202587459308008318,
@@ -363,7 +395,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8631 ],
+                                 "@position" : [ 9820, 8551 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 949992542310347921,
@@ -378,7 +410,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8714 ],
+                                 "@position" : [ 9820, 8634 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 2973265546997317127,
@@ -393,7 +425,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8797 ],
+                                 "@position" : [ 9820, 8717 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 13583345214139124009,
@@ -408,7 +440,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8880 ],
+                                 "@position" : [ 9820, 8800 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 17641150396189723558,
@@ -432,13 +464,13 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Random Strata",
-                        "@position" : [ 9532, 9006 ],
+                        "@position" : [ 9516, 8926 ],
                         "components" : [
                            {
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 8963 ],
+                                 "@position" : [ 9820, 8883 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 8202587459308008318,
@@ -453,7 +485,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 9046 ],
+                                 "@position" : [ 9820, 8966 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 949992542310347921,
@@ -468,7 +500,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 9129 ],
+                                 "@position" : [ 9820, 9049 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 2973265546997317127,
@@ -483,7 +515,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 9212 ],
+                                 "@position" : [ 9820, 9132 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 13583345214139124009,
@@ -498,7 +530,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "strata_selection_5",
-                                 "@position" : [ 9836, 9295 ],
+                                 "@position" : [ 9820, 9215 ],
                                  "links" : [],
                                  "reference" : "strata/release/strata_selection_5.json",
                                  "seed" : 17641150396189723558,
@@ -528,7 +560,7 @@
             "surface_decorations" : {
                "@collapsed" : false,
                "@name" : "river_bed",
-               "@position" : [ 9192, 9200 ],
+               "@position" : [ 9174, 9025 ],
                "links" : [],
                "reference" : "decorations/river_bed.json",
                "seed" : 0,
@@ -540,7 +572,7 @@
             "surface_substrate" : {
                "@collapsed" : false,
                "@name" : "river_bed",
-               "@position" : [ 9190, 9063 ],
+               "@position" : [ 9165, 8809 ],
                "links" : [
                   {
                      "linkPath" : [
@@ -908,7 +940,7 @@
                   "@x-name" : "x",
                   "@y-name" : "y",
                   "caveSurfaceShrink" : {
-                     "enabled" : true,
+                     "enabled" : false,
                      "value" : 1
                   },
                   "caveThresholdBias" : {
@@ -917,112 +949,144 @@
                   },
                   "caves" : {
                      "@collapsed" : false,
-                     "@name" : "Layered 3D",
-                     "@position" : [ 9183, 8034 ],
-                     "components" : [
+                     "@name" : "cave_height_3d",
+                     "@position" : [ 9135, 8322 ],
+                     "frequency" : [ 1, 1 ],
+                     "links" : [
                         {
-                           "fun" : {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "sliderValue"
+                              }
+                           ],
+                           "linkType" : "LT:CUSTOM_SLIDER",
+                           "sliderValue" : -0.070000000298023224
+                        },
+                        {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 1,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "nodeValue"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_2D",
+                           "nodeValue" : {
                               "@collapsed" : false,
-                              "@name" : "tier_4_caves",
-                              "@position" : [ 9513, 7913 ],
-                              "frequency" : [ 1, 1 ],
-                              "links" : [],
-                              "reference" : "noise3d/caves/release/tier_4_caves.json",
-                              "seed" : 10241904780022452932,
-                              "seed-combine" : true,
-                              "seed-hash" : "zlvopHnuLg1ZMAdR",
-                              "tick" : 0,
-                              "type" : "reference"
-                           },
-                           "noiseMaxY" : 256,
-                           "y" : 0,
-                           "yfun" : {
-                              "@collapsed" : false,
-                              "@name" : "Sum 2D",
-                              "@position" : [ 9519, 8063 ],
+                              "@name" : "Constant 2D",
+                              "@position" : [ 9447, 8338 ],
                               "frequency" : 1,
-                              "seed" : 0,
-                              "seed-combine" : true,
-                              "seed-hash" : "",
-                              "terms" : [
-                                 {
-                                    "fun" : {
-                                       "@collapsed" : false,
-                                       "@name" : "Min 2D",
-                                       "@position" : [ 9845, 8072 ],
-                                       "frequency" : 1,
-                                       "seed" : 0,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "",
-                                       "terms" : [
-                                          {
-                                             "@collapsed" : false,
-                                             "@name" : "Constant 2D",
-                                             "@position" : [ 10134, 8056 ],
-                                             "frequency" : 1,
-                                             "type" : "constant",
-                                             "value" : -0.49300003051757813
-                                          },
-                                          {
-                                             "@collapsed" : false,
-                                             "@name" : "water_system_1",
-                                             "@position" : [ 10134, 8162 ],
-                                             "frequency" : 1,
-                                             "links" : [],
-                                             "reference" : "noise2d/watersystems/water_system_1.json",
-                                             "seed" : 7577140515190446856,
-                                             "seed-combine" : true,
-                                             "seed-hash" : "vfKUd1LeyNQkxZRE",
-                                             "tick" : 0,
-                                             "type" : "reference"
-                                          }
-                                       ],
-                                       "type" : "min"
-                                    },
-                                    "multiplier" : 1,
-                                    "power" : 1
-                                 },
-                                 {
-                                    "fun" : {
-                                       "@collapsed" : false,
-                                       "@name" : "Constant 2D",
-                                       "@position" : [ 9848, 8263 ],
-                                       "frequency" : 1,
-                                       "type" : "constant",
-                                       "value" : -0.20000000298023224
-                                    },
-                                    "multiplier" : 1,
-                                    "power" : 1
-                                 }
-                              ],
-                              "type" : "sum"
+                              "type" : "constant",
+                              "value" : -0.49300003051757813
                            }
                         },
                         {
-                           "fun" : {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_3D",
+                           "nodeValue" : {
                               "@collapsed" : false,
-                              "@name" : "Constant 3D",
-                              "@position" : [ 9515, 8386 ],
+                              "@name" : "tier_1_caves",
+                              "@position" : [ 9460, 8497 ],
                               "frequency" : [ 1, 1 ],
-                              "type" : "constant",
-                              "value" : -1
-                           },
-                           "noiseMaxY" : 0,
-                           "y" : 256,
-                           "yfun" : null
+                              "links" : [],
+                              "reference" : "noise3d/caves/release/tier_1_caves.json",
+                              "seed" : 2840125855102216963,
+                              "seed-combine" : false,
+                              "seed-hash" : "6qIPujHIsn6speZx",
+                              "tick" : 2,
+                              "type" : "reference"
+                           }
                         }
                      ],
-                     "frequency" : [ 1, 1 ],
+                     "reference" : "noise3d/misc/cave_height_3d.json",
                      "seed" : 0,
                      "seed-combine" : true,
                      "seed-hash" : "",
-                     "type" : "layered"
+                     "tick" : 2,
+                     "type" : "reference"
                   },
                   "caves_decorations" : null,
                   "caves_substrate" : {
                      "@collapsed" : false,
                      "@name" : "tier_2_caves",
-                     "@position" : [ 9185, 8953 ],
+                     "@position" : [ 9158, 8683 ],
                      "links" : [],
                      "reference" : "substrate/caves/tier_2_caves.json",
                      "seed" : 15408175334311480782,
@@ -1052,7 +1116,7 @@
                   "heightmap" : {
                      "@collapsed" : false,
                      "@name" : "Min 2D",
-                     "@position" : [ 9206, 7716 ],
+                     "@position" : [ 9108, 8064 ],
                      "frequency" : 1,
                      "seed" : 0,
                      "seed-combine" : true,
@@ -1061,7 +1125,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "Constant 2D",
-                           "@position" : [ 9495, 7700 ],
+                           "@position" : [ 9397, 8048 ],
                            "frequency" : 1,
                            "type" : "constant",
                            "value" : -0.49300003051757813
@@ -1069,7 +1133,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "water_system_1",
-                           "@position" : [ 9495, 7806 ],
+                           "@position" : [ 9397, 8154 ],
                            "frequency" : 1,
                            "links" : [],
                            "reference" : "noise2d/watersystems/water_system_1.json",
@@ -1099,19 +1163,19 @@
                   "strata" : {
                      "@collapsed" : true,
                      "@name" : "Random Strata",
-                     "@position" : [ 9171, 8631 ],
+                     "@position" : [ 9155, 8551 ],
                      "components" : [
                         {
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Random Strata",
-                              "@position" : [ 9532, 8176 ],
+                              "@position" : [ 9516, 8096 ],
                               "components" : [
                                  {
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8133 ],
+                                       "@position" : [ 9820, 8053 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 8202587459308008318,
@@ -1126,7 +1190,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8216 ],
+                                       "@position" : [ 9820, 8136 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 949992542310347921,
@@ -1141,7 +1205,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8299 ],
+                                       "@position" : [ 9820, 8219 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 2973265546997317127,
@@ -1156,7 +1220,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8382 ],
+                                       "@position" : [ 9820, 8302 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 13583345214139124009,
@@ -1171,7 +1235,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8465 ],
+                                       "@position" : [ 9820, 8385 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 17641150396189723558,
@@ -1195,13 +1259,13 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Random Strata",
-                              "@position" : [ 9532, 8591 ],
+                              "@position" : [ 9516, 8511 ],
                               "components" : [
                                  {
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8548 ],
+                                       "@position" : [ 9820, 8468 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 8202587459308008318,
@@ -1216,7 +1280,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8631 ],
+                                       "@position" : [ 9820, 8551 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 949992542310347921,
@@ -1231,7 +1295,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8714 ],
+                                       "@position" : [ 9820, 8634 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 2973265546997317127,
@@ -1246,7 +1310,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8797 ],
+                                       "@position" : [ 9820, 8717 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 13583345214139124009,
@@ -1261,7 +1325,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8880 ],
+                                       "@position" : [ 9820, 8800 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 17641150396189723558,
@@ -1285,13 +1349,13 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Random Strata",
-                              "@position" : [ 9532, 9006 ],
+                              "@position" : [ 9516, 8926 ],
                               "components" : [
                                  {
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 8963 ],
+                                       "@position" : [ 9820, 8883 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 8202587459308008318,
@@ -1306,7 +1370,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 9046 ],
+                                       "@position" : [ 9820, 8966 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 949992542310347921,
@@ -1321,7 +1385,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 9129 ],
+                                       "@position" : [ 9820, 9049 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 2973265546997317127,
@@ -1336,7 +1400,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 9212 ],
+                                       "@position" : [ 9820, 9132 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 13583345214139124009,
@@ -1351,7 +1415,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "strata_selection_5",
-                                       "@position" : [ 9836, 9295 ],
+                                       "@position" : [ 9820, 9215 ],
                                        "links" : [],
                                        "reference" : "strata/release/strata_selection_5.json",
                                        "seed" : 17641150396189723558,
@@ -1381,7 +1445,7 @@
                   "surface_decorations" : {
                      "@collapsed" : false,
                      "@name" : "river_bed",
-                     "@position" : [ 9192, 9200 ],
+                     "@position" : [ 9174, 9025 ],
                      "links" : [],
                      "reference" : "decorations/river_bed.json",
                      "seed" : 0,
@@ -1393,7 +1457,7 @@
                   "surface_substrate" : {
                      "@collapsed" : false,
                      "@name" : "river_bed",
-                     "@position" : [ 9190, 9063 ],
+                     "@position" : [ 9165, 8809 ],
                      "links" : [
                         {
                            "linkPath" : [

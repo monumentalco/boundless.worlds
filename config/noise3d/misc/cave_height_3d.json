@@ -1,0 +1,557 @@
+{
+   "@collapsed" : false,
+   "@configType" : "NOISE3D",
+   "@name" : "cave_height_3d",
+   "@position" : [ 7932, 8159 ],
+   "@scroll" : [ 8412.9375, 8269.958984375, 0 ],
+   "@toggle-test" : false,
+   "@toggle-world" : false,
+   "@unlinked" : [],
+   "@version" : 18,
+   "noise3d" : {
+      "fun" : {
+         "@collapsed" : false,
+         "@name" : "Layered 3D",
+         "@position" : [ 8258, 8012 ],
+         "components" : [
+            {
+               "fun" : null,
+               "noiseMaxY" : 256,
+               "y" : 0,
+               "yfun" : {
+                  "@collapsed" : false,
+                  "@name" : "cave_height",
+                  "@position" : [ 8580, 8088 ],
+                  "frequency" : 1,
+                  "links" : [
+                     {
+                        "linkPath" : [
+                           {
+                              "index" : -1,
+                              "name" : "noise2d"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "terms"
+                           },
+                           {
+                              "index" : 1,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "value"
+                           }
+                        ],
+                        "linkType" : "LT:CUSTOM_SLIDER",
+                        "sliderValue" : -0.15000000596046448
+                     },
+                     {
+                        "linkPath" : [
+                           {
+                              "index" : -1,
+                              "name" : "noise2d"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "terms"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "terms"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "terms"
+                           },
+                           {
+                              "index" : 0,
+                              "name" : ""
+                           },
+                           {
+                              "index" : -1,
+                              "name" : "fun"
+                           }
+                        ],
+                        "linkType" : "LT:NOISE_2D",
+                        "nodeValue" : null
+                     }
+                  ],
+                  "reference" : "noise2d/misc/cave_height.json",
+                  "seed" : 0,
+                  "seed-combine" : true,
+                  "seed-hash" : "",
+                  "tick" : 0,
+                  "type" : "reference"
+               }
+            },
+            {
+               "fun" : {
+                  "@collapsed" : false,
+                  "@name" : "Constant 3D",
+                  "@position" : [ 8582, 8280 ],
+                  "frequency" : [ 1, 1 ],
+                  "type" : "constant",
+                  "value" : -1
+               },
+               "noiseMaxY" : 0,
+               "y" : 256,
+               "yfun" : null
+            }
+         ],
+         "frequency" : [ 1, 1 ],
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "type" : "layered"
+      },
+      "links" : [
+         {
+            "blockConstraint" : 4048379168,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "yfun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "links"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "sliderValue"
+               }
+            ],
+            "linkType" : "LT:CUSTOM_SLIDER",
+            "name" : "Offset Y",
+            "shortPath" : "cave_height.Offset Y",
+            "sliderCheck" : false,
+            "sliderDefault" : -0.10000000149011612,
+            "sliderMax" : 1,
+            "sliderMin" : -1,
+            "sliderStep" : 0.0010000000474974513
+         },
+         {
+            "blockConstraint" : 4048379168,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "yfun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "links"
+               },
+               {
+                  "index" : 1,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "nodeValue"
+               }
+            ],
+            "linkType" : "LT:NOISE_2D",
+            "name" : "Heightmap",
+            "shortPath" : "cave_height.Heightmap",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         },
+         {
+            "blockConstraint" : 3501891936,
+            "blockDefault" : "",
+            "checkDefault" : false,
+            "linkPath" : [
+               {
+                  "index" : -1,
+                  "name" : "noise3d"
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               },
+               {
+                  "index" : -1,
+                  "name" : "components"
+               },
+               {
+                  "index" : 0,
+                  "name" : ""
+               },
+               {
+                  "index" : -1,
+                  "name" : "fun"
+               }
+            ],
+            "linkType" : "LT:NOISE_3D",
+            "name" : "Caves",
+            "shortPath" : "Layered 3D.function",
+            "sliderCheck" : false,
+            "sliderDefault" : 0,
+            "sliderMax" : 0,
+            "sliderMin" : 0,
+            "sliderStep" : 0
+         }
+      ]
+   },
+   "seed" : "I has a seed!",
+   "sharedConfig" : {
+      "worldSize" : 288
+   },
+   "test" : {
+      "@collapsed" : false,
+      "@name" : "Reference 3D",
+      "@position" : [ 8258, 8527 ],
+      "embedded" : {
+         "@collapsed" : false,
+         "@configType" : "NOISE3D",
+         "@name" : "cave_height_3d",
+         "@position" : [ 7932, 8159 ],
+         "@toggle-test" : false,
+         "@toggle-world" : false,
+         "@version" : 18,
+         "noise3d" : {
+            "fun" : {
+               "@collapsed" : false,
+               "@name" : "Layered 3D",
+               "@position" : [ 8258, 8012 ],
+               "components" : [
+                  {
+                     "fun" : null,
+                     "noiseMaxY" : 256,
+                     "y" : 0,
+                     "yfun" : {
+                        "@collapsed" : false,
+                        "@name" : "cave_height",
+                        "@position" : [ 8580, 8088 ],
+                        "frequency" : 1,
+                        "links" : [
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 1,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "value"
+                                 }
+                              ],
+                              "linkType" : "LT:CUSTOM_SLIDER",
+                              "sliderValue" : -0.15000000596046448
+                           },
+                           {
+                              "linkPath" : [
+                                 {
+                                    "index" : -1,
+                                    "name" : "noise2d"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "terms"
+                                 },
+                                 {
+                                    "index" : 0,
+                                    "name" : ""
+                                 },
+                                 {
+                                    "index" : -1,
+                                    "name" : "fun"
+                                 }
+                              ],
+                              "linkType" : "LT:NOISE_2D",
+                              "nodeValue" : null
+                           }
+                        ],
+                        "reference" : "noise2d/misc/cave_height.json",
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "tick" : 0,
+                        "type" : "reference"
+                     }
+                  },
+                  {
+                     "fun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 3D",
+                        "@position" : [ 8582, 8280 ],
+                        "frequency" : [ 1, 1 ],
+                        "type" : "constant",
+                        "value" : -1
+                     },
+                     "noiseMaxY" : 0,
+                     "y" : 256,
+                     "yfun" : null
+                  }
+               ],
+               "frequency" : [ 1, 1 ],
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "type" : "layered"
+            },
+            "links" : [
+               {
+                  "blockConstraint" : 4048379168,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "yfun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "links"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "sliderValue"
+                     }
+                  ],
+                  "linkType" : "LT:CUSTOM_SLIDER",
+                  "name" : "Offset Y",
+                  "shortPath" : "cave_height.Offset Y",
+                  "sliderCheck" : false,
+                  "sliderDefault" : -0.10000000149011612,
+                  "sliderMax" : 1,
+                  "sliderMin" : -1,
+                  "sliderStep" : 0.0010000000474974513
+               },
+               {
+                  "blockConstraint" : 4048379168,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "yfun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "links"
+                     },
+                     {
+                        "index" : 1,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "nodeValue"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_2D",
+                  "name" : "Heightmap",
+                  "shortPath" : "cave_height.Heightmap",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               },
+               {
+                  "blockConstraint" : 3501891936,
+                  "blockDefault" : "",
+                  "checkDefault" : false,
+                  "linkPath" : [
+                     {
+                        "index" : -1,
+                        "name" : "noise3d"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "components"
+                     },
+                     {
+                        "index" : 0,
+                        "name" : ""
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "fun"
+                     }
+                  ],
+                  "linkType" : "LT:NOISE_3D",
+                  "name" : "Caves",
+                  "shortPath" : "Layered 3D.function",
+                  "sliderCheck" : false,
+                  "sliderDefault" : 0,
+                  "sliderMax" : 0,
+                  "sliderMin" : 0,
+                  "sliderStep" : 0
+               }
+            ]
+         },
+         "seed" : "I has a seed!",
+         "sharedConfig" : {
+            "worldSize" : 288
+         },
+         "test" : {
+            "@collapsed" : false,
+            "@name" : "Reference 3D",
+            "@position" : [ 8258, 8527 ],
+            "frequency" : [ 1, 1 ],
+            "seed" : 17448900051818618863,
+            "seed-combine" : true,
+            "seed-hash" : "WIonDeMckx70lfls",
+            "type" : "reference"
+         }
+      },
+      "frequency" : [ 1, 1 ],
+      "links" : [],
+      "reference" : "",
+      "seed" : 17448900051818618863,
+      "seed-combine" : true,
+      "seed-hash" : "WIonDeMckx70lfls",
+      "tick" : 0,
+      "type" : "reference"
+   }
+}

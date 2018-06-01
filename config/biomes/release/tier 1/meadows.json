@@ -2,15 +2,8 @@
    "@collapsed" : false,
    "@configType" : "BIOME",
    "@name" : "meadows",
-   "@position" : [
-      7932,
-      8160
-   ],
-   "@scroll" : [
-      9050.34375,
-      8773.7685546875,
-      0
-   ],
+   "@position" : [ 7932, 8160 ],
+   "@scroll" : [ 9321.1513671875, 8865.83984375, -0.25 ],
    "@toggle-test" : false,
    "@toggle-world" : true,
    "@unlinked" : [],
@@ -19,17 +12,14 @@
       "fun" : {
          "@collapsed" : false,
          "@name" : "meadows",
-         "@position" : [
-            8457,
-            8462
-         ],
+         "@position" : [ 8457, 8462 ],
          "altitude" : {
             "enabled" : true,
-            "value" : 0.4090000092983246
+            "value" : 0.40900000929832458
          },
          "humidity" : {
             "enabled" : true,
-            "value" : 0.4390000104904175
+            "value" : 0.43900001049041748
          },
          "labels" : [
             {
@@ -49,10 +39,7 @@
          "part" : {
             "@collapsed" : false,
             "@name" : "meadows",
-            "@position" : [
-               8966,
-               8205
-            ],
+            "@position" : [ 8966, 8205 ],
             "@selector-open" : false,
             "@toggle-caves" : true,
             "@toggle-ccaves" : true,
@@ -68,7 +55,7 @@
             "@x-name" : "x",
             "@y-name" : "y",
             "caveSurfaceShrink" : {
-               "enabled" : true,
+               "enabled" : false,
                "value" : 1
             },
             "caveThresholdBias" : {
@@ -77,41 +64,88 @@
             },
             "caves" : {
                "@collapsed" : false,
-               "@name" : "Layered 3D",
-               "@position" : [
-                  9454,
-                  7478
-               ],
-               "components" : [
+               "@name" : "cave_height_3d",
+               "@position" : [ 9491, 7971 ],
+               "frequency" : [ 1, 1 ],
+               "links" : [
                   {
-                     "fun" : {
-                        "@collapsed" : false,
-                        "@name" : "tier_1_caves",
-                        "@position" : [
-                           9800,
-                           7377
-                        ],
-                        "frequency" : [
-                           1,
-                           1
-                        ],
-                        "links" : [],
-                        "reference" : "noise3d/caves/release/tier_1_caves.json",
-                        "seed" : 2840125855102216963,
-                        "seed-combine" : false,
-                        "seed-hash" : "6qIPujHIsn6speZx",
-                        "tick" : 2,
-                        "type" : "reference"
-                     },
-                     "noiseMaxY" : 256,
-                     "y" : 0,
-                     "yfun" : {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "sliderValue"
+                        }
+                     ],
+                     "linkType" : "LT:CUSTOM_SLIDER",
+                     "sliderValue" : -0.095000006258487701
+                  },
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 1,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "nodeValue"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_2D",
+                     "nodeValue" : {
                         "@collapsed" : false,
                         "@name" : "Sum 2D",
-                        "@position" : [
-                           9790,
-                           7507
-                        ],
+                        "@position" : [ 9822, 7811 ],
                         "frequency" : 1,
                         "seed" : 0,
                         "seed-combine" : true,
@@ -120,147 +154,11 @@
                            {
                               "fun" : {
                                  "@collapsed" : false,
-                                 "@name" : "Min 2D",
-                                 "@position" : [
-                                    10101,
-                                    7511
-                                 ],
+                                 "@name" : "Constant 2D",
+                                 "@position" : [ 10116, 7824 ],
                                  "frequency" : 1,
-                                 "seed" : 0,
-                                 "seed-combine" : true,
-                                 "seed-hash" : "",
-                                 "terms" : [
-                                    {
-                                       "@collapsed" : false,
-                                       "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10405,
-                                          7395
-                                       ],
-                                       "frequency" : 1,
-                                       "seed" : 0,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "",
-                                       "terms" : [
-                                          {
-                                             "fun" : {
-                                                "@collapsed" : false,
-                                                "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   10699,
-                                                   7408
-                                                ],
-                                                "frequency" : 1,
-                                                "type" : "constant",
-                                                "value" : -0.47600001096725464
-                                             },
-                                             "multiplier" : 1,
-                                             "power" : 1
-                                          },
-                                          {
-                                             "fun" : {
-                                                "@collapsed" : false,
-                                                "@name" : "Heightmap - Angled Hills",
-                                                "@position" : [
-                                                   10699,
-                                                   7514
-                                                ],
-                                                "frequency" : 1,
-                                                "links" : [
-                                                   {
-                                                      "linkPath" : [
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "noise2d"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "fun"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "power"
-                                                         }
-                                                      ],
-                                                      "linkType" : "LT:CUSTOM_SLIDER",
-                                                      "sliderValue" : 0.5
-                                                   },
-                                                   {
-                                                      "linkPath" : [
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "noise2d"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "fun"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "overflowPower"
-                                                         }
-                                                      ],
-                                                      "linkType" : "LT:CUSTOM_SLIDER",
-                                                      "sliderValue" : 0.4130000174045563
-                                                   },
-                                                   {
-                                                      "linkPath" : [
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "noise2d"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "fun"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "fun"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "frequency"
-                                                         },
-                                                         {
-                                                            "index" : -1,
-                                                            "name" : "@xz"
-                                                         }
-                                                      ],
-                                                      "linkType" : "LT:CUSTOM_SLIDER",
-                                                      "sliderValue" : 0.0650000050663948
-                                                   }
-                                                ],
-                                                "reference" : "noise2d/heightmaps/angledhills.json",
-                                                "seed" : 17967947831772151096,
-                                                "seed-combine" : true,
-                                                "seed-hash" : "E4egFlHLbMxzev4c",
-                                                "tick" : 0,
-                                                "type" : "reference"
-                                             },
-                                             "multiplier" : 0.023000001907348633,
-                                             "power" : 1
-                                          }
-                                       ],
-                                       "type" : "sum"
-                                    },
-                                    {
-                                       "@collapsed" : false,
-                                       "@name" : "water_system_1",
-                                       "@position" : [
-                                          10405,
-                                          7701
-                                       ],
-                                       "frequency" : 1,
-                                       "links" : [],
-                                       "reference" : "noise2d/watersystems/water_system_1.json",
-                                       "seed" : 7577140515190446856,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "vfKUd1LeyNQkxZRE",
-                                       "tick" : 0,
-                                       "type" : "reference"
-                                    }
-                                 ],
-                                 "type" : "min"
+                                 "type" : "constant",
+                                 "value" : -0.47600001096725464
                               },
                               "multiplier" : 1,
                               "power" : 1
@@ -268,16 +166,81 @@
                            {
                               "fun" : {
                                  "@collapsed" : false,
-                                 "@name" : "Constant 2D",
-                                 "@position" : [
-                                    10101,
-                                    7716
-                                 ],
+                                 "@name" : "Heightmap - Angled Hills",
+                                 "@position" : [ 10116, 7930 ],
                                  "frequency" : 1,
-                                 "type" : "constant",
-                                 "value" : -0.15000000596046448
+                                 "links" : [
+                                    {
+                                       "linkPath" : [
+                                          {
+                                             "index" : -1,
+                                             "name" : "noise2d"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "power"
+                                          }
+                                       ],
+                                       "linkType" : "LT:CUSTOM_SLIDER",
+                                       "sliderValue" : 0.5
+                                    },
+                                    {
+                                       "linkPath" : [
+                                          {
+                                             "index" : -1,
+                                             "name" : "noise2d"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "overflowPower"
+                                          }
+                                       ],
+                                       "linkType" : "LT:CUSTOM_SLIDER",
+                                       "sliderValue" : 0.41300001740455627
+                                    },
+                                    {
+                                       "linkPath" : [
+                                          {
+                                             "index" : -1,
+                                             "name" : "noise2d"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "frequency"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "@xz"
+                                          }
+                                       ],
+                                       "linkType" : "LT:CUSTOM_SLIDER",
+                                       "sliderValue" : 0.065000005066394806
+                                    }
+                                 ],
+                                 "reference" : "noise2d/heightmaps/angledhills.json",
+                                 "seed" : 17967947831772151096,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "E4egFlHLbMxzev4c",
+                                 "tick" : 0,
+                                 "type" : "reference"
                               },
-                              "multiplier" : 1,
+                              "multiplier" : 0.023000001907348633,
                               "power" : 1
                            }
                         ],
@@ -285,42 +248,56 @@
                      }
                   },
                   {
-                     "fun" : {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_3D",
+                     "nodeValue" : {
                         "@collapsed" : false,
-                        "@name" : "Constant 3D",
-                        "@position" : [
-                           9786,
-                           7830
-                        ],
-                        "frequency" : [
-                           1,
-                           1
-                        ],
-                        "type" : "constant",
-                        "value" : -1
-                     },
-                     "noiseMaxY" : 0,
-                     "y" : 256,
-                     "yfun" : null
+                        "@name" : "tier_1_caves",
+                        "@position" : [ 9816, 8146 ],
+                        "frequency" : [ 1, 1 ],
+                        "links" : [],
+                        "reference" : "noise3d/caves/release/tier_1_caves.json",
+                        "seed" : 2840125855102216963,
+                        "seed-combine" : false,
+                        "seed-hash" : "6qIPujHIsn6speZx",
+                        "tick" : 2,
+                        "type" : "reference"
+                     }
                   }
                ],
-               "frequency" : [
-                  1,
-                  1
-               ],
+               "reference" : "noise3d/misc/cave_height_3d.json",
                "seed" : 0,
                "seed-combine" : true,
                "seed-hash" : "",
-               "type" : "layered"
+               "tick" : 2,
+               "type" : "reference"
             },
             "caves_decorations" : null,
             "caves_substrate" : {
                "@collapsed" : false,
                "@name" : "tier_1_caves",
-               "@position" : [
-                  9466,
-                  8347
-               ],
+               "@position" : [ 9466, 8347 ],
                "links" : [],
                "reference" : "substrate/caves/tier_1_caves.json",
                "seed" : 15408175334311480782,
@@ -350,10 +327,7 @@
             "heightmap" : {
                "@collapsed" : false,
                "@name" : "Min 2D",
-               "@position" : [
-                  9464,
-                  7078
-               ],
+               "@position" : [ 9464, 7078 ],
                "frequency" : 1,
                "seed" : 0,
                "seed-combine" : true,
@@ -362,10 +336,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "Sum 2D",
-                     "@position" : [
-                        9816,
-                        6914
-                     ],
+                     "@position" : [ 9816, 6914 ],
                      "frequency" : 1,
                      "seed" : 0,
                      "seed-combine" : true,
@@ -375,10 +346,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Constant 2D",
-                              "@position" : [
-                                 10112,
-                                 6904
-                              ],
+                              "@position" : [ 10112, 6904 ],
                               "frequency" : 1,
                               "type" : "constant",
                               "value" : -0.47600001096725464
@@ -390,10 +358,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Heightmap - Angled Hills",
-                              "@position" : [
-                                 10112,
-                                 7033
-                              ],
+                              "@position" : [ 10112, 7033 ],
                               "frequency" : 1,
                               "links" : [
                                  {
@@ -430,7 +395,7 @@
                                        }
                                     ],
                                     "linkType" : "LT:CUSTOM_SLIDER",
-                                    "sliderValue" : 0.4130000174045563
+                                    "sliderValue" : 0.41300001740455627
                                  },
                                  {
                                     "linkPath" : [
@@ -456,7 +421,7 @@
                                        }
                                     ],
                                     "linkType" : "LT:CUSTOM_SLIDER",
-                                    "sliderValue" : 0.0650000050663948
+                                    "sliderValue" : 0.065000005066394806
                                  }
                               ],
                               "reference" : "noise2d/heightmaps/angledhills.json",
@@ -475,10 +440,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "water_system_1",
-                     "@position" : [
-                        9792,
-                        7244
-                     ],
+                     "@position" : [ 9792, 7244 ],
                      "frequency" : 1,
                      "links" : [],
                      "reference" : "noise2d/watersystems/water_system_1.json",
@@ -508,10 +470,7 @@
             "strata" : {
                "@collapsed" : false,
                "@name" : "standard_fill",
-               "@position" : [
-                  8903,
-                  8500
-               ],
+               "@position" : [ 9479, 8232 ],
                "links" : [],
                "reference" : "strata/release/standard_fill.json",
                "seed" : 4806540044189345838,
@@ -523,19 +482,13 @@
             "surface_decorations" : {
                "@collapsed" : false,
                "@name" : "Join Decoration",
-               "@position" : [
-                  9348,
-                  10010
-               ],
+               "@position" : [ 9348, 10010 ],
                "components" : [
                   {
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "river_bed",
-                        "@position" : [
-                           9811,
-                           8657
-                        ],
+                        "@position" : [ 9811, 8657 ],
                         "links" : [],
                         "reference" : "decorations/river_bed.json",
                         "seed" : 0,
@@ -550,10 +503,7 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Standard Decorations",
-                        "@position" : [
-                           9811,
-                           8717
-                        ],
+                        "@position" : [ 9811, 8717 ],
                         "@toggle-ceiling" : false,
                         "@toggle-floor" : true,
                         "ceiling" : [],
@@ -576,30 +526,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    8821
-                                 ],
+                                 "@position" : [ 10264, 8821 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       8821
-                                    ],
+                                    "@position" : [ 10560, 8821 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          8776
-                                       ],
+                                       "@position" : [ 10856, 8776 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -609,11 +550,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   8766
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 8766 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -748,10 +686,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   8941
-                                                ],
+                                                "@position" : [ 11152, 8941 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -787,7 +722,7 @@
                                  "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                  "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                               ],
-                              "density" : 0.4599999785423279,
+                              "density" : 0.45999997854232788,
                               "depth" : 8,
                               "instance" : null,
                               "maxGradient" : 5,
@@ -799,30 +734,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    9125
-                                 ],
+                                 "@position" : [ 10264, 9125 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       9125
-                                    ],
+                                    "@position" : [ 10560, 9125 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          9080
-                                       ],
+                                       "@position" : [ 10856, 9080 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -832,11 +758,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   9070
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 9070 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -971,10 +894,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   9245
-                                                ],
+                                                "@position" : [ 11152, 9245 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -1010,7 +930,7 @@
                                  "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                  "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                               ],
-                              "density" : 0.6499999761581421,
+                              "density" : 0.64999997615814209,
                               "depth" : 8,
                               "instance" : null,
                               "maxGradient" : 5,
@@ -1022,30 +942,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    9429
-                                 ],
+                                 "@position" : [ 10264, 9429 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       9429
-                                    ],
+                                    "@position" : [ 10560, 9429 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          9384
-                                       ],
+                                       "@position" : [ 10856, 9384 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -1055,11 +966,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   9374
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 9374 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -1194,10 +1102,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   9549
-                                                ],
+                                                "@position" : [ 11152, 9549 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -1245,30 +1150,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    9733
-                                 ],
+                                 "@position" : [ 10264, 9733 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       9733
-                                    ],
+                                    "@position" : [ 10560, 9733 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          9688
-                                       ],
+                                       "@position" : [ 10856, 9688 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -1278,11 +1174,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   9678
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 9678 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -1417,10 +1310,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   9853
-                                                ],
+                                                "@position" : [ 11152, 9853 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -1456,15 +1346,12 @@
                                  "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                  "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                               ],
-                              "density" : -0.6100000143051147,
+                              "density" : -0.61000001430511475,
                               "depth" : 8,
                               "instance" : {
                                  "@collapsed" : false,
                                  "@name" : "Bush (deprecated)",
-                                 "@position" : [
-                                    10264,
-                                    9981
-                                 ],
+                                 "@position" : [ 10264, 9981 ],
                                  "blockType" : "WOOD_LUSH_LEAVES",
                                  "height" : 3,
                                  "maxScale" : 2,
@@ -1483,30 +1370,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    10246
-                                 ],
+                                 "@position" : [ 10264, 10246 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       10246
-                                    ],
+                                    "@position" : [ 10560, 10246 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          10201
-                                       ],
+                                       "@position" : [ 10856, 10201 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -1516,11 +1394,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   10191
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 10191 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -1655,10 +1530,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   10366
-                                                ],
+                                                "@position" : [ 11152, 10366 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -1694,15 +1566,12 @@
                                  "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                  "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                               ],
-                              "density" : -0.550000011920929,
+                              "density" : -0.55000001192092896,
                               "depth" : 8,
                               "instance" : {
                                  "@collapsed" : false,
                                  "@name" : "bush_lush",
-                                 "@position" : [
-                                    10264,
-                                    10494
-                                 ],
+                                 "@position" : [ 10264, 10494 ],
                                  "links" : [],
                                  "reference" : "instances/bushes/bush_lush.json",
                                  "seed" : 0,
@@ -1720,30 +1589,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    10716
-                                 ],
+                                 "@position" : [ 10264, 10716 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       10716
-                                    ],
+                                    "@position" : [ 10560, 10716 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          10671
-                                       ],
+                                       "@position" : [ 10856, 10671 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -1753,11 +1613,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   10661
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 10661 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -1892,10 +1749,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   10836
-                                                ],
+                                                "@position" : [ 11152, 10836 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -1924,10 +1778,7 @@
                               "sizeNoise" : {
                                  "@collapsed" : false,
                                  "@name" : "Perlin 2D",
-                                 "@position" : [
-                                    10264,
-                                    10554
-                                 ],
+                                 "@position" : [ 10264, 10554 ],
                                  "frequency" : 2,
                                  "seed" : 17324204735068898878,
                                  "seed-combine" : true,
@@ -1948,10 +1799,7 @@
                               "instance" : {
                                  "@collapsed" : false,
                                  "@name" : "oak",
-                                 "@position" : [
-                                    10264,
-                                    10964
-                                 ],
+                                 "@position" : [ 10264, 10964 ],
                                  "links" : [],
                                  "reference" : "instances/trees/oak.json",
                                  "seed" : 0,
@@ -1969,30 +1817,21 @@
                               "noise" : {
                                  "@collapsed" : false,
                                  "@name" : "Remap 2D",
-                                 "@position" : [
-                                    10264,
-                                    11186
-                                 ],
+                                 "@position" : [ 10264, 11186 ],
                                  "clamp" : true,
                                  "clampPower" : 10,
                                  "frequency" : 1,
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Remap 2D",
-                                    "@position" : [
-                                       10560,
-                                       11186
-                                    ],
+                                    "@position" : [ 10560, 11186 ],
                                     "clamp" : true,
                                     "clampPower" : 10,
                                     "frequency" : 1,
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Sum 2D",
-                                       "@position" : [
-                                          10856,
-                                          11141
-                                       ],
+                                       "@position" : [ 10856, 11141 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -2002,11 +1841,8 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Ditches",
-                                                "@position" : [
-                                                   11152,
-                                                   11131
-                                                ],
-                                                "frequency" : 0.7750000357627869,
+                                                "@position" : [ 11152, 11131 ],
+                                                "frequency" : 0.77500003576278687,
                                                 "links" : [
                                                    {
                                                       "linkPath" : [
@@ -2141,10 +1977,7 @@
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Constant 2D",
-                                                "@position" : [
-                                                   11152,
-                                                   11306
-                                                ],
+                                                "@position" : [ 11152, 11306 ],
                                                 "frequency" : 1,
                                                 "type" : "constant",
                                                 "value" : -0.049000002443790436
@@ -2173,10 +2006,7 @@
                               "sizeNoise" : {
                                  "@collapsed" : false,
                                  "@name" : "Perlin 2D",
-                                 "@position" : [
-                                    10264,
-                                    11024
-                                 ],
+                                 "@position" : [ 10264, 11024 ],
                                  "frequency" : 2,
                                  "seed" : 17324204735068898878,
                                  "seed-combine" : true,
@@ -2204,19 +2034,13 @@
             "surface_substrate" : {
                "@collapsed" : false,
                "@name" : "Join Substrate",
-               "@position" : [
-                  9472,
-                  8442
-               ],
+               "@position" : [ 9472, 8442 ],
                "components" : [
                   {
                      "fun" : {
                         "@collapsed" : true,
                         "@name" : "river_bed",
-                        "@position" : [
-                           9812,
-                           8451
-                        ],
+                        "@position" : [ 9812, 8451 ],
                         "links" : [],
                         "reference" : "substrate/river_bed.json",
                         "seed" : 0,
@@ -2231,10 +2055,7 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Standard Substrate",
-                        "@position" : [
-                           9807,
-                           8528
-                        ],
+                        "@position" : [ 9807, 8528 ],
                         "@toggle-ceils" : false,
                         "@toggle-strates" : false,
                         "ceils" : [],
@@ -2248,10 +2069,7 @@
                               "depthNoise" : {
                                  "@collapsed" : true,
                                  "@name" : "Min 2D",
-                                 "@position" : [
-                                    10232,
-                                    8630
-                                 ],
+                                 "@position" : [ 10232, 8630 ],
                                  "frequency" : 1,
                                  "seed" : 0,
                                  "seed-combine" : true,
@@ -2260,30 +2078,21 @@
                                     {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10556,
-                                          8517
-                                       ],
+                                       "@position" : [ 10556, 8517 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10867,
-                                             8517
-                                          ],
+                                          "@position" : [ 10867, 8517 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                11178,
-                                                8472
-                                             ],
+                                             "@position" : [ 11178, 8472 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -2293,10 +2102,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Min 2D",
-                                                      "@position" : [
-                                                         11489,
-                                                         8471
-                                                      ],
+                                                      "@position" : [ 11489, 8471 ],
                                                       "frequency" : 1,
                                                       "seed" : 0,
                                                       "seed-combine" : true,
@@ -2305,10 +2111,7 @@
                                                          {
                                                             "@collapsed" : false,
                                                             "@name" : "water_system_1",
-                                                            "@position" : [
-                                                               11791,
-                                                               8355
-                                                            ],
+                                                            "@position" : [ 11791, 8355 ],
                                                             "frequency" : 1,
                                                             "links" : [],
                                                             "reference" : "noise2d/watersystems/water_system_1.json",
@@ -2321,10 +2124,7 @@
                                                          {
                                                             "@collapsed" : false,
                                                             "@name" : "Sum 2D",
-                                                            "@position" : [
-                                                               11791,
-                                                               8461
-                                                            ],
+                                                            "@position" : [ 11791, 8461 ],
                                                             "frequency" : 1,
                                                             "seed" : 0,
                                                             "seed-combine" : true,
@@ -2334,11 +2134,8 @@
                                                                   "fun" : {
                                                                      "@collapsed" : false,
                                                                      "@name" : "Heightmap - Rolling Hills",
-                                                                     "@position" : [
-                                                                        12085,
-                                                                        8462
-                                                                     ],
-                                                                     "frequency" : 0.6290000081062317,
+                                                                     "@position" : [ 12085, 8462 ],
+                                                                     "frequency" : 0.62900000810623169,
                                                                      "links" : [
                                                                         {
                                                                            "linkPath" : [
@@ -2407,13 +2204,10 @@
                                                                   "fun" : {
                                                                      "@collapsed" : false,
                                                                      "@name" : "Constant 2D",
-                                                                     "@position" : [
-                                                                        12085,
-                                                                        8614
-                                                                     ],
+                                                                     "@position" : [ 12085, 8614 ],
                                                                      "frequency" : 1,
                                                                      "type" : "constant",
-                                                                     "value" : -0.06400000303983688
+                                                                     "value" : -0.064000003039836884
                                                                   },
                                                                   "multiplier" : 1,
                                                                   "power" : 1
@@ -2431,10 +2225,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11489,
-                                                         8744
-                                                      ],
+                                                      "@position" : [ 11489, 8744 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : 0.45000001788139343
@@ -2462,31 +2253,22 @@
                                     {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10556,
-                                          8872
-                                       ],
+                                       "@position" : [ 10556, 8872 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10844,
-                                             8872
-                                          ],
+                                          "@position" : [ 10844, 8872 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Ditches",
-                                             "@position" : [
-                                                11131,
-                                                8881
-                                             ],
-                                             "frequency" : 0.7750000357627869,
+                                             "@position" : [ 11131, 8881 ],
+                                             "frequency" : 0.77500003576278687,
                                              "links" : [
                                                 {
                                                    "linkPath" : [
@@ -2645,10 +2427,7 @@
                                  "noise" : {
                                     "@collapsed" : true,
                                     "@name" : "Sum 2D",
-                                    "@position" : [
-                                       10235,
-                                       8830
-                                    ],
+                                    "@position" : [ 10235, 8830 ],
                                     "frequency" : 1,
                                     "seed" : 0,
                                     "seed-combine" : true,
@@ -2658,13 +2437,10 @@
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Constant 2D",
-                                             "@position" : [
-                                                10517,
-                                                8795
-                                             ],
+                                             "@position" : [ 10517, 8795 ],
                                              "frequency" : 1,
                                              "type" : "constant",
-                                             "value" : 0.2750000059604645
+                                             "value" : 0.27500000596046448
                                           },
                                           "multiplier" : 1,
                                           "power" : 1
@@ -2673,10 +2449,7 @@
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Perlin 2D",
-                                             "@position" : [
-                                                10517,
-                                                8852
-                                             ],
+                                             "@position" : [ 10517, 8852 ],
                                              "frequency" : 1,
                                              "seed" : 4906183706173169870,
                                              "seed-combine" : true,
@@ -2699,10 +2472,7 @@
                               "depthNoise" : {
                                  "@collapsed" : true,
                                  "@name" : "Min 2D",
-                                 "@position" : [
-                                    10226,
-                                    9046
-                                 ],
+                                 "@position" : [ 10226, 9046 ],
                                  "frequency" : 1,
                                  "seed" : 0,
                                  "seed-combine" : true,
@@ -2711,30 +2481,21 @@
                                     {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10550,
-                                          8933
-                                       ],
+                                       "@position" : [ 10550, 8933 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10861,
-                                             8933
-                                          ],
+                                          "@position" : [ 10861, 8933 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                11172,
-                                                8888
-                                             ],
+                                             "@position" : [ 11172, 8888 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -2744,10 +2505,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Min 2D",
-                                                      "@position" : [
-                                                         11483,
-                                                         8887
-                                                      ],
+                                                      "@position" : [ 11483, 8887 ],
                                                       "frequency" : 1,
                                                       "seed" : 0,
                                                       "seed-combine" : true,
@@ -2756,10 +2514,7 @@
                                                          {
                                                             "@collapsed" : false,
                                                             "@name" : "water_system_1",
-                                                            "@position" : [
-                                                               11785,
-                                                               8771
-                                                            ],
+                                                            "@position" : [ 11785, 8771 ],
                                                             "frequency" : 1,
                                                             "links" : [],
                                                             "reference" : "noise2d/watersystems/water_system_1.json",
@@ -2772,10 +2527,7 @@
                                                          {
                                                             "@collapsed" : false,
                                                             "@name" : "Sum 2D",
-                                                            "@position" : [
-                                                               11785,
-                                                               8877
-                                                            ],
+                                                            "@position" : [ 11785, 8877 ],
                                                             "frequency" : 1,
                                                             "seed" : 0,
                                                             "seed-combine" : true,
@@ -2785,11 +2537,8 @@
                                                                   "fun" : {
                                                                      "@collapsed" : false,
                                                                      "@name" : "Heightmap - Rolling Hills",
-                                                                     "@position" : [
-                                                                        12079,
-                                                                        8878
-                                                                     ],
-                                                                     "frequency" : 0.6290000081062317,
+                                                                     "@position" : [ 12079, 8878 ],
+                                                                     "frequency" : 0.62900000810623169,
                                                                      "links" : [
                                                                         {
                                                                            "linkPath" : [
@@ -2858,13 +2607,10 @@
                                                                   "fun" : {
                                                                      "@collapsed" : false,
                                                                      "@name" : "Constant 2D",
-                                                                     "@position" : [
-                                                                        12079,
-                                                                        9030
-                                                                     ],
+                                                                     "@position" : [ 12079, 9030 ],
                                                                      "frequency" : 1,
                                                                      "type" : "constant",
-                                                                     "value" : -0.06400000303983688
+                                                                     "value" : -0.064000003039836884
                                                                   },
                                                                   "multiplier" : 1,
                                                                   "power" : 1
@@ -2882,10 +2628,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11483,
-                                                         9160
-                                                      ],
+                                                      "@position" : [ 11483, 9160 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : 0.45000001788139343
@@ -2913,31 +2656,22 @@
                                     {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10550,
-                                          9288
-                                       ],
+                                       "@position" : [ 10550, 9288 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10838,
-                                             9288
-                                          ],
+                                          "@position" : [ 10838, 9288 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Ditches",
-                                             "@position" : [
-                                                11125,
-                                                9297
-                                             ],
-                                             "frequency" : 0.7750000357627869,
+                                             "@position" : [ 11125, 9297 ],
+                                             "frequency" : 0.77500003576278687,
                                              "links" : [
                                                 {
                                                    "linkPath" : [
@@ -3096,10 +2830,7 @@
                                  "noise" : {
                                     "@collapsed" : true,
                                     "@name" : "Sum 2D",
-                                    "@position" : [
-                                       10210,
-                                       9259
-                                    ],
+                                    "@position" : [ 10210, 9259 ],
                                     "frequency" : 1,
                                     "seed" : 0,
                                     "seed-combine" : true,
@@ -3109,13 +2840,10 @@
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Constant 2D",
-                                             "@position" : [
-                                                10492,
-                                                9224
-                                             ],
+                                             "@position" : [ 10492, 9224 ],
                                              "frequency" : 1,
                                              "type" : "constant",
-                                             "value" : 0.2750000059604645
+                                             "value" : 0.27500000596046448
                                           },
                                           "multiplier" : 1,
                                           "power" : 1
@@ -3124,10 +2852,7 @@
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Perlin 2D",
-                                             "@position" : [
-                                                10492,
-                                                9281
-                                             ],
+                                             "@position" : [ 10492, 9281 ],
                                              "frequency" : 1,
                                              "seed" : 4906183706173169870,
                                              "seed-combine" : true,
@@ -3193,9 +2918,9 @@
          "type" : "standard",
          "vegetation" : {
             "enabled" : true,
-            "value" : 0.8340000510215759
+            "value" : 0.83400005102157593
          },
-         "weight" : 0.6000000238418579
+         "weight" : 0.60000002384185791
       },
       "links" : [
          {
@@ -3242,25 +2967,48 @@
    "palette" : {
       "@collapsed" : false,
       "@name" : "Migrated Palette",
-      "@position" : [
-         7972,
-         8160
-      ],
+      "@position" : [ 7972, 8160 ],
       "ASH_DEFAULT_BASE" : 20,
       "CRYSTAL_GLEAM_BASE" : 50,
+      "CUTTLETRUNK_AUX" : 1,
+      "CUTTLETRUNK_BASE" : 1,
+      "CUTTLETRUNK_EXOTIC" : 1,
       "FLORA_FLOWER_1" : 104,
       "FLORA_FLOWER_2" : 12,
       "FLORA_FLOWER_3" : 158,
       "FLORA_FLOWER_4" : 74,
+      "FLORA_PLANT_FIBROUS" : 1,
+      "FLORA_PLANT_INKY" : 1,
+      "FUNGUS_AMANITA" : 1,
+      "FUNGUS_BRACKET" : 1,
+      "FUNGUS_CORAL" : 1,
+      "FUNGUS_DRIPPING" : 1,
+      "FUNGUS_GLOWING" : 1,
+      "FUNGUS_SCATTER" : 1,
       "GRASS_BARBED_BASE" : 179,
       "GRASS_GNARLED_BASE" : 30,
       "GRASS_VERDANT_BASE" : 136,
       "GRAVEL_DEFAULT_BASE" : 193,
       "GROWTH_DEFAULT_BASE" : 20,
+      "HOPPER_AUX" : 1,
+      "HOPPER_BASE" : 1,
+      "HOPPER_EXOTIC" : 1,
+      "HUNTER_AUX" : 1,
+      "HUNTER_BASE" : 1,
+      "HUNTER_EXOTIC" : 1,
       "ICE_DEFAULT_BASE" : 20,
       "ICE_GLACIER_BASE" : 20,
       "MOULD_DEFAULT_BASE" : 20,
       "MUD_DEFAULT_BASE" : 20,
+      "PLANT_ALOE" : 1,
+      "PLANT_CACTUS" : 1,
+      "PLANT_FIDDLEHEAD" : 1,
+      "PLANT_LOTUS" : 1,
+      "PLANT_SNOWDROP" : 1,
+      "PLANT_YUCCA" : 1,
+      "ROADRUNNER_AUX" : 1,
+      "ROADRUNNER_BASE" : 1,
+      "ROADRUNNER_EXOTIC" : 1,
       "ROCK_IGNEOUS_BASE" : 23,
       "ROCK_METAMORPHIC_BASE" : 166,
       "ROCK_SEDIMENTARY_BASE" : 169,
@@ -3268,9 +3016,15 @@
       "SOIL_CLAY_BASE" : 20,
       "SOIL_PEATY_BASE" : 194,
       "SOIL_SILTY_BASE" : 45,
+      "SPITTER_AUX" : 1,
+      "SPITTER_BASE" : 1,
+      "SPITTER_EXOTIC" : 1,
       "SPONGE_DEFAULT_BASE" : 20,
       "TANGLE_DEFAULT_BASE" : 20,
       "THORNS_DEFAULT_BASE" : 20,
+      "WILDSTOCK_AUX" : 1,
+      "WILDSTOCK_BASE" : 1,
+      "WILDSTOCK_EXOTIC" : 1,
       "WOOD_ANCIENT_TRUNK" : 43,
       "WOOD_EXOTIC_LEAVES" : 178,
       "WOOD_LUSH_LEAVES" : 50,
@@ -3291,36 +3045,27 @@
    "test" : {
       "@collapsed" : false,
       "@name" : "Reference Biome",
-      "@position" : [
-         8457,
-         10438
-      ],
+      "@position" : [ 8457, 10438 ],
       "embedded" : {
          "@collapsed" : false,
          "@configType" : "BIOME",
          "@name" : "meadows",
-         "@position" : [
-            7932,
-            8160
-         ],
+         "@position" : [ 7932, 8160 ],
          "@toggle-test" : false,
          "@toggle-world" : true,
-         "@version" : 15,
+         "@version" : 18,
          "biome" : {
             "fun" : {
                "@collapsed" : false,
                "@name" : "meadows",
-               "@position" : [
-                  8457,
-                  8462
-               ],
+               "@position" : [ 8457, 8462 ],
                "altitude" : {
                   "enabled" : true,
-                  "value" : 0.4090000092983246
+                  "value" : 0.40900000929832458
                },
                "humidity" : {
                   "enabled" : true,
-                  "value" : 0.4390000104904175
+                  "value" : 0.43900001049041748
                },
                "labels" : [
                   {
@@ -3340,10 +3085,7 @@
                "part" : {
                   "@collapsed" : false,
                   "@name" : "meadows",
-                  "@position" : [
-                     8966,
-                     8205
-                  ],
+                  "@position" : [ 8966, 8205 ],
                   "@selector-open" : false,
                   "@toggle-caves" : true,
                   "@toggle-ccaves" : true,
@@ -3359,7 +3101,7 @@
                   "@x-name" : "x",
                   "@y-name" : "y",
                   "caveSurfaceShrink" : {
-                     "enabled" : true,
+                     "enabled" : false,
                      "value" : 1
                   },
                   "caveThresholdBias" : {
@@ -3368,41 +3110,88 @@
                   },
                   "caves" : {
                      "@collapsed" : false,
-                     "@name" : "Layered 3D",
-                     "@position" : [
-                        9454,
-                        7478
-                     ],
-                     "components" : [
+                     "@name" : "cave_height_3d",
+                     "@position" : [ 9491, 7971 ],
+                     "frequency" : [ 1, 1 ],
+                     "links" : [
                         {
-                           "fun" : {
-                              "@collapsed" : false,
-                              "@name" : "tier_1_caves",
-                              "@position" : [
-                                 9800,
-                                 7377
-                              ],
-                              "frequency" : [
-                                 1,
-                                 1
-                              ],
-                              "links" : [],
-                              "reference" : "noise3d/caves/release/tier_1_caves.json",
-                              "seed" : 2840125855102216963,
-                              "seed-combine" : false,
-                              "seed-hash" : "6qIPujHIsn6speZx",
-                              "tick" : 2,
-                              "type" : "reference"
-                           },
-                           "noiseMaxY" : 256,
-                           "y" : 0,
-                           "yfun" : {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "sliderValue"
+                              }
+                           ],
+                           "linkType" : "LT:CUSTOM_SLIDER",
+                           "sliderValue" : -0.095000006258487701
+                        },
+                        {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 1,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "nodeValue"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_2D",
+                           "nodeValue" : {
                               "@collapsed" : false,
                               "@name" : "Sum 2D",
-                              "@position" : [
-                                 9790,
-                                 7507
-                              ],
+                              "@position" : [ 9822, 7811 ],
                               "frequency" : 1,
                               "seed" : 0,
                               "seed-combine" : true,
@@ -3411,147 +3200,11 @@
                                  {
                                     "fun" : {
                                        "@collapsed" : false,
-                                       "@name" : "Min 2D",
-                                       "@position" : [
-                                          10101,
-                                          7511
-                                       ],
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 10116, 7824 ],
                                        "frequency" : 1,
-                                       "seed" : 0,
-                                       "seed-combine" : true,
-                                       "seed-hash" : "",
-                                       "terms" : [
-                                          {
-                                             "@collapsed" : false,
-                                             "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10405,
-                                                7395
-                                             ],
-                                             "frequency" : 1,
-                                             "seed" : 0,
-                                             "seed-combine" : true,
-                                             "seed-hash" : "",
-                                             "terms" : [
-                                                {
-                                                   "fun" : {
-                                                      "@collapsed" : false,
-                                                      "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         10699,
-                                                         7408
-                                                      ],
-                                                      "frequency" : 1,
-                                                      "type" : "constant",
-                                                      "value" : -0.47600001096725464
-                                                   },
-                                                   "multiplier" : 1,
-                                                   "power" : 1
-                                                },
-                                                {
-                                                   "fun" : {
-                                                      "@collapsed" : false,
-                                                      "@name" : "Heightmap - Angled Hills",
-                                                      "@position" : [
-                                                         10699,
-                                                         7514
-                                                      ],
-                                                      "frequency" : 1,
-                                                      "links" : [
-                                                         {
-                                                            "linkPath" : [
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "noise2d"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "fun"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "power"
-                                                               }
-                                                            ],
-                                                            "linkType" : "LT:CUSTOM_SLIDER",
-                                                            "sliderValue" : 0.5
-                                                         },
-                                                         {
-                                                            "linkPath" : [
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "noise2d"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "fun"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "overflowPower"
-                                                               }
-                                                            ],
-                                                            "linkType" : "LT:CUSTOM_SLIDER",
-                                                            "sliderValue" : 0.4130000174045563
-                                                         },
-                                                         {
-                                                            "linkPath" : [
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "noise2d"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "fun"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "fun"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "frequency"
-                                                               },
-                                                               {
-                                                                  "index" : -1,
-                                                                  "name" : "@xz"
-                                                               }
-                                                            ],
-                                                            "linkType" : "LT:CUSTOM_SLIDER",
-                                                            "sliderValue" : 0.0650000050663948
-                                                         }
-                                                      ],
-                                                      "reference" : "noise2d/heightmaps/angledhills.json",
-                                                      "seed" : 17967947831772151096,
-                                                      "seed-combine" : true,
-                                                      "seed-hash" : "E4egFlHLbMxzev4c",
-                                                      "tick" : 0,
-                                                      "type" : "reference"
-                                                   },
-                                                   "multiplier" : 0.023000001907348633,
-                                                   "power" : 1
-                                                }
-                                             ],
-                                             "type" : "sum"
-                                          },
-                                          {
-                                             "@collapsed" : false,
-                                             "@name" : "water_system_1",
-                                             "@position" : [
-                                                10405,
-                                                7701
-                                             ],
-                                             "frequency" : 1,
-                                             "links" : [],
-                                             "reference" : "noise2d/watersystems/water_system_1.json",
-                                             "seed" : 7577140515190446856,
-                                             "seed-combine" : true,
-                                             "seed-hash" : "vfKUd1LeyNQkxZRE",
-                                             "tick" : 0,
-                                             "type" : "reference"
-                                          }
-                                       ],
-                                       "type" : "min"
+                                       "type" : "constant",
+                                       "value" : -0.47600001096725464
                                     },
                                     "multiplier" : 1,
                                     "power" : 1
@@ -3559,16 +3212,81 @@
                                  {
                                     "fun" : {
                                        "@collapsed" : false,
-                                       "@name" : "Constant 2D",
-                                       "@position" : [
-                                          10101,
-                                          7716
-                                       ],
+                                       "@name" : "Heightmap - Angled Hills",
+                                       "@position" : [ 10116, 7930 ],
                                        "frequency" : 1,
-                                       "type" : "constant",
-                                       "value" : -0.15000000596046448
+                                       "links" : [
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "power"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 0.5
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "overflowPower"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 0.41300001740455627
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "frequency"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "@xz"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 0.065000005066394806
+                                          }
+                                       ],
+                                       "reference" : "noise2d/heightmaps/angledhills.json",
+                                       "seed" : 17967947831772151096,
+                                       "seed-combine" : true,
+                                       "seed-hash" : "E4egFlHLbMxzev4c",
+                                       "tick" : 0,
+                                       "type" : "reference"
                                     },
-                                    "multiplier" : 1,
+                                    "multiplier" : 0.023000001907348633,
                                     "power" : 1
                                  }
                               ],
@@ -3576,42 +3294,56 @@
                            }
                         },
                         {
-                           "fun" : {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_3D",
+                           "nodeValue" : {
                               "@collapsed" : false,
-                              "@name" : "Constant 3D",
-                              "@position" : [
-                                 9786,
-                                 7830
-                              ],
-                              "frequency" : [
-                                 1,
-                                 1
-                              ],
-                              "type" : "constant",
-                              "value" : -1
-                           },
-                           "noiseMaxY" : 0,
-                           "y" : 256,
-                           "yfun" : null
+                              "@name" : "tier_1_caves",
+                              "@position" : [ 9816, 8146 ],
+                              "frequency" : [ 1, 1 ],
+                              "links" : [],
+                              "reference" : "noise3d/caves/release/tier_1_caves.json",
+                              "seed" : 2840125855102216963,
+                              "seed-combine" : false,
+                              "seed-hash" : "6qIPujHIsn6speZx",
+                              "tick" : 2,
+                              "type" : "reference"
+                           }
                         }
                      ],
-                     "frequency" : [
-                        1,
-                        1
-                     ],
+                     "reference" : "noise3d/misc/cave_height_3d.json",
                      "seed" : 0,
                      "seed-combine" : true,
                      "seed-hash" : "",
-                     "type" : "layered"
+                     "tick" : 2,
+                     "type" : "reference"
                   },
                   "caves_decorations" : null,
                   "caves_substrate" : {
                      "@collapsed" : false,
                      "@name" : "tier_1_caves",
-                     "@position" : [
-                        9466,
-                        8347
-                     ],
+                     "@position" : [ 9466, 8347 ],
                      "links" : [],
                      "reference" : "substrate/caves/tier_1_caves.json",
                      "seed" : 15408175334311480782,
@@ -3641,10 +3373,7 @@
                   "heightmap" : {
                      "@collapsed" : false,
                      "@name" : "Min 2D",
-                     "@position" : [
-                        9464,
-                        7078
-                     ],
+                     "@position" : [ 9464, 7078 ],
                      "frequency" : 1,
                      "seed" : 0,
                      "seed-combine" : true,
@@ -3653,10 +3382,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "Sum 2D",
-                           "@position" : [
-                              9816,
-                              6914
-                           ],
+                           "@position" : [ 9816, 6914 ],
                            "frequency" : 1,
                            "seed" : 0,
                            "seed-combine" : true,
@@ -3666,10 +3392,7 @@
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Constant 2D",
-                                    "@position" : [
-                                       10112,
-                                       6904
-                                    ],
+                                    "@position" : [ 10112, 6904 ],
                                     "frequency" : 1,
                                     "type" : "constant",
                                     "value" : -0.47600001096725464
@@ -3681,10 +3404,7 @@
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Heightmap - Angled Hills",
-                                    "@position" : [
-                                       10112,
-                                       7033
-                                    ],
+                                    "@position" : [ 10112, 7033 ],
                                     "frequency" : 1,
                                     "links" : [
                                        {
@@ -3721,7 +3441,7 @@
                                              }
                                           ],
                                           "linkType" : "LT:CUSTOM_SLIDER",
-                                          "sliderValue" : 0.4130000174045563
+                                          "sliderValue" : 0.41300001740455627
                                        },
                                        {
                                           "linkPath" : [
@@ -3747,7 +3467,7 @@
                                              }
                                           ],
                                           "linkType" : "LT:CUSTOM_SLIDER",
-                                          "sliderValue" : 0.0650000050663948
+                                          "sliderValue" : 0.065000005066394806
                                        }
                                     ],
                                     "reference" : "noise2d/heightmaps/angledhills.json",
@@ -3766,10 +3486,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "water_system_1",
-                           "@position" : [
-                              9792,
-                              7244
-                           ],
+                           "@position" : [ 9792, 7244 ],
                            "frequency" : 1,
                            "links" : [],
                            "reference" : "noise2d/watersystems/water_system_1.json",
@@ -3799,10 +3516,7 @@
                   "strata" : {
                      "@collapsed" : false,
                      "@name" : "standard_fill",
-                     "@position" : [
-                        8903,
-                        8500
-                     ],
+                     "@position" : [ 9479, 8232 ],
                      "links" : [],
                      "reference" : "strata/release/standard_fill.json",
                      "seed" : 4806540044189345838,
@@ -3814,19 +3528,13 @@
                   "surface_decorations" : {
                      "@collapsed" : false,
                      "@name" : "Join Decoration",
-                     "@position" : [
-                        9348,
-                        10010
-                     ],
+                     "@position" : [ 9348, 10010 ],
                      "components" : [
                         {
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "river_bed",
-                              "@position" : [
-                                 9811,
-                                 8657
-                              ],
+                              "@position" : [ 9811, 8657 ],
                               "links" : [],
                               "reference" : "decorations/river_bed.json",
                               "seed" : 0,
@@ -3841,10 +3549,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Standard Decorations",
-                              "@position" : [
-                                 9811,
-                                 8717
-                              ],
+                              "@position" : [ 9811, 8717 ],
                               "@toggle-ceiling" : false,
                               "@toggle-floor" : true,
                               "ceiling" : [],
@@ -3867,30 +3572,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          8821
-                                       ],
+                                       "@position" : [ 10264, 8821 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             8821
-                                          ],
+                                          "@position" : [ 10560, 8821 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                8776
-                                             ],
+                                             "@position" : [ 10856, 8776 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -3900,11 +3596,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         8766
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 8766 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -4039,10 +3732,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         8941
-                                                      ],
+                                                      "@position" : [ 11152, 8941 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -4078,7 +3768,7 @@
                                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                        "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                                     ],
-                                    "density" : 0.4599999785423279,
+                                    "density" : 0.45999997854232788,
                                     "depth" : 8,
                                     "instance" : null,
                                     "maxGradient" : 5,
@@ -4090,30 +3780,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          9125
-                                       ],
+                                       "@position" : [ 10264, 9125 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             9125
-                                          ],
+                                          "@position" : [ 10560, 9125 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                9080
-                                             ],
+                                             "@position" : [ 10856, 9080 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -4123,11 +3804,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         9070
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 9070 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -4262,10 +3940,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         9245
-                                                      ],
+                                                      "@position" : [ 11152, 9245 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -4301,7 +3976,7 @@
                                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                        "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                                     ],
-                                    "density" : 0.6499999761581421,
+                                    "density" : 0.64999997615814209,
                                     "depth" : 8,
                                     "instance" : null,
                                     "maxGradient" : 5,
@@ -4313,30 +3988,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          9429
-                                       ],
+                                       "@position" : [ 10264, 9429 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             9429
-                                          ],
+                                          "@position" : [ 10560, 9429 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                9384
-                                             ],
+                                             "@position" : [ 10856, 9384 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -4346,11 +4012,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         9374
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 9374 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -4485,10 +4148,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         9549
-                                                      ],
+                                                      "@position" : [ 11152, 9549 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -4536,30 +4196,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          9733
-                                       ],
+                                       "@position" : [ 10264, 9733 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             9733
-                                          ],
+                                          "@position" : [ 10560, 9733 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                9688
-                                             ],
+                                             "@position" : [ 10856, 9688 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -4569,11 +4220,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         9678
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 9678 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -4708,10 +4356,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         9853
-                                                      ],
+                                                      "@position" : [ 11152, 9853 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -4747,15 +4392,12 @@
                                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                        "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                                     ],
-                                    "density" : -0.6100000143051147,
+                                    "density" : -0.61000001430511475,
                                     "depth" : 8,
                                     "instance" : {
                                        "@collapsed" : false,
                                        "@name" : "Bush (deprecated)",
-                                       "@position" : [
-                                          10264,
-                                          9981
-                                       ],
+                                       "@position" : [ 10264, 9981 ],
                                        "blockType" : "WOOD_LUSH_LEAVES",
                                        "height" : 3,
                                        "maxScale" : 2,
@@ -4774,30 +4416,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          10246
-                                       ],
+                                       "@position" : [ 10264, 10246 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             10246
-                                          ],
+                                          "@position" : [ 10560, 10246 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                10201
-                                             ],
+                                             "@position" : [ 10856, 10201 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -4807,11 +4440,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         10191
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 10191 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -4946,10 +4576,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         10366
-                                                      ],
+                                                      "@position" : [ 11152, 10366 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -4985,15 +4612,12 @@
                                        "GRASS_VERDANT_BASE/SOIL_SILTY_BASE",
                                        "GRASS_VERDANT_BASE/SOIL_PEATY_BASE"
                                     ],
-                                    "density" : -0.550000011920929,
+                                    "density" : -0.55000001192092896,
                                     "depth" : 8,
                                     "instance" : {
                                        "@collapsed" : false,
                                        "@name" : "bush_lush",
-                                       "@position" : [
-                                          10264,
-                                          10494
-                                       ],
+                                       "@position" : [ 10264, 10494 ],
                                        "links" : [],
                                        "reference" : "instances/bushes/bush_lush.json",
                                        "seed" : 0,
@@ -5011,30 +4635,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          10716
-                                       ],
+                                       "@position" : [ 10264, 10716 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             10716
-                                          ],
+                                          "@position" : [ 10560, 10716 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                10671
-                                             ],
+                                             "@position" : [ 10856, 10671 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -5044,11 +4659,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         10661
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 10661 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -5183,10 +4795,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         10836
-                                                      ],
+                                                      "@position" : [ 11152, 10836 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -5215,10 +4824,7 @@
                                     "sizeNoise" : {
                                        "@collapsed" : false,
                                        "@name" : "Perlin 2D",
-                                       "@position" : [
-                                          10264,
-                                          10554
-                                       ],
+                                       "@position" : [ 10264, 10554 ],
                                        "frequency" : 2,
                                        "seed" : 17324204735068898878,
                                        "seed-combine" : true,
@@ -5239,10 +4845,7 @@
                                     "instance" : {
                                        "@collapsed" : false,
                                        "@name" : "oak",
-                                       "@position" : [
-                                          10264,
-                                          10964
-                                       ],
+                                       "@position" : [ 10264, 10964 ],
                                        "links" : [],
                                        "reference" : "instances/trees/oak.json",
                                        "seed" : 0,
@@ -5260,30 +4863,21 @@
                                     "noise" : {
                                        "@collapsed" : false,
                                        "@name" : "Remap 2D",
-                                       "@position" : [
-                                          10264,
-                                          11186
-                                       ],
+                                       "@position" : [ 10264, 11186 ],
                                        "clamp" : true,
                                        "clampPower" : 10,
                                        "frequency" : 1,
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Remap 2D",
-                                          "@position" : [
-                                             10560,
-                                             11186
-                                          ],
+                                          "@position" : [ 10560, 11186 ],
                                           "clamp" : true,
                                           "clampPower" : 10,
                                           "frequency" : 1,
                                           "fun" : {
                                              "@collapsed" : false,
                                              "@name" : "Sum 2D",
-                                             "@position" : [
-                                                10856,
-                                                11141
-                                             ],
+                                             "@position" : [ 10856, 11141 ],
                                              "frequency" : 1,
                                              "seed" : 0,
                                              "seed-combine" : true,
@@ -5293,11 +4887,8 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Ditches",
-                                                      "@position" : [
-                                                         11152,
-                                                         11131
-                                                      ],
-                                                      "frequency" : 0.7750000357627869,
+                                                      "@position" : [ 11152, 11131 ],
+                                                      "frequency" : 0.77500003576278687,
                                                       "links" : [
                                                          {
                                                             "linkPath" : [
@@ -5432,10 +5023,7 @@
                                                    "fun" : {
                                                       "@collapsed" : false,
                                                       "@name" : "Constant 2D",
-                                                      "@position" : [
-                                                         11152,
-                                                         11306
-                                                      ],
+                                                      "@position" : [ 11152, 11306 ],
                                                       "frequency" : 1,
                                                       "type" : "constant",
                                                       "value" : -0.049000002443790436
@@ -5464,10 +5052,7 @@
                                     "sizeNoise" : {
                                        "@collapsed" : false,
                                        "@name" : "Perlin 2D",
-                                       "@position" : [
-                                          10264,
-                                          11024
-                                       ],
+                                       "@position" : [ 10264, 11024 ],
                                        "frequency" : 2,
                                        "seed" : 17324204735068898878,
                                        "seed-combine" : true,
@@ -5495,19 +5080,13 @@
                   "surface_substrate" : {
                      "@collapsed" : false,
                      "@name" : "Join Substrate",
-                     "@position" : [
-                        9472,
-                        8442
-                     ],
+                     "@position" : [ 9472, 8442 ],
                      "components" : [
                         {
                            "fun" : {
                               "@collapsed" : true,
                               "@name" : "river_bed",
-                              "@position" : [
-                                 9812,
-                                 8451
-                              ],
+                              "@position" : [ 9812, 8451 ],
                               "links" : [],
                               "reference" : "substrate/river_bed.json",
                               "seed" : 0,
@@ -5522,10 +5101,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Standard Substrate",
-                              "@position" : [
-                                 9807,
-                                 8528
-                              ],
+                              "@position" : [ 9807, 8528 ],
                               "@toggle-ceils" : false,
                               "@toggle-strates" : false,
                               "ceils" : [],
@@ -5539,10 +5115,7 @@
                                     "depthNoise" : {
                                        "@collapsed" : true,
                                        "@name" : "Min 2D",
-                                       "@position" : [
-                                          10232,
-                                          8630
-                                       ],
+                                       "@position" : [ 10232, 8630 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -5551,30 +5124,21 @@
                                           {
                                              "@collapsed" : false,
                                              "@name" : "Remap 2D",
-                                             "@position" : [
-                                                10556,
-                                                8517
-                                             ],
+                                             "@position" : [ 10556, 8517 ],
                                              "clamp" : true,
                                              "clampPower" : 10,
                                              "frequency" : 1,
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Remap 2D",
-                                                "@position" : [
-                                                   10867,
-                                                   8517
-                                                ],
+                                                "@position" : [ 10867, 8517 ],
                                                 "clamp" : true,
                                                 "clampPower" : 10,
                                                 "frequency" : 1,
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Sum 2D",
-                                                   "@position" : [
-                                                      11178,
-                                                      8472
-                                                   ],
+                                                   "@position" : [ 11178, 8472 ],
                                                    "frequency" : 1,
                                                    "seed" : 0,
                                                    "seed-combine" : true,
@@ -5584,10 +5148,7 @@
                                                          "fun" : {
                                                             "@collapsed" : false,
                                                             "@name" : "Min 2D",
-                                                            "@position" : [
-                                                               11489,
-                                                               8471
-                                                            ],
+                                                            "@position" : [ 11489, 8471 ],
                                                             "frequency" : 1,
                                                             "seed" : 0,
                                                             "seed-combine" : true,
@@ -5596,10 +5157,7 @@
                                                                {
                                                                   "@collapsed" : false,
                                                                   "@name" : "water_system_1",
-                                                                  "@position" : [
-                                                                     11791,
-                                                                     8355
-                                                                  ],
+                                                                  "@position" : [ 11791, 8355 ],
                                                                   "frequency" : 1,
                                                                   "links" : [],
                                                                   "reference" : "noise2d/watersystems/water_system_1.json",
@@ -5612,10 +5170,7 @@
                                                                {
                                                                   "@collapsed" : false,
                                                                   "@name" : "Sum 2D",
-                                                                  "@position" : [
-                                                                     11791,
-                                                                     8461
-                                                                  ],
+                                                                  "@position" : [ 11791, 8461 ],
                                                                   "frequency" : 1,
                                                                   "seed" : 0,
                                                                   "seed-combine" : true,
@@ -5625,11 +5180,8 @@
                                                                         "fun" : {
                                                                            "@collapsed" : false,
                                                                            "@name" : "Heightmap - Rolling Hills",
-                                                                           "@position" : [
-                                                                              12085,
-                                                                              8462
-                                                                           ],
-                                                                           "frequency" : 0.6290000081062317,
+                                                                           "@position" : [ 12085, 8462 ],
+                                                                           "frequency" : 0.62900000810623169,
                                                                            "links" : [
                                                                               {
                                                                                  "linkPath" : [
@@ -5698,13 +5250,10 @@
                                                                         "fun" : {
                                                                            "@collapsed" : false,
                                                                            "@name" : "Constant 2D",
-                                                                           "@position" : [
-                                                                              12085,
-                                                                              8614
-                                                                           ],
+                                                                           "@position" : [ 12085, 8614 ],
                                                                            "frequency" : 1,
                                                                            "type" : "constant",
-                                                                           "value" : -0.06400000303983688
+                                                                           "value" : -0.064000003039836884
                                                                         },
                                                                         "multiplier" : 1,
                                                                         "power" : 1
@@ -5722,10 +5271,7 @@
                                                          "fun" : {
                                                             "@collapsed" : false,
                                                             "@name" : "Constant 2D",
-                                                            "@position" : [
-                                                               11489,
-                                                               8744
-                                                            ],
+                                                            "@position" : [ 11489, 8744 ],
                                                             "frequency" : 1,
                                                             "type" : "constant",
                                                             "value" : 0.45000001788139343
@@ -5753,31 +5299,22 @@
                                           {
                                              "@collapsed" : false,
                                              "@name" : "Remap 2D",
-                                             "@position" : [
-                                                10556,
-                                                8872
-                                             ],
+                                             "@position" : [ 10556, 8872 ],
                                              "clamp" : true,
                                              "clampPower" : 10,
                                              "frequency" : 1,
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Remap 2D",
-                                                "@position" : [
-                                                   10844,
-                                                   8872
-                                                ],
+                                                "@position" : [ 10844, 8872 ],
                                                 "clamp" : true,
                                                 "clampPower" : 10,
                                                 "frequency" : 1,
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Ditches",
-                                                   "@position" : [
-                                                      11131,
-                                                      8881
-                                                   ],
-                                                   "frequency" : 0.7750000357627869,
+                                                   "@position" : [ 11131, 8881 ],
+                                                   "frequency" : 0.77500003576278687,
                                                    "links" : [
                                                       {
                                                          "linkPath" : [
@@ -5936,10 +5473,7 @@
                                        "noise" : {
                                           "@collapsed" : true,
                                           "@name" : "Sum 2D",
-                                          "@position" : [
-                                             10235,
-                                             8830
-                                          ],
+                                          "@position" : [ 10235, 8830 ],
                                           "frequency" : 1,
                                           "seed" : 0,
                                           "seed-combine" : true,
@@ -5949,13 +5483,10 @@
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Constant 2D",
-                                                   "@position" : [
-                                                      10517,
-                                                      8795
-                                                   ],
+                                                   "@position" : [ 10517, 8795 ],
                                                    "frequency" : 1,
                                                    "type" : "constant",
-                                                   "value" : 0.2750000059604645
+                                                   "value" : 0.27500000596046448
                                                 },
                                                 "multiplier" : 1,
                                                 "power" : 1
@@ -5964,10 +5495,7 @@
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Perlin 2D",
-                                                   "@position" : [
-                                                      10517,
-                                                      8852
-                                                   ],
+                                                   "@position" : [ 10517, 8852 ],
                                                    "frequency" : 1,
                                                    "seed" : 4906183706173169870,
                                                    "seed-combine" : true,
@@ -5990,10 +5518,7 @@
                                     "depthNoise" : {
                                        "@collapsed" : true,
                                        "@name" : "Min 2D",
-                                       "@position" : [
-                                          10226,
-                                          9046
-                                       ],
+                                       "@position" : [ 10226, 9046 ],
                                        "frequency" : 1,
                                        "seed" : 0,
                                        "seed-combine" : true,
@@ -6002,30 +5527,21 @@
                                           {
                                              "@collapsed" : false,
                                              "@name" : "Remap 2D",
-                                             "@position" : [
-                                                10550,
-                                                8933
-                                             ],
+                                             "@position" : [ 10550, 8933 ],
                                              "clamp" : true,
                                              "clampPower" : 10,
                                              "frequency" : 1,
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Remap 2D",
-                                                "@position" : [
-                                                   10861,
-                                                   8933
-                                                ],
+                                                "@position" : [ 10861, 8933 ],
                                                 "clamp" : true,
                                                 "clampPower" : 10,
                                                 "frequency" : 1,
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Sum 2D",
-                                                   "@position" : [
-                                                      11172,
-                                                      8888
-                                                   ],
+                                                   "@position" : [ 11172, 8888 ],
                                                    "frequency" : 1,
                                                    "seed" : 0,
                                                    "seed-combine" : true,
@@ -6035,10 +5551,7 @@
                                                          "fun" : {
                                                             "@collapsed" : false,
                                                             "@name" : "Min 2D",
-                                                            "@position" : [
-                                                               11483,
-                                                               8887
-                                                            ],
+                                                            "@position" : [ 11483, 8887 ],
                                                             "frequency" : 1,
                                                             "seed" : 0,
                                                             "seed-combine" : true,
@@ -6047,10 +5560,7 @@
                                                                {
                                                                   "@collapsed" : false,
                                                                   "@name" : "water_system_1",
-                                                                  "@position" : [
-                                                                     11785,
-                                                                     8771
-                                                                  ],
+                                                                  "@position" : [ 11785, 8771 ],
                                                                   "frequency" : 1,
                                                                   "links" : [],
                                                                   "reference" : "noise2d/watersystems/water_system_1.json",
@@ -6063,10 +5573,7 @@
                                                                {
                                                                   "@collapsed" : false,
                                                                   "@name" : "Sum 2D",
-                                                                  "@position" : [
-                                                                     11785,
-                                                                     8877
-                                                                  ],
+                                                                  "@position" : [ 11785, 8877 ],
                                                                   "frequency" : 1,
                                                                   "seed" : 0,
                                                                   "seed-combine" : true,
@@ -6076,11 +5583,8 @@
                                                                         "fun" : {
                                                                            "@collapsed" : false,
                                                                            "@name" : "Heightmap - Rolling Hills",
-                                                                           "@position" : [
-                                                                              12079,
-                                                                              8878
-                                                                           ],
-                                                                           "frequency" : 0.6290000081062317,
+                                                                           "@position" : [ 12079, 8878 ],
+                                                                           "frequency" : 0.62900000810623169,
                                                                            "links" : [
                                                                               {
                                                                                  "linkPath" : [
@@ -6149,13 +5653,10 @@
                                                                         "fun" : {
                                                                            "@collapsed" : false,
                                                                            "@name" : "Constant 2D",
-                                                                           "@position" : [
-                                                                              12079,
-                                                                              9030
-                                                                           ],
+                                                                           "@position" : [ 12079, 9030 ],
                                                                            "frequency" : 1,
                                                                            "type" : "constant",
-                                                                           "value" : -0.06400000303983688
+                                                                           "value" : -0.064000003039836884
                                                                         },
                                                                         "multiplier" : 1,
                                                                         "power" : 1
@@ -6173,10 +5674,7 @@
                                                          "fun" : {
                                                             "@collapsed" : false,
                                                             "@name" : "Constant 2D",
-                                                            "@position" : [
-                                                               11483,
-                                                               9160
-                                                            ],
+                                                            "@position" : [ 11483, 9160 ],
                                                             "frequency" : 1,
                                                             "type" : "constant",
                                                             "value" : 0.45000001788139343
@@ -6204,31 +5702,22 @@
                                           {
                                              "@collapsed" : false,
                                              "@name" : "Remap 2D",
-                                             "@position" : [
-                                                10550,
-                                                9288
-                                             ],
+                                             "@position" : [ 10550, 9288 ],
                                              "clamp" : true,
                                              "clampPower" : 10,
                                              "frequency" : 1,
                                              "fun" : {
                                                 "@collapsed" : false,
                                                 "@name" : "Remap 2D",
-                                                "@position" : [
-                                                   10838,
-                                                   9288
-                                                ],
+                                                "@position" : [ 10838, 9288 ],
                                                 "clamp" : true,
                                                 "clampPower" : 10,
                                                 "frequency" : 1,
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Ditches",
-                                                   "@position" : [
-                                                      11125,
-                                                      9297
-                                                   ],
-                                                   "frequency" : 0.7750000357627869,
+                                                   "@position" : [ 11125, 9297 ],
+                                                   "frequency" : 0.77500003576278687,
                                                    "links" : [
                                                       {
                                                          "linkPath" : [
@@ -6387,10 +5876,7 @@
                                        "noise" : {
                                           "@collapsed" : true,
                                           "@name" : "Sum 2D",
-                                          "@position" : [
-                                             10210,
-                                             9259
-                                          ],
+                                          "@position" : [ 10210, 9259 ],
                                           "frequency" : 1,
                                           "seed" : 0,
                                           "seed-combine" : true,
@@ -6400,13 +5886,10 @@
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Constant 2D",
-                                                   "@position" : [
-                                                      10492,
-                                                      9224
-                                                   ],
+                                                   "@position" : [ 10492, 9224 ],
                                                    "frequency" : 1,
                                                    "type" : "constant",
-                                                   "value" : 0.2750000059604645
+                                                   "value" : 0.27500000596046448
                                                 },
                                                 "multiplier" : 1,
                                                 "power" : 1
@@ -6415,10 +5898,7 @@
                                                 "fun" : {
                                                    "@collapsed" : false,
                                                    "@name" : "Perlin 2D",
-                                                   "@position" : [
-                                                      10492,
-                                                      9281
-                                                   ],
+                                                   "@position" : [ 10492, 9281 ],
                                                    "frequency" : 1,
                                                    "seed" : 4906183706173169870,
                                                    "seed-combine" : true,
@@ -6484,9 +5964,9 @@
                "type" : "standard",
                "vegetation" : {
                   "enabled" : true,
-                  "value" : 0.8340000510215759
+                  "value" : 0.83400005102157593
                },
-               "weight" : 0.6000000238418579
+               "weight" : 0.60000002384185791
             },
             "links" : [
                {
@@ -6533,25 +6013,48 @@
          "palette" : {
             "@collapsed" : false,
             "@name" : "Migrated Palette",
-            "@position" : [
-               7972,
-               8160
-            ],
+            "@position" : [ 7972, 8160 ],
             "ASH_DEFAULT_BASE" : 20,
             "CRYSTAL_GLEAM_BASE" : 50,
+            "CUTTLETRUNK_AUX" : 1,
+            "CUTTLETRUNK_BASE" : 1,
+            "CUTTLETRUNK_EXOTIC" : 1,
             "FLORA_FLOWER_1" : 104,
             "FLORA_FLOWER_2" : 12,
             "FLORA_FLOWER_3" : 158,
             "FLORA_FLOWER_4" : 74,
+            "FLORA_PLANT_FIBROUS" : 1,
+            "FLORA_PLANT_INKY" : 1,
+            "FUNGUS_AMANITA" : 1,
+            "FUNGUS_BRACKET" : 1,
+            "FUNGUS_CORAL" : 1,
+            "FUNGUS_DRIPPING" : 1,
+            "FUNGUS_GLOWING" : 1,
+            "FUNGUS_SCATTER" : 1,
             "GRASS_BARBED_BASE" : 179,
             "GRASS_GNARLED_BASE" : 30,
             "GRASS_VERDANT_BASE" : 136,
             "GRAVEL_DEFAULT_BASE" : 193,
             "GROWTH_DEFAULT_BASE" : 20,
+            "HOPPER_AUX" : 1,
+            "HOPPER_BASE" : 1,
+            "HOPPER_EXOTIC" : 1,
+            "HUNTER_AUX" : 1,
+            "HUNTER_BASE" : 1,
+            "HUNTER_EXOTIC" : 1,
             "ICE_DEFAULT_BASE" : 20,
             "ICE_GLACIER_BASE" : 20,
             "MOULD_DEFAULT_BASE" : 20,
             "MUD_DEFAULT_BASE" : 20,
+            "PLANT_ALOE" : 1,
+            "PLANT_CACTUS" : 1,
+            "PLANT_FIDDLEHEAD" : 1,
+            "PLANT_LOTUS" : 1,
+            "PLANT_SNOWDROP" : 1,
+            "PLANT_YUCCA" : 1,
+            "ROADRUNNER_AUX" : 1,
+            "ROADRUNNER_BASE" : 1,
+            "ROADRUNNER_EXOTIC" : 1,
             "ROCK_IGNEOUS_BASE" : 23,
             "ROCK_METAMORPHIC_BASE" : 166,
             "ROCK_SEDIMENTARY_BASE" : 169,
@@ -6559,9 +6062,15 @@
             "SOIL_CLAY_BASE" : 20,
             "SOIL_PEATY_BASE" : 194,
             "SOIL_SILTY_BASE" : 45,
+            "SPITTER_AUX" : 1,
+            "SPITTER_BASE" : 1,
+            "SPITTER_EXOTIC" : 1,
             "SPONGE_DEFAULT_BASE" : 20,
             "TANGLE_DEFAULT_BASE" : 20,
             "THORNS_DEFAULT_BASE" : 20,
+            "WILDSTOCK_AUX" : 1,
+            "WILDSTOCK_BASE" : 1,
+            "WILDSTOCK_EXOTIC" : 1,
             "WOOD_ANCIENT_TRUNK" : 43,
             "WOOD_EXOTIC_LEAVES" : 178,
             "WOOD_LUSH_LEAVES" : 50,
@@ -6580,10 +6089,7 @@
          "test" : {
             "@collapsed" : false,
             "@name" : "Reference Biome",
-            "@position" : [
-               8457,
-               10438
-            ],
+            "@position" : [ 8457, 10438 ],
             "seed" : 0,
             "seed-combine" : true,
             "seed-hash" : "",
