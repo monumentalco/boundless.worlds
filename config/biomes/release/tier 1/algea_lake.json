@@ -3,7 +3,7 @@
    "@configType" : "BIOME",
    "@name" : "algea_lake",
    "@position" : [ 7608, 7880 ],
-   "@scroll" : [ 9022.0654296875, 8639.9521484375, -0.25 ],
+   "@scroll" : [ 8069.1630859375, 8321.7841796875, 0.25 ],
    "@toggle-test" : false,
    "@toggle-world" : true,
    "@unlinked" : [],
@@ -67,52 +67,230 @@
             },
             "caves" : {
                "@collapsed" : false,
-               "@name" : "Layered 3D",
-               "@position" : [ 8891, 8201 ],
-               "components" : [
+               "@name" : "cave_height_3d",
+               "@position" : [ 8885, 7907 ],
+               "frequency" : [ 1, 1 ],
+               "links" : [
                   {
-                     "fun" : {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "sliderValue"
+                        }
+                     ],
+                     "linkType" : "LT:CUSTOM_SLIDER",
+                     "sliderValue" : -0.096000000834465027
+                  },
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "yfun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "links"
+                        },
+                        {
+                           "index" : 1,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "nodeValue"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_2D",
+                     "nodeValue" : {
+                        "@collapsed" : false,
+                        "@name" : "Sum 2D",
+                        "@position" : [ 9201, 7752 ],
+                        "frequency" : 1,
+                        "seed" : 0,
+                        "seed-combine" : true,
+                        "seed-hash" : "",
+                        "terms" : [
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Heightmap - Rolling Hills",
+                                 "@position" : [ 9494, 7776 ],
+                                 "frequency" : 0.71200001239776611,
+                                 "links" : [
+                                    {
+                                       "linkPath" : [
+                                          {
+                                             "index" : -1,
+                                             "name" : "noise2d"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "terms"
+                                          },
+                                          {
+                                             "index" : 0,
+                                             "name" : ""
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "multiplier"
+                                          }
+                                       ],
+                                       "linkType" : "LT:CUSTOM_SLIDER",
+                                       "sliderValue" : 2
+                                    },
+                                    {
+                                       "linkPath" : [
+                                          {
+                                             "index" : -1,
+                                             "name" : "noise2d"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "fun"
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "terms"
+                                          },
+                                          {
+                                             "index" : 1,
+                                             "name" : ""
+                                          },
+                                          {
+                                             "index" : -1,
+                                             "name" : "multiplier"
+                                          }
+                                       ],
+                                       "linkType" : "LT:CUSTOM_SLIDER",
+                                       "sliderValue" : 1.0040000677108765
+                                    }
+                                 ],
+                                 "reference" : "noise2d/heightmaps/rollinghills.json",
+                                 "seed" : 2455343687293435752,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "zGJUFiOnZLcaobAc",
+                                 "tick" : 0,
+                                 "type" : "reference"
+                              },
+                              "multiplier" : 0.056000001728534698,
+                              "power" : 1
+                           },
+                           {
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Constant 2D",
+                                 "@position" : [ 9494, 7928 ],
+                                 "frequency" : 1,
+                                 "type" : "constant",
+                                 "value" : -0.77300006151199341
+                              },
+                              "multiplier" : 1,
+                              "power" : 1
+                           }
+                        ],
+                        "type" : "sum"
+                     }
+                  },
+                  {
+                     "linkPath" : [
+                        {
+                           "index" : -1,
+                           "name" : "noise3d"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "components"
+                        },
+                        {
+                           "index" : 0,
+                           "name" : ""
+                        },
+                        {
+                           "index" : -1,
+                           "name" : "fun"
+                        }
+                     ],
+                     "linkType" : "LT:NOISE_3D",
+                     "nodeValue" : {
                         "@collapsed" : false,
                         "@name" : "tier_1_caves",
-                        "@position" : [ 9191, 8253 ],
+                        "@position" : [ 9210, 8082 ],
                         "frequency" : [ 1, 1 ],
                         "links" : [],
                         "reference" : "noise3d/caves/release/tier_1_caves.json",
                         "seed" : 2840125855102216963,
                         "seed-combine" : false,
                         "seed-hash" : "6qIPujHIsn6speZx",
-                        "tick" : 0,
+                        "tick" : 2,
                         "type" : "reference"
-                     },
-                     "noiseMaxY" : 128,
-                     "y" : 20,
-                     "yfun" : null
-                  },
-                  {
-                     "fun" : {
-                        "@collapsed" : false,
-                        "@name" : "Constant 3D",
-                        "@position" : [ 9189, 8387 ],
-                        "frequency" : [ 1, 1 ],
-                        "type" : "constant",
-                        "value" : -1
-                     },
-                     "noiseMaxY" : 128,
-                     "y" : 20,
-                     "yfun" : null
+                     }
                   }
                ],
-               "frequency" : [ 1, 1 ],
-               "seed" : 5838724533931592693,
+               "reference" : "noise3d/misc/cave_height_3d.json",
+               "seed" : 0,
                "seed-combine" : true,
-               "seed-hash" : "IZMDCWGhzixIfxuX",
-               "type" : "layered"
+               "seed-hash" : "",
+               "tick" : 2,
+               "type" : "reference"
             },
             "caves_decorations" : null,
             "caves_substrate" : {
                "@collapsed" : false,
                "@name" : "tier_1_caves",
-               "@position" : [ 8890, 8698 ],
+               "@position" : [ 8921, 8309 ],
                "links" : [],
                "reference" : "substrate/caves/tier_1_caves.json",
                "seed" : 15408175334311480782,
@@ -129,20 +307,20 @@
             "drop" : null,
             "dropMaxDepth" : {
                "enabled" : false,
-               "value" : 5
+               "value" : 0
             },
             "dropMaxGradient" : {
                "enabled" : false,
-               "value" : 1.7699999809265137
+               "value" : 0
             },
             "dropMaxNoGravel" : {
                "enabled" : false,
-               "value" : 1
+               "value" : 0
             },
             "heightmap" : {
                "@collapsed" : false,
                "@name" : "Min 2D",
-               "@position" : [ 8899, 7299 ],
+               "@position" : [ 8881, 7410 ],
                "frequency" : 1,
                "seed" : 0,
                "seed-combine" : true,
@@ -151,7 +329,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "Sum 2D",
-                     "@position" : [ 9203, 7183 ],
+                     "@position" : [ 9185, 7294 ],
                      "frequency" : 1,
                      "seed" : 0,
                      "seed-combine" : true,
@@ -161,7 +339,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Heightmap - Rolling Hills",
-                              "@position" : [ 9496, 7207 ],
+                              "@position" : [ 9478, 7318 ],
                               "frequency" : 0.71200001239776611,
                               "links" : [
                                  {
@@ -231,7 +409,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Constant 2D",
-                              "@position" : [ 9496, 7359 ],
+                              "@position" : [ 9478, 7470 ],
                               "frequency" : 1,
                               "type" : "constant",
                               "value" : -0.77300006151199341
@@ -245,7 +423,7 @@
                   {
                      "@collapsed" : false,
                      "@name" : "water_system_1",
-                     "@position" : [ 9204, 7493 ],
+                     "@position" : [ 9186, 7604 ],
                      "frequency" : 1,
                      "links" : [],
                      "reference" : "noise2d/watersystems/water_system_1.json",
@@ -275,7 +453,7 @@
             "strata" : {
                "@collapsed" : false,
                "@name" : "standard_fill",
-               "@position" : [ 8903, 8550 ],
+               "@position" : [ 8913, 8188 ],
                "links" : [],
                "reference" : "strata/release/standard_fill.json",
                "seed" : 4806540044189345838,
@@ -287,7 +465,7 @@
             "surface_decorations" : {
                "@collapsed" : false,
                "@name" : "lake_bed",
-               "@position" : [ 8896, 8959 ],
+               "@position" : [ 8933, 8627 ],
                "links" : [],
                "reference" : "decorations/lake_bed.json",
                "seed" : 0,
@@ -299,7 +477,7 @@
             "surface_substrate" : {
                "@collapsed" : false,
                "@name" : "lake_bed",
-               "@position" : [ 8888, 8796 ],
+               "@position" : [ 8911, 8430 ],
                "links" : [
                   {
                      "linkPath" : [
@@ -494,15 +672,15 @@
                "type" : "reference"
             },
             "threeD" : {
-               "@collapsed" : false,
+               "@collapsed" : true,
                "@name" : "Layered 3D",
-               "@position" : [ 8886, 7713 ],
+               "@position" : [ 8889, 7656 ],
                "components" : [
                   {
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Constant 3D",
-                        "@position" : [ 9207, 7614 ],
+                        "@position" : [ 9210, 7557 ],
                         "frequency" : [ 1, 1 ],
                         "type" : "constant",
                         "value" : 1
@@ -515,7 +693,7 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Sum 3D",
-                        "@position" : [ 9207, 7779 ],
+                        "@position" : [ 9210, 7722 ],
                         "frequency" : [ 1, 1 ],
                         "seed" : 0,
                         "seed-combine" : true,
@@ -525,7 +703,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Fractal 3D",
-                                 "@position" : [ 9510, 7743 ],
+                                 "@position" : [ 9513, 7686 ],
                                  "frequency" : [
                                     {
                                        "max" : 2,
@@ -536,7 +714,7 @@
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Perlin 3D",
-                                    "@position" : [ 9793, 7815 ],
+                                    "@position" : [ 9796, 7758 ],
                                     "frequency" : [ 1, 1 ],
                                     "seed" : 5808606252525584249,
                                     "seed-combine" : true,
@@ -564,7 +742,7 @@
                               "fun" : {
                                  "@collapsed" : false,
                                  "@name" : "Constant 3D",
-                                 "@position" : [ 9510, 8015 ],
+                                 "@position" : [ 9513, 7958 ],
                                  "frequency" : [ 1, 1 ],
                                  "type" : "constant",
                                  "value" : 0.49300003051757813
@@ -583,7 +761,7 @@
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Constant 3D",
-                        "@position" : [ 9207, 8144 ],
+                        "@position" : [ 9210, 8087 ],
                         "frequency" : [ 1, 1 ],
                         "type" : "constant",
                         "value" : 1
@@ -623,7 +801,7 @@
             "threed_substrate" : {
                "@collapsed" : false,
                "@name" : "Standard Substrate",
-               "@position" : [ 8898, 9064 ],
+               "@position" : [ 8952, 8778 ],
                "@toggle-ceils" : false,
                "@toggle-strates" : false,
                "ceils" : [],
@@ -670,13 +848,13 @@
             "enabled" : true,
             "value" : 0.9100000262260437
          },
-         "weight" : 0.5
+         "weight" : 0.40000000596046448
       },
       "links" : [
          {
             "blockConstraint" : 1779159312,
             "blockDefault" : "",
-            "checkDefault" : true,
+            "checkDefault" : false,
             "linkPath" : [
                {
                   "index" : -1,
@@ -695,7 +873,7 @@
             "name" : "Biome Weight",
             "shortPath" : "algea_lake.weight",
             "sliderCheck" : false,
-            "sliderDefault" : 0.70000004768371582,
+            "sliderDefault" : 0.40000000596046448,
             "sliderMax" : 1,
             "sliderMin" : 0,
             "sliderStep" : 0.0010000000474974513
@@ -863,52 +1041,230 @@
                   },
                   "caves" : {
                      "@collapsed" : false,
-                     "@name" : "Layered 3D",
-                     "@position" : [ 8891, 8201 ],
-                     "components" : [
+                     "@name" : "cave_height_3d",
+                     "@position" : [ 8885, 7907 ],
+                     "frequency" : [ 1, 1 ],
+                     "links" : [
                         {
-                           "fun" : {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "sliderValue"
+                              }
+                           ],
+                           "linkType" : "LT:CUSTOM_SLIDER",
+                           "sliderValue" : -0.096000000834465027
+                        },
+                        {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "yfun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "links"
+                              },
+                              {
+                                 "index" : 1,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "nodeValue"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_2D",
+                           "nodeValue" : {
+                              "@collapsed" : false,
+                              "@name" : "Sum 2D",
+                              "@position" : [ 9201, 7752 ],
+                              "frequency" : 1,
+                              "seed" : 0,
+                              "seed-combine" : true,
+                              "seed-hash" : "",
+                              "terms" : [
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Heightmap - Rolling Hills",
+                                       "@position" : [ 9494, 7776 ],
+                                       "frequency" : 0.71200001239776611,
+                                       "links" : [
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 0,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "multiplier"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 2
+                                          },
+                                          {
+                                             "linkPath" : [
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "noise2d"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "fun"
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "terms"
+                                                },
+                                                {
+                                                   "index" : 1,
+                                                   "name" : ""
+                                                },
+                                                {
+                                                   "index" : -1,
+                                                   "name" : "multiplier"
+                                                }
+                                             ],
+                                             "linkType" : "LT:CUSTOM_SLIDER",
+                                             "sliderValue" : 1.0040000677108765
+                                          }
+                                       ],
+                                       "reference" : "noise2d/heightmaps/rollinghills.json",
+                                       "seed" : 2455343687293435752,
+                                       "seed-combine" : true,
+                                       "seed-hash" : "zGJUFiOnZLcaobAc",
+                                       "tick" : 0,
+                                       "type" : "reference"
+                                    },
+                                    "multiplier" : 0.056000001728534698,
+                                    "power" : 1
+                                 },
+                                 {
+                                    "fun" : {
+                                       "@collapsed" : false,
+                                       "@name" : "Constant 2D",
+                                       "@position" : [ 9494, 7928 ],
+                                       "frequency" : 1,
+                                       "type" : "constant",
+                                       "value" : -0.77300006151199341
+                                    },
+                                    "multiplier" : 1,
+                                    "power" : 1
+                                 }
+                              ],
+                              "type" : "sum"
+                           }
+                        },
+                        {
+                           "linkPath" : [
+                              {
+                                 "index" : -1,
+                                 "name" : "noise3d"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "components"
+                              },
+                              {
+                                 "index" : 0,
+                                 "name" : ""
+                              },
+                              {
+                                 "index" : -1,
+                                 "name" : "fun"
+                              }
+                           ],
+                           "linkType" : "LT:NOISE_3D",
+                           "nodeValue" : {
                               "@collapsed" : false,
                               "@name" : "tier_1_caves",
-                              "@position" : [ 9191, 8253 ],
+                              "@position" : [ 9210, 8082 ],
                               "frequency" : [ 1, 1 ],
                               "links" : [],
                               "reference" : "noise3d/caves/release/tier_1_caves.json",
                               "seed" : 2840125855102216963,
                               "seed-combine" : false,
                               "seed-hash" : "6qIPujHIsn6speZx",
-                              "tick" : 0,
+                              "tick" : 2,
                               "type" : "reference"
-                           },
-                           "noiseMaxY" : 128,
-                           "y" : 20,
-                           "yfun" : null
-                        },
-                        {
-                           "fun" : {
-                              "@collapsed" : false,
-                              "@name" : "Constant 3D",
-                              "@position" : [ 9189, 8387 ],
-                              "frequency" : [ 1, 1 ],
-                              "type" : "constant",
-                              "value" : -1
-                           },
-                           "noiseMaxY" : 128,
-                           "y" : 20,
-                           "yfun" : null
+                           }
                         }
                      ],
-                     "frequency" : [ 1, 1 ],
-                     "seed" : 5838724533931592693,
+                     "reference" : "noise3d/misc/cave_height_3d.json",
+                     "seed" : 0,
                      "seed-combine" : true,
-                     "seed-hash" : "IZMDCWGhzixIfxuX",
-                     "type" : "layered"
+                     "seed-hash" : "",
+                     "tick" : 2,
+                     "type" : "reference"
                   },
                   "caves_decorations" : null,
                   "caves_substrate" : {
                      "@collapsed" : false,
                      "@name" : "tier_1_caves",
-                     "@position" : [ 8890, 8698 ],
+                     "@position" : [ 8921, 8309 ],
                      "links" : [],
                      "reference" : "substrate/caves/tier_1_caves.json",
                      "seed" : 15408175334311480782,
@@ -925,20 +1281,20 @@
                   "drop" : null,
                   "dropMaxDepth" : {
                      "enabled" : false,
-                     "value" : 5
+                     "value" : 0
                   },
                   "dropMaxGradient" : {
                      "enabled" : false,
-                     "value" : 1.7699999809265137
+                     "value" : 0
                   },
                   "dropMaxNoGravel" : {
                      "enabled" : false,
-                     "value" : 1
+                     "value" : 0
                   },
                   "heightmap" : {
                      "@collapsed" : false,
                      "@name" : "Min 2D",
-                     "@position" : [ 8899, 7299 ],
+                     "@position" : [ 8881, 7410 ],
                      "frequency" : 1,
                      "seed" : 0,
                      "seed-combine" : true,
@@ -947,7 +1303,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "Sum 2D",
-                           "@position" : [ 9203, 7183 ],
+                           "@position" : [ 9185, 7294 ],
                            "frequency" : 1,
                            "seed" : 0,
                            "seed-combine" : true,
@@ -957,7 +1313,7 @@
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Heightmap - Rolling Hills",
-                                    "@position" : [ 9496, 7207 ],
+                                    "@position" : [ 9478, 7318 ],
                                     "frequency" : 0.71200001239776611,
                                     "links" : [
                                        {
@@ -1027,7 +1383,7 @@
                                  "fun" : {
                                     "@collapsed" : false,
                                     "@name" : "Constant 2D",
-                                    "@position" : [ 9496, 7359 ],
+                                    "@position" : [ 9478, 7470 ],
                                     "frequency" : 1,
                                     "type" : "constant",
                                     "value" : -0.77300006151199341
@@ -1041,7 +1397,7 @@
                         {
                            "@collapsed" : false,
                            "@name" : "water_system_1",
-                           "@position" : [ 9204, 7493 ],
+                           "@position" : [ 9186, 7604 ],
                            "frequency" : 1,
                            "links" : [],
                            "reference" : "noise2d/watersystems/water_system_1.json",
@@ -1071,7 +1427,7 @@
                   "strata" : {
                      "@collapsed" : false,
                      "@name" : "standard_fill",
-                     "@position" : [ 8903, 8550 ],
+                     "@position" : [ 8913, 8188 ],
                      "links" : [],
                      "reference" : "strata/release/standard_fill.json",
                      "seed" : 4806540044189345838,
@@ -1083,7 +1439,7 @@
                   "surface_decorations" : {
                      "@collapsed" : false,
                      "@name" : "lake_bed",
-                     "@position" : [ 8896, 8959 ],
+                     "@position" : [ 8933, 8627 ],
                      "links" : [],
                      "reference" : "decorations/lake_bed.json",
                      "seed" : 0,
@@ -1095,7 +1451,7 @@
                   "surface_substrate" : {
                      "@collapsed" : false,
                      "@name" : "lake_bed",
-                     "@position" : [ 8888, 8796 ],
+                     "@position" : [ 8911, 8430 ],
                      "links" : [
                         {
                            "linkPath" : [
@@ -1290,15 +1646,15 @@
                      "type" : "reference"
                   },
                   "threeD" : {
-                     "@collapsed" : false,
+                     "@collapsed" : true,
                      "@name" : "Layered 3D",
-                     "@position" : [ 8886, 7713 ],
+                     "@position" : [ 8889, 7656 ],
                      "components" : [
                         {
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Constant 3D",
-                              "@position" : [ 9207, 7614 ],
+                              "@position" : [ 9210, 7557 ],
                               "frequency" : [ 1, 1 ],
                               "type" : "constant",
                               "value" : 1
@@ -1311,7 +1667,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Sum 3D",
-                              "@position" : [ 9207, 7779 ],
+                              "@position" : [ 9210, 7722 ],
                               "frequency" : [ 1, 1 ],
                               "seed" : 0,
                               "seed-combine" : true,
@@ -1321,7 +1677,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Fractal 3D",
-                                       "@position" : [ 9510, 7743 ],
+                                       "@position" : [ 9513, 7686 ],
                                        "frequency" : [
                                           {
                                              "max" : 2,
@@ -1332,7 +1688,7 @@
                                        "fun" : {
                                           "@collapsed" : false,
                                           "@name" : "Perlin 3D",
-                                          "@position" : [ 9793, 7815 ],
+                                          "@position" : [ 9796, 7758 ],
                                           "frequency" : [ 1, 1 ],
                                           "seed" : 5808606252525584249,
                                           "seed-combine" : true,
@@ -1360,7 +1716,7 @@
                                     "fun" : {
                                        "@collapsed" : false,
                                        "@name" : "Constant 3D",
-                                       "@position" : [ 9510, 8015 ],
+                                       "@position" : [ 9513, 7958 ],
                                        "frequency" : [ 1, 1 ],
                                        "type" : "constant",
                                        "value" : 0.49300003051757813
@@ -1379,7 +1735,7 @@
                            "fun" : {
                               "@collapsed" : false,
                               "@name" : "Constant 3D",
-                              "@position" : [ 9207, 8144 ],
+                              "@position" : [ 9210, 8087 ],
                               "frequency" : [ 1, 1 ],
                               "type" : "constant",
                               "value" : 1
@@ -1419,7 +1775,7 @@
                   "threed_substrate" : {
                      "@collapsed" : false,
                      "@name" : "Standard Substrate",
-                     "@position" : [ 8898, 9064 ],
+                     "@position" : [ 8952, 8778 ],
                      "@toggle-ceils" : false,
                      "@toggle-strates" : false,
                      "ceils" : [],
@@ -1466,13 +1822,13 @@
                   "enabled" : true,
                   "value" : 0.9100000262260437
                },
-               "weight" : 0.5
+               "weight" : 0.40000000596046448
             },
             "links" : [
                {
                   "blockConstraint" : 1779159312,
                   "blockDefault" : "",
-                  "checkDefault" : true,
+                  "checkDefault" : false,
                   "linkPath" : [
                      {
                         "index" : -1,
@@ -1491,7 +1847,7 @@
                   "name" : "Biome Weight",
                   "shortPath" : "algea_lake.weight",
                   "sliderCheck" : false,
-                  "sliderDefault" : 0.70000004768371582,
+                  "sliderDefault" : 0.40000000596046448,
                   "sliderMax" : 1,
                   "sliderMin" : 0,
                   "sliderStep" : 0.0010000000474974513
