@@ -3,7 +3,7 @@
    "@configType" : "NOISE3D",
    "@name" : "giant_flat_caves_2",
    "@position" : [ 7932, 8160 ],
-   "@scroll" : [ 8367.4853515625, 8095.64306640625, -0.25 ],
+   "@scroll" : [ 8368.326171875, 8095.64306640625, -0.25 ],
    "@toggle-test" : false,
    "@toggle-world" : false,
    "@unlinked" : [],
@@ -11,67 +11,102 @@
    "noise3d" : {
       "fun" : {
          "@collapsed" : false,
-         "@name" : "Sum 3D",
-         "@position" : [ 8240, 8040 ],
-         "frequency" : [ 1, 1, 1 ],
-         "seed-hash" : "",
-         "terms" : [
+         "@name" : "Layered 3D",
+         "@position" : [ 8270, 8021 ],
+         "components" : [
             {
                "fun" : {
                   "@collapsed" : false,
-                  "@name" : "Max 3D",
-                  "@position" : [ 8544, 8027 ],
-                  "frequency" : [ 1, 1, 1 ],
+                  "@name" : "Sum 3D",
+                  "@position" : [ 8591, 7799 ],
+                  "frequency" : [ 1, 0.62800002098083496 ],
+                  "seed" : 0,
+                  "seed-combine" : true,
                   "seed-hash" : "",
                   "terms" : [
                      {
-                        "@collapsed" : false,
-                        "@name" : "Simplex 3D",
-                        "@position" : [ 8837, 7988 ],
-                        "frequency" : [ 0.16300000250339508, 1.9890000820159912, 0.16300000250339508 ],
-                        "offset" : [ 458.09442138671875, -140.97354125976563, -202.84037780761719 ],
-                        "offset-hash" : "nNJtvyWHptLOtQFQ",
-                        "seed-hash" : "nNJtvyWHptLOtQFQ",
-                        "type" : "simplex"
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Max 3D",
+                           "@position" : [ 8895, 7786 ],
+                           "frequency" : [ 1, 1 ],
+                           "seed" : 0,
+                           "seed-combine" : true,
+                           "seed-hash" : "",
+                           "terms" : [
+                              {
+                                 "@collapsed" : false,
+                                 "@name" : "Simplex 3D",
+                                 "@position" : [ 9188, 7747 ],
+                                 "frequency" : [ 0.16300000250339508, 1.9890000820159912 ],
+                                 "seed" : 9893151964044182996,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "nNJtvyWHptLOtQFQ",
+                                 "type" : "simplex"
+                              },
+                              {
+                                 "@collapsed" : false,
+                                 "@name" : "Simplex 3D",
+                                 "@position" : [ 9188, 7876 ],
+                                 "frequency" : [ 0.16300000250339508, 1.9890000820159912 ],
+                                 "seed" : 15556514909636037148,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "gR73fRlAf6AWfj89",
+                                 "type" : "simplex"
+                              }
+                           ],
+                           "type" : "max"
+                        },
+                        "multiplier" : 1,
+                        "power" : 1
                      },
                      {
-                        "@collapsed" : false,
-                        "@name" : "Simplex 3D",
-                        "@position" : [ 8837, 8117 ],
-                        "frequency" : [ 0.16300000250339508, 1.9890000820159912, 0.16300000250339508 ],
-                        "offset" : [ 949.3128662109375, 377.67333984375, -243.25634765625 ],
-                        "offset-hash" : "gR73fRlAf6AWfj89",
-                        "seed-hash" : "gR73fRlAf6AWfj89",
-                        "type" : "simplex"
+                        "fun" : {
+                           "@collapsed" : false,
+                           "@name" : "Constant 3D",
+                           "@position" : [ 8895, 8005 ],
+                           "frequency" : [ 1, 1 ],
+                           "type" : "constant",
+                           "value" : 0.67900002002716064
+                        },
+                        "multiplier" : 1,
+                        "power" : 1
                      }
                   ],
-                  "type" : "max"
+                  "type" : "sum"
                },
-               "multiplier" : 1,
-               "power" : 1,
-               "seed-hash" : ""
+               "noiseMaxY" : 256,
+               "y" : 0,
+               "yfun" : {
+                  "@collapsed" : false,
+                  "@name" : "Constant 2D",
+                  "@position" : [ 8605, 8160 ],
+                  "frequency" : 1,
+                  "type" : "constant",
+                  "value" : 1
+               }
             },
             {
                "fun" : {
                   "@collapsed" : false,
                   "@name" : "Constant 3D",
-                  "@position" : [ 8544, 8246 ],
-                  "frequency" : [ 1, 1, 1 ],
-                  "offset" : [ -250.53512573242188, 383.47433471679688, -55.92852783203125 ],
-                  "offset-hash" : "GwBo0H6CRuKunMym",
-                  "seed-hash" : "GwBo0H6CRuKunMym",
+                  "@position" : [ 8594, 8289 ],
+                  "frequency" : [ 1, 1 ],
                   "type" : "constant",
-                  "value" : 0.66300004720687866
+                  "value" : -1
                },
-               "multiplier" : 1,
-               "power" : 1,
-               "seed-hash" : ""
+               "noiseMaxY" : 0,
+               "y" : 256,
+               "yfun" : null
             }
          ],
-         "type" : "sum"
+         "frequency" : [ 1, 1 ],
+         "seed" : 0,
+         "seed-combine" : true,
+         "seed-hash" : "",
+         "type" : "layered"
       },
-      "links" : [],
-      "seed-hash" : ""
+      "links" : []
    },
    "seed" : "I has a seed!",
    "seed-hash" : "",
@@ -90,94 +125,127 @@
          "@position" : [ 7932, 8160 ],
          "@toggle-test" : false,
          "@toggle-world" : false,
-         "@version" : 14,
+         "@version" : 18,
          "noise3d" : {
             "fun" : {
                "@collapsed" : false,
-               "@name" : "Sum 3D",
-               "@position" : [ 8240, 8040 ],
-               "frequency" : [ 1, 1, 1 ],
-               "seed-hash" : "",
-               "terms" : [
+               "@name" : "Layered 3D",
+               "@position" : [ 8270, 8021 ],
+               "components" : [
                   {
                      "fun" : {
                         "@collapsed" : false,
-                        "@name" : "Max 3D",
-                        "@position" : [ 8544, 8027 ],
-                        "frequency" : [ 1, 1, 1 ],
+                        "@name" : "Sum 3D",
+                        "@position" : [ 8591, 7799 ],
+                        "frequency" : [ 1, 0.62800002098083496 ],
+                        "seed" : 0,
+                        "seed-combine" : true,
                         "seed-hash" : "",
                         "terms" : [
                            {
-                              "@collapsed" : false,
-                              "@name" : "Simplex 3D",
-                              "@position" : [ 8837, 7988 ],
-                              "frequency" : [ 0.16300000250339508, 1.9890000820159912, 0.16300000250339508 ],
-                              "offset" : [ 458.09442138671875, -140.97354125976563, -202.84037780761719 ],
-                              "offset-hash" : "nNJtvyWHptLOtQFQ",
-                              "seed-hash" : "nNJtvyWHptLOtQFQ",
-                              "type" : "simplex"
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Max 3D",
+                                 "@position" : [ 8895, 7786 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "seed" : 0,
+                                 "seed-combine" : true,
+                                 "seed-hash" : "",
+                                 "terms" : [
+                                    {
+                                       "@collapsed" : false,
+                                       "@name" : "Simplex 3D",
+                                       "@position" : [ 9188, 7747 ],
+                                       "frequency" : [ 0.16300000250339508, 1.9890000820159912 ],
+                                       "seed" : 9893151964044182996,
+                                       "seed-combine" : true,
+                                       "seed-hash" : "nNJtvyWHptLOtQFQ",
+                                       "type" : "simplex"
+                                    },
+                                    {
+                                       "@collapsed" : false,
+                                       "@name" : "Simplex 3D",
+                                       "@position" : [ 9188, 7876 ],
+                                       "frequency" : [ 0.16300000250339508, 1.9890000820159912 ],
+                                       "seed" : 15556514909636037148,
+                                       "seed-combine" : true,
+                                       "seed-hash" : "gR73fRlAf6AWfj89",
+                                       "type" : "simplex"
+                                    }
+                                 ],
+                                 "type" : "max"
+                              },
+                              "multiplier" : 1,
+                              "power" : 1
                            },
                            {
-                              "@collapsed" : false,
-                              "@name" : "Simplex 3D",
-                              "@position" : [ 8837, 8117 ],
-                              "frequency" : [ 0.16300000250339508, 1.9890000820159912, 0.16300000250339508 ],
-                              "offset" : [ 949.3128662109375, 377.67333984375, -243.25634765625 ],
-                              "offset-hash" : "gR73fRlAf6AWfj89",
-                              "seed-hash" : "gR73fRlAf6AWfj89",
-                              "type" : "simplex"
+                              "fun" : {
+                                 "@collapsed" : false,
+                                 "@name" : "Constant 3D",
+                                 "@position" : [ 8895, 8005 ],
+                                 "frequency" : [ 1, 1 ],
+                                 "type" : "constant",
+                                 "value" : 0.67900002002716064
+                              },
+                              "multiplier" : 1,
+                              "power" : 1
                            }
                         ],
-                        "type" : "max"
+                        "type" : "sum"
                      },
-                     "multiplier" : 1,
-                     "power" : 1,
-                     "seed-hash" : ""
+                     "noiseMaxY" : 256,
+                     "y" : 0,
+                     "yfun" : {
+                        "@collapsed" : false,
+                        "@name" : "Constant 2D",
+                        "@position" : [ 8605, 8160 ],
+                        "frequency" : 1,
+                        "type" : "constant",
+                        "value" : 1
+                     }
                   },
                   {
                      "fun" : {
                         "@collapsed" : false,
                         "@name" : "Constant 3D",
-                        "@position" : [ 8544, 8246 ],
-                        "frequency" : [ 1, 1, 1 ],
-                        "offset" : [ -250.53512573242188, 383.47433471679688, -55.92852783203125 ],
-                        "offset-hash" : "GwBo0H6CRuKunMym",
-                        "seed-hash" : "GwBo0H6CRuKunMym",
+                        "@position" : [ 8594, 8289 ],
+                        "frequency" : [ 1, 1 ],
                         "type" : "constant",
-                        "value" : 0.66300004720687866
+                        "value" : -1
                      },
-                     "multiplier" : 1,
-                     "power" : 1,
-                     "seed-hash" : ""
+                     "noiseMaxY" : 0,
+                     "y" : 256,
+                     "yfun" : null
                   }
                ],
-               "type" : "sum"
+               "frequency" : [ 1, 1 ],
+               "seed" : 0,
+               "seed-combine" : true,
+               "seed-hash" : "",
+               "type" : "layered"
             },
-            "links" : [],
-            "seed-hash" : ""
+            "links" : []
          },
          "seed" : "I has a seed!",
-         "seed-hash" : "",
          "sharedConfig" : {
-            "seed-hash" : "",
             "worldSize" : 288
          },
          "test" : {
             "@collapsed" : false,
             "@name" : "Reference 3D",
             "@position" : [ 8240, 8398 ],
-            "frequency" : [ 1, 1, 1 ],
-            "offset" : [ -238.44978332519531, -29.833806991577148, -9.5334072113037109 ],
-            "offset-hash" : "H2sBnrth33XjbKRs",
+            "frequency" : [ 1, 1 ],
+            "seed" : 1862548344184716481,
+            "seed-combine" : true,
             "seed-hash" : "H2sBnrth33XjbKRs",
             "type" : "reference"
          }
       },
-      "frequency" : [ 1, 1, 1 ],
+      "frequency" : [ 1, 1 ],
       "links" : [],
-      "offset" : [ -238.44978332519531, -29.833806991577148, -9.5334072113037109 ],
-      "offset-hash" : "H2sBnrth33XjbKRs",
       "reference" : "",
+      "seed" : 1862548344184716481,
+      "seed-combine" : true,
       "seed-hash" : "H2sBnrth33XjbKRs",
       "tick" : 0,
       "type" : "reference"
