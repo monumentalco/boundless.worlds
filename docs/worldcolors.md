@@ -24,30 +24,36 @@ There is a recipe per world configuration:
 
 ### Lush Worlds:
 
-`lush-0 - Lush Level 1`
-`lush-1 - Lush Level 2`
-`lush-2 - Lush Level 3`
-`lush-3 - Lush Level 4`
+```
+lush-0 - Lush Level 1
+lush-1 - Lush Level 2
+lush-2 - Lush Level 3
+lush-3 - Lush Level 4
+```
 
 ### Coal Worlds:
 
 * Reducing Luminance
 * SVML = Solid [-50,-40,-30,-20], Vegetation, Mineral [50,40,30,20], Liquid [100,80,60,40]
 
-`coal-2 - Coal Level 3 :: 0#Base[], 2#veg[lum+15], 3#solid[hue-50,lum+15], 5#liquid[hue+100,lum+15], 6#mineral[hue+50,lum-15]`
-`coal-3 - Coal Level 4 :: 0#Base[], 2#veg[lum+15], 3#solid[hue-40,lum-15], 5#liquid[hue+80, lum+15], 6#mineral[hue+40,lum-15]`
-`coal-4 - Coal Level 5 :: 0#Base[], 2#veg[lum-15], 3#solid[hue-30,lum-15], 5#liquid[hue+60, lum+15], 6#mineral[hue+30,lum-15]`
-`coal-5 - Coal Level 6 :: 0#Base[], 2#veg[lum-15], 3#solid[hue-20,lum-15], 5#liquid[hue+40, lum-15], 6#mineral[hue+20,lum-15]`
+```
+coal-2 - Coal Level 3 :: 0#Base[], 2#veg[lum+15], 3#solid[hue-50,lum+15], 5#liquid[hue+100,lum+15], 6#mineral[hue+50,lum-15]
+coal-3 - Coal Level 4 :: 0#Base[], 2#veg[lum+15], 3#solid[hue-40,lum-15], 5#liquid[hue+80, lum+15], 6#mineral[hue+40,lum-15]
+coal-4 - Coal Level 5 :: 0#Base[], 2#veg[lum-15], 3#solid[hue-30,lum-15], 5#liquid[hue+60, lum+15], 6#mineral[hue+30,lum-15]
+coal-5 - Coal Level 6 :: 0#Base[], 2#veg[lum-15], 3#solid[hue-20,lum-15], 5#liquid[hue+40, lum-15], 6#mineral[hue+20,lum-15]
+```
 
 ### Metal Worlds:
 
 * Reduced Saturation
 * VSxLM = Vegetation, Solid [50,40,30,20], Liquid [180], Minerals[180-50,180-40,180-30,180-20]
 
-`metal-2 - Metal Level 3 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+50], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-50]`
-`metal-3 - Metal Level 4 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+40], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-40]`
-`metal-4 - Metal Level 5 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+30], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-30]`
-`metal-5 - Metal Level 6 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+20], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-20]`
+```
+metal-2 - Metal Level 3 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+50], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-50]
+metal-3 - Metal Level 4 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+40], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-40]
+metal-4 - Metal Level 5 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+30], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-30]
+metal-5 - Metal Level 6 :: 0#Base[sat-20], 2#veg[], 3#solid[hue+20], 4#MinLiq[hue+180], 5#liquid[], 6#mineral[hue-20]
+```
 
 ### Gem Element Worlds:
 
@@ -58,8 +64,10 @@ There is a recipe per world configuration:
 	* Increased Luminance
 	* SVML = Solid[-10], Vegetation, Mineral[10], Liquid[10]
 
-`gem-4 - Gem Element Level 5 :: 0#Base[lum-10], 2#veg[], 3#solid[hue+10], 5#liquid[hue-20], 6#mineral[hue-10]`
-`gem-5 - Gem Element Level 6 :: 0#Base[lum+10], 2#veg[], 3#solid[hue-10], 5#liquid[hue+20], 6#mineral[hue+10]`
+```
+gem-4 - Gem Element Level 5 :: 0#Base[lum-10], 2#veg[], 3#solid[hue+10], 5#liquid[hue-20], 6#mineral[hue-10]
+gem-5 - Gem Element Level 6 :: 0#Base[lum+10], 2#veg[], 3#solid[hue-10], 5#liquid[hue+20], 6#mineral[hue+10]
+```
 
 #### Special Element Worlds:
 
@@ -67,6 +75,7 @@ There is a recipe per world configuration:
 * **Blink** - Increased Luminance, Cold Vegetation, Hue [Green-Yellow]
 * **Rift** - Split Hue [Pink-Purple]
 
-`special-6 - Special Element Level 7`
-`special-7 - Special Element Level 8`
-
+```
+special-6 - Special Element Level 7
+special-7 - Special Element Level 8
+```
