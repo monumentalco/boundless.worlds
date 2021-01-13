@@ -3,60 +3,103 @@
    "@configType" : "NOISE2D",
    "@name" : "mv_attribute_distribution",
    "@position" : [ 7932.0, 8160.0 ],
-   "@scroll" : [ 8324.7998046875, 8359.2373046875, -0.25 ],
+   "@scroll" : [ 8658.638671875, 8569.4580078125, -0.25 ],
    "@toggle-test" : false,
-   "@toggle-world" : false,
+   "@toggle-world" : true,
    "@unlinked" : [],
    "@version" : 18,
    "noise2d" : {
       "fun" : {
          "@collapsed" : false,
          "@name" : "Distort 2D",
-         "@position" : [ 8705.0, 8119.0 ],
+         "@position" : [ 8365.0, 8464.0 ],
          "base" : {
             "@collapsed" : false,
-            "@name" : "Cell Samples 2D",
-            "@position" : [ 9002.0, 8066.0 ],
-            "cells" : {
+            "@name" : "Distort 2D",
+            "@position" : [ 8808.0, 8198.0 ],
+            "base" : {
                "@collapsed" : false,
-               "@name" : "Voronoi 2D",
-               "@position" : [ 9291.0, 8042.0 ],
-               "frequency" : 0.15000000596046448,
-               "seed" : 17427789108644392674,
+               "@name" : "MV Biome",
+               "@position" : [ 9115.0, 8232.0 ],
+               "attr" : "altitude",
+               "seed" : 3024776256081877203,
                "seed-combine" : true,
-               "seed-hash" : "l7cVU9Dw9MJJRCQx",
-               "type" : "voronoi"
+               "seed-hash" : "CBeEOMORBJ5t5Em5",
+               "type" : "mv_biome"
             },
-            "frequency" : 0.55900001525878906,
-            "fun" : null,
-            "mix" : false,
-            "overflowPower" : 1.0,
-            "power" : 0.5,
-            "seed" : 0,
+            "distortion" : {
+               "@collapsed" : false,
+               "@name" : "Gabor 2D",
+               "@position" : [ 8959.0, 8434.0 ],
+               "cellCount" : 4.0,
+               "components" : [
+                  {
+                     "F" : 0.82400006055831909,
+                     "K" : 0.70300000905990601,
+                     "a" : 1.2580000162124634,
+                     "w" : {
+                        "@collapsed" : false,
+                        "@name" : "Perlin 2D",
+                        "@position" : [ 9311.0, 8555.0 ],
+                        "frequency" : 0.20000000298023224,
+                        "seed" : 6385638760287490141,
+                        "seed-combine" : true,
+                        "seed-hash" : "ZD9zlYM5PZ6nApmp",
+                        "type" : "perlin"
+                     }
+                  }
+               ],
+               "frequency" : 0.05000000074505806,
+               "seed" : 11711226578083642302,
+               "seed-combine" : true,
+               "seed-hash" : "fiKoTIzIlKrZvsev",
+               "type" : "gabor"
+            },
+            "distortionScale" : 3.0000002384185791,
+            "frequency" : 1.0,
+            "seed" : 8051151608951824478,
             "seed-combine" : true,
-            "seed-hash" : "",
-            "type" : "cell_samples"
+            "seed-hash" : "PEZX8HPk6QgMb4qk",
+            "type" : "distort"
          },
          "distortion" : {
             "@collapsed" : false,
-            "@name" : "Perlin 2D",
-            "@position" : [ 9002.0, 8254.0 ],
-            "frequency" : 0.20000000298023224,
-            "seed" : 1773037932719439197,
+            "@name" : "Gabor 2D",
+            "@position" : [ 8516.0, 8700.0 ],
+            "cellCount" : 4.0,
+            "components" : [
+               {
+                  "F" : 0.52100002765655518,
+                  "K" : 0.35600000619888306,
+                  "a" : 1.1069999933242798,
+                  "w" : {
+                     "@collapsed" : false,
+                     "@name" : "Perlin 2D",
+                     "@position" : [ 8868.0, 8821.0 ],
+                     "frequency" : 0.20000000298023224,
+                     "seed" : 6385638760287490141,
+                     "seed-combine" : true,
+                     "seed-hash" : "ZD9zlYM5PZ6nApmp",
+                     "type" : "perlin"
+                  }
+               }
+            ],
+            "frequency" : 0.05000000074505806,
+            "seed" : 11711226578083642302,
             "seed-combine" : true,
-            "seed-hash" : "UOs6RL2pW4ad7A7C",
-            "type" : "perlin"
+            "seed-hash" : "fiKoTIzIlKrZvsev",
+            "type" : "gabor"
          },
-         "distortionScale" : 2.0,
-         "frequency" : 0.5,
-         "seed" : 6776613465777908889,
+         "distortionScale" : 3.0000002384185791,
+         "frequency" : 1.0,
+         "seed" : 8051151608951824478,
          "seed-combine" : true,
-         "seed-hash" : "32bFdXQqylOc3LaR",
+         "seed-hash" : "PEZX8HPk6QgMb4qk",
          "type" : "distort"
       },
       "links" : [
          {
-            "blockConstraint" : 9587530,
+            "blockConstraint" : 9645834,
             "blockDefault" : "",
             "checkDefault" : false,
             "global" : false,
@@ -76,13 +119,17 @@
                },
                {
                   "index" : -1,
-                  "name" : "fun"
+                  "name" : "base"
+               },
+               {
+                  "index" : -1,
+                  "name" : "attr"
                }
             ],
-            "linkType" : "LT:NOISE_2D",
-            "name" : "base",
-            "selectDefault" : "",
-            "shortPath" : "Cell Samples 2D.function",
+            "linkType" : "LT:CUSTOM_SELECT",
+            "name" : "attribute",
+            "selectDefault" : "altitude",
+            "shortPath" : "MV Biome.attribute",
             "sliderCheck" : false,
             "sliderDefault" : 0.0,
             "sliderMax" : 0.0,
@@ -93,7 +140,7 @@
    },
    "seed" : "I has a seed!",
    "sharedConfig" : {
-      "worldSize" : 288.0
+      "worldSize" : 192.0
    },
    "test" : {
       "@collapsed" : false,
@@ -105,57 +152,100 @@
          "@name" : "mv_attribute_distribution",
          "@position" : [ 7932.0, 8160.0 ],
          "@toggle-test" : false,
-         "@toggle-world" : false,
+         "@toggle-world" : true,
          "@version" : 18,
          "noise2d" : {
             "fun" : {
                "@collapsed" : false,
                "@name" : "Distort 2D",
-               "@position" : [ 8705.0, 8119.0 ],
+               "@position" : [ 8365.0, 8464.0 ],
                "base" : {
                   "@collapsed" : false,
-                  "@name" : "Cell Samples 2D",
-                  "@position" : [ 9002.0, 8066.0 ],
-                  "cells" : {
+                  "@name" : "Distort 2D",
+                  "@position" : [ 8808.0, 8198.0 ],
+                  "base" : {
                      "@collapsed" : false,
-                     "@name" : "Voronoi 2D",
-                     "@position" : [ 9291.0, 8042.0 ],
-                     "frequency" : 0.15000000596046448,
-                     "seed" : 17427789108644392674,
+                     "@name" : "MV Biome",
+                     "@position" : [ 9115.0, 8232.0 ],
+                     "attr" : "altitude",
+                     "seed" : 3024776256081877203,
                      "seed-combine" : true,
-                     "seed-hash" : "l7cVU9Dw9MJJRCQx",
-                     "type" : "voronoi"
+                     "seed-hash" : "CBeEOMORBJ5t5Em5",
+                     "type" : "mv_biome"
                   },
-                  "frequency" : 0.55900001525878906,
-                  "fun" : null,
-                  "mix" : false,
-                  "overflowPower" : 1.0,
-                  "power" : 0.5,
-                  "seed" : 0,
+                  "distortion" : {
+                     "@collapsed" : false,
+                     "@name" : "Gabor 2D",
+                     "@position" : [ 8959.0, 8434.0 ],
+                     "cellCount" : 4.0,
+                     "components" : [
+                        {
+                           "F" : 0.82400006055831909,
+                           "K" : 0.70300000905990601,
+                           "a" : 1.2580000162124634,
+                           "w" : {
+                              "@collapsed" : false,
+                              "@name" : "Perlin 2D",
+                              "@position" : [ 9311.0, 8555.0 ],
+                              "frequency" : 0.20000000298023224,
+                              "seed" : 6385638760287490141,
+                              "seed-combine" : true,
+                              "seed-hash" : "ZD9zlYM5PZ6nApmp",
+                              "type" : "perlin"
+                           }
+                        }
+                     ],
+                     "frequency" : 0.05000000074505806,
+                     "seed" : 11711226578083642302,
+                     "seed-combine" : true,
+                     "seed-hash" : "fiKoTIzIlKrZvsev",
+                     "type" : "gabor"
+                  },
+                  "distortionScale" : 3.0000002384185791,
+                  "frequency" : 1.0,
+                  "seed" : 8051151608951824478,
                   "seed-combine" : true,
-                  "seed-hash" : "",
-                  "type" : "cell_samples"
+                  "seed-hash" : "PEZX8HPk6QgMb4qk",
+                  "type" : "distort"
                },
                "distortion" : {
                   "@collapsed" : false,
-                  "@name" : "Perlin 2D",
-                  "@position" : [ 9002.0, 8254.0 ],
-                  "frequency" : 0.20000000298023224,
-                  "seed" : 1773037932719439197,
+                  "@name" : "Gabor 2D",
+                  "@position" : [ 8516.0, 8700.0 ],
+                  "cellCount" : 4.0,
+                  "components" : [
+                     {
+                        "F" : 0.52100002765655518,
+                        "K" : 0.35600000619888306,
+                        "a" : 1.1069999933242798,
+                        "w" : {
+                           "@collapsed" : false,
+                           "@name" : "Perlin 2D",
+                           "@position" : [ 8868.0, 8821.0 ],
+                           "frequency" : 0.20000000298023224,
+                           "seed" : 6385638760287490141,
+                           "seed-combine" : true,
+                           "seed-hash" : "ZD9zlYM5PZ6nApmp",
+                           "type" : "perlin"
+                        }
+                     }
+                  ],
+                  "frequency" : 0.05000000074505806,
+                  "seed" : 11711226578083642302,
                   "seed-combine" : true,
-                  "seed-hash" : "UOs6RL2pW4ad7A7C",
-                  "type" : "perlin"
+                  "seed-hash" : "fiKoTIzIlKrZvsev",
+                  "type" : "gabor"
                },
-               "distortionScale" : 2.0,
-               "frequency" : 0.5,
-               "seed" : 6776613465777908889,
+               "distortionScale" : 3.0000002384185791,
+               "frequency" : 1.0,
+               "seed" : 8051151608951824478,
                "seed-combine" : true,
-               "seed-hash" : "32bFdXQqylOc3LaR",
+               "seed-hash" : "PEZX8HPk6QgMb4qk",
                "type" : "distort"
             },
             "links" : [
                {
-                  "blockConstraint" : 9587530,
+                  "blockConstraint" : 9645834,
                   "blockDefault" : "",
                   "checkDefault" : false,
                   "global" : false,
@@ -175,13 +265,17 @@
                      },
                      {
                         "index" : -1,
-                        "name" : "fun"
+                        "name" : "base"
+                     },
+                     {
+                        "index" : -1,
+                        "name" : "attr"
                      }
                   ],
-                  "linkType" : "LT:NOISE_2D",
-                  "name" : "base",
-                  "selectDefault" : "",
-                  "shortPath" : "Cell Samples 2D.function",
+                  "linkType" : "LT:CUSTOM_SELECT",
+                  "name" : "attribute",
+                  "selectDefault" : "altitude",
+                  "shortPath" : "MV Biome.attribute",
                   "sliderCheck" : false,
                   "sliderDefault" : 0.0,
                   "sliderMax" : 0.0,
@@ -192,7 +286,7 @@
          },
          "seed" : "I has a seed!",
          "sharedConfig" : {
-            "worldSize" : 288.0
+            "worldSize" : 192.0
          },
          "test" : {
             "@collapsed" : false,
